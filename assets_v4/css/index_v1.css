@@ -1,0 +1,3822 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width:100%;
+  overflow-x:hidden;
+}
+p, h1, h2, h3, h4, h5{
+    font-family: 'Montserrat', sans-serif;;
+}
+.hand-icon {
+  width: 22%;
+  height: 52%;
+  margin-left: 70%;
+  position: relative;
+  top: -96%;
+}
+.metric-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-white-1{
+  display:none;
+}
+.experience-image{
+  max-width: 101.2%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.produly_design {
+   position: relative;
+   left: 10%;
+}
+.carousel-indicators li {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border-top: 0;
+    border-bottom:0;
+}
+
+.custom-caption {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    padding: 20px 30px;
+    border-radius: 8px;
+    color: #fff;
+    max-width: 450px;
+}
+.custom-buttons {
+    margin-top: 50px;
+}
+
+.custom-buttons .btn {
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    transition: 0.3s ease;
+}
+.booking-now{
+  background-color: #fff;
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: black;
+}
+.reserve-now {
+  background-color: #fff;
+  margin-right: 15px;
+  font-size: 15px;
+  padding: 6px 20px;
+  border-radius: 5px;
+  border: 2px solid white;
+  color: black;
+  font-weight: 600;
+}
+
+.reserve-now:hover {
+    background: white;
+    color: black;
+}
+
+.custom-buttons .btn:hover {
+    background: white;
+    color: black;
+}
+
+.reserve-now-1 {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.reserve-now-1:hover {
+    background: black;
+    color: white;
+}
+.reserve-now-2{
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+.produly-design {
+  font-weight: 700;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.built-india {
+    font-size: 52px;
+    position: relative;
+    top: -8px;
+    font-style: italic;
+    font-weight: 800;
+}
+.quality_compromise{
+  font-size: 18px;
+}
+.three-challenger-content{
+    position: relative;
+    right: 2%;
+}
+.scooter{
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  top: 8px;
+  font-style: italic;
+}
+.product-showcase {
+    margin: 80px 0;
+    position: relative;
+}
+
+.image-card-container {
+    position: relative;
+    width: 100%;
+    background: #f0f5ff;
+    border-radius: 20px;
+    overflow: visible;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.challenger-image {
+    max-width: 100%;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+    display: block;
+    position: relative;
+    z-index: 1;
+    /* box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.4); */
+}
+.perfetto-image{
+  /* box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.4); */
+  border-radius: 20px;
+}
+.challenger{
+  font-size: 50px;
+}
+.status_qjo{
+  font-size: 50px;
+  font-weight:600;
+}
+.challenge{
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+  font-style: italic;
+  font-weight: 700;
+}
+.perfetto_logo{
+  width: 50%;
+}
+.challenger_logo{
+  width: 70%;
+}
+.perfect{
+  font-weight: 800;
+  position: relative;
+  top: 10px;
+  font-size: 50px;
+  font-style: italic;
+}
+.etrol_logo{
+  width: 40%;
+}
+.perfetto{
+  font-weight: 800;
+  font-size: 50px;
+  position: relative;
+  top: 14px;
+  font-style: italic;
+}
+.without-pollution{
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+  font-style: italic;
+}
+.image-card-container:hover .challenger-image {
+    transform: scale(1.02);
+}
+
+.product-card {
+    position: absolute;
+    width: 300px;
+    background-color: #eeebeb;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    padding: 30px;
+    right: 26%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.product-card-1 {
+    position: absolute;
+    width: 300px;
+    background-color: #eeebeb;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    padding: 30px;
+    left: 26%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    }
+
+.product-thumbnail {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.product-thumbnail-1 {
+  width: 74%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.product-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 10px;
+    position: relative;
+    top: -30px;
+}
+
+.price-label {
+  font-size: 12px;
+  color: #000000;
+  margin-bottom: 2px;
+  margin-top: -15%;
+}
+
+.price-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  font-size: bold;
+  margin-bottom: -5px;
+}
+
+.price-note {
+  font-size: 10px;
+  color: #000000;
+  margin-bottom: 10px;
+  margin-top: 7px;
+}
+
+.emi-info {
+  font-size: 11px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.product-btn {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  text-align: center;
+  border: none;
+}
+
+.reserve-btn {
+    background: white;
+    color: #333;
+    border: 2px solid #dfdfdf;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserve-btn:hover {
+    background: #f5f5f5;
+}
+
+.learn-btn {
+    background: #000000;
+    color: white;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.learn-btn:hover {
+    background: #444;
+}
+
+.disclaimer {
+    font-size: 11px;
+    color: #888;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+.content-overlay-1 {
+    position: relative;
+    top: -552px;
+    left: 27%;
+    margin-top: -8%;
+    color: white;
+    z-index: 10;
+    max-width: 600px;
+}
+.heading {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 800;
+    font-style: italic;
+}
+.subheading{
+  font-size: 44px;
+  font-weight: 800;
+  font-style: italic;
+}
+.description{
+  font-weight: 600;
+    color: white;
+}
+.learn-more-btn {
+  background: black;
+  color: white;
+  height: 35px;
+  width: 31%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.warranty-content{
+    position: relative;
+    top: -452px;
+    left: 27%;
+    margin-top: -8%;
+    color: white;
+    z-index: 10;
+    max-width: 600px; 
+}
+.challenger-mode{
+    border-radius:20px;
+}
+.warranty-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      position: relative;
+      right: 4%;
+      top: 100px;
+}
+
+.warranty-card {
+  background: rgb(38, 38, 37);
+    border-radius: 20px;
+    padding: 40px;
+    min-width: 250px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.warranty-card:hover {
+    transform: translateY(-10px);
+    background: rgb(38, 38, 37);
+}
+.warranty-number {
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.warranty-type {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.warranty-label {
+  font-size: 1.2rem;
+  color: #fffefe;
+  font-weight: 500;
+  position: relative;
+  top: -10%;
+  font-family: 'Montserrat', sans-serif;
+}
+.warranty-heading {
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+    position: relative;
+    left: 16%;
+    top: 143px;
+    margin-bottom: 1rem;
+    width: 350px;
+    font-style: italic;
+}
+.warranty-subheading {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 4rem;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  position: relative;
+  left: 22%;
+  width: 350px;
+  top: 131px;
+}
+
+.list-section{
+    margin-top:-10%;
+}
+
+.content{
+    padding-top: 15%;
+    padding-left: 10%;
+}
+ .experience-1{
+    color: white;
+    font-weight: 800;
+    font-size: 50px;
+    font-style: italic;
+ }
+ .simple-1{
+    color: white;
+    position: relative;
+    left: 18px;
+ }
+.location-title-subcontent{
+  font-weight:600;
+  font-size:18px;
+}
+.location-title{
+  font-weight:700;
+  font-size: 24px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    width: 63%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: 18%;
+    top: 60px;
+}
+
+.topnav a {
+    color: #040404;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+a:hover{
+  color:black;
+}
+.know_everything{
+  margin-top: 6%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: white;
+  font-style: italic;
+}
+.app-image{
+    width: 100%;
+    position: relative;
+    top: 24px;
+    margin-bottom: 8%;
+}
+.map-container {
+  position: relative;
+    width: 100%;
+    padding-bottom: 60%; 
+    height: 0;
+    left: 10%;
+    top: 60px;
+    overflow: hidden;
+    border-radius: 10px; 
+}
+
+.map-container iframe {
+  position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.visit-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.location-dropdown {
+    cursor: pointer;
+}
+
+.circle-badge {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #f9b827;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.battery-image{
+  width: 100%;
+  height: 100%;
+  margin-top: -2%;
+}
+
+.booking-now{
+  display:none;
+}
+.status_qjo{
+  font-size: 47px;
+  font-weight: 800;
+  color: white;
+  font-style: italic;
+  position: relative;
+  top: 17px;
+}
+.lead{
+  text-align: justify;
+}
+.Robust{
+  text-align: center;
+  margin-top:25px;
+  font-size: 28px;
+}
+.lead-electronics{
+  text-align: justify;
+  position: relative;
+  left: 16%;
+}
+.Robust-electronics{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 28px;
+}
+.image-1 {
+  width:100%;
+}
+.image-2 {
+  width:100%;
+}
+.image-3 {
+  width:100%;
+}
+.image-4 {
+  width:100%;
+}
+.challenger-mode-1{
+  display:none;
+}
+
+:root {
+  --primary-green: #2ECC71;
+  --secondary-green: #27AE60;
+  --accent-yellow: #f5a623;
+  --accent-cyan: #00BFA5;
+  --text-dark: #2C3E50;
+  --text-gray: #6C757D;
+  --bg-light: #F8F9FA;
+  --bg-gray: #E5E8EC;
+}
+.calculator-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 300px 300px;
+  gap: 2rem;
+}
+
+/* Left Column Styles */
+.calculator-left {
+  padding-right: 2rem;
+}
+
+.main-heading {
+    font-size: 26px;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-style: italic;
+}
+
+.main-heading em {
+  font-style: normal;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  color: var(--text-gray);
+  margin-bottom: 2rem;
+}
+.product-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  color: grey; /* <- this sets default grey */
+  
+}
+
+.product-tabs .tab:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #000;
+}
+
+.tab.active-1 {
+  color: black; 
+  font-weight: 700;
+}
+
+
+
+.sliders-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.slider-group {
+  width: 100%;
+    height: 70px;
+}
+
+.slider-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 11px;
+    color:#126583
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider {
+     width: 100%;
+    height: 36px;
+    background: var(--bg-gray);
+    border-radius: 4px;
+    outline: none;
+    -webkit-appearance: none;
+}
+/* .design_develop-image {
+  width: 64%;
+  border-radius: 35px;
+} */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border: 2px solid var(--primary-green);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background: var(--thumb-color, #073763); /* center color (blue/green) */
+  border: 3px solid white; /* white border */
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: var(--thumb-color, #073763);
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+
+.slider-value {
+  position: absolute;
+    top: -30px;
+    right: 0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.slider-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* --- Common Styles --- */
+.calculator-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 42px;
+}
+
+.calculator-middle-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 42px;
+  display:none;
+}
+
+.metric-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: white;
+  width: 60%;
+  height: 28%;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+.metric-card.green {
+  background: #2EAF3B;
+}
+
+.metric-card.yellow {
+  background: var(--accent-yellow);
+}
+.metric-card.cyan {
+  background: var(--accent-cyan);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+.card-value {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.card-footnote {
+    font-size: 10px;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+    color: black;
+    position: relative;
+    top: -8px;
+}
+.unit {
+  font-size: 10px;
+  color:black;
+}
+.inr{
+  color: black;
+}
+/* --- Right Column - Progress Bars --- */
+.calculator-right {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  position: relative;
+  right: 44%;
+}
+.calculator-right-1 {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  position: relative;
+  right: 44%;
+  display: none;
+}
+.monthly-metrics {
+display: flex;
+justify-content: space-evenly;
+margin-bottom: 2rem;
+position: relative;
+left: 0%;
+}
+
+.metric {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+text-align: left;
+position: relative;
+left: 5px;
+}
+
+.metric .label,
+.metric .label-1 {
+  color: var(--text-gray);
+  font-size: 10px;
+  margin-bottom: 0.25rem;
+}
+
+.metric .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  left: 28px;
+}
+
+.metric:first-child .value {
+  color: var(--accent-cyan);
+}
+
+.metric:last-child .value {
+  color: var(--accent-cyan);
+}
+
+
+.progress-bars {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0rem;
+  margin-top: 2rem;
+  position: relative;
+  right: 3%;
+}
+
+.progress-bars-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  position: relative;
+  right: 3%;
+}
+.progress-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.progress-group-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.progress-label {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  color: var(--text-gray);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.progress-bar {
+  width: 36px;
+  height: 260px;
+  background: var(--bg-gray);
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-track {
+  width: 100%;
+  height: 100% ;
+  /* max-height:86% !important; */
+  background: #d9d9d9;
+  border-radius: 18px;
+  position: relative;
+}
+
+.progress-fill {
+  position: absolute;
+  bottom: 0;
+   max-height:245px !important;
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transition: height 0.3s ease;
+}
+
+.progress-fillq .green {
+  background: #00A859;
+  height: 60%;
+}
+
+.progress-fill .yellow {
+  background: #E0A100;
+  height: 20%;
+}
+
+.progress-icon {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.progress-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-symbol {
+  fill: none;
+  stroke: rgb(28 28 28);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.three-challenger-mobile{
+  display:none;
+}
+.three-challenger{
+    display:block;
+    position: relative;
+    top: -2px;
+}
+.calculator-middle-1{
+  display:none;
+}
+.bike-slider-mobile{
+  display: none;
+}
+.button1{
+  border:none;
+  background-color: none;
+}
+.button2{
+  border:none;
+  background-color: none;
+}
+.button3{
+  border:none;
+  background-color: none;
+}
+.reserve-now-three-challenger{
+  background-color: #2C1C10;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  right: 0%;
+}
+.reserve-now-three-challenger:hover{
+  color:white;
+}
+.perfetto_image_mobile{
+  display: none;
+}
+.battery-image-mobile{
+  display:none;
+}
+.know_everything-1{
+  display:block;
+  margin-top: 6%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  font-style: italic;
+  display: none;
+}
+.design_develop-image{
+  width:100%;
+}
+@media(min-width:320px) and (max-width:360px){
+  .map-image{
+    position: relative;
+    top: 20px;
+  }
+  .dealer-card{
+    width: 90%;
+    position: relative;
+    left: 10px;
+  }
+  .dealer-name{
+    font-size: 15px;
+  }
+  .schedule-btn{
+    width: 40%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .perfetto_image_mobile{
+      display: block;
+      position: relative;
+      left: 11px;
+      width: 90%;
+  }
+  .perfetto-image{
+    display: none;
+  }
+  .map-iframe {
+    width: 50%;
+  }
+  .perfetto_logo{
+    width: 100%;
+  }
+  .bike-slider-mobile{
+    display: block;
+  }
+  .challenger {
+    font-size: 20px;
+  }
+  .challenge {
+    font-size: 25px;
+    position: relative;
+    top: 9px;
+  }
+  .status_qjo{
+    font-size: 15px;
+  }
+  .scooter{
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+  }
+  .without-pollution{
+    font-size: 16px;
+  }
+  .produly-design{
+      font-size: 16px;
+      width: 250px;
+      position: relative;
+      right: 12%;
+  }
+  .built-india{
+    font-size: 25px;
+    width: 250px;
+    position: relative;
+    right: 13%;
+    margin-top: -4%;
+  }
+  .quality_compromise{
+      font-size: 10px;
+      position: relative;
+      right: 12%;
+      font-weight: 700;
+      width: 200px;
+  }
+  .reserve-now-three-challenger{
+    position: relative;
+    right: 12%;
+    padding: 7px 20px;
+  }
+  .three-challenger{
+    position: relative;
+    top: 10%;
+    display:none;
+  }
+  .three-challenger-content{
+    position: relative;
+    top: -54px;
+    width: 80%;
+  }
+  .three-challenger-mobile{
+      display: block;
+      position: relative;
+      right: 20%;
+      top: 10px;
+      
+  }
+  .progress-track{
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    position: relative;
+  }
+  .progress-bars{
+    position: relative;
+    right: 10%;
+  }
+  .challenger-mode-1{
+    display: block;
+    margin-top: -23%;
+  }
+  .challenger-mode{
+    display:none;
+  }
+  .reserve-now{
+    display:none;
+  }
+  .booking-now{
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+  }
+  .experience-div{
+    margin-top:-50%;
+  }
+
+  .graph-value-label {
+    display:none;
+  }
+  .savings-graph{
+    margin-top:-450%;
+  }
+  .savings-cards{
+    margin-top: 24px;
+  }
+  .graph-column{
+    position: relative;
+    left: 176px;
+  }
+  .graph-column-1{
+    position: relative;
+    left: 185px;
+  }
+  .graph-label-1{
+    position: relative;
+    left: 193px;
+  }
+  .graph-label{
+    position: relative;
+    left: 164px;
+    top: -306px;
+  }
+  .graph-value{
+    font-size: 13px;
+  }
+  .graph-value-label{
+    position: relative;
+    left: 10px;
+  }
+  .graph-bar-container-1{
+    position: relative;
+    left: 10px;
+  }
+  .calculator-section{
+    display: flex;
+  }
+  .custom-buttons .btn {
+    position: relative;
+    right: 20%;
+    width: 105px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display:none;
+  }
+  .heading{
+    font-size: 26px;
+  }
+  .etrol_logo{
+    width:100%;
+  }
+  .subheading {
+    font-size: 13px;
+    width: 140px;
+  }
+  .heading{
+    font-size: 15px;
+    width: 100px;
+  }
+  .product-card {
+    padding: 20px;
+    width: 70%;
+    position: absolute;
+    height: 61%;
+    top: 66%;
+    left: 14%;
+  }
+  .product-card-1{
+      width: 70%;
+      height: 64%;
+      position: absolute;
+      top: 66%;
+      left: 14%;
+      padding: 20px;
+  }
+  .metric-card{
+    height: 88%;
+    position: relative;
+    right: 11%;
+  }
+  .calculator-middle{
+    width:100px
+  }
+  .card-value{
+    font-size: 12px;
+  }
+  .monthly-metrics{
+    width: 218px;
+  }
+  .hand-icon{
+    width: 10%;
+  }
+  .warranty-type{
+    font-size: 15px;
+    width: 120px;
+  }
+  .warranty-label{
+      font-size: 10px;
+      position: relative;
+      right: 10%;
+  }
+    .product-title {
+      font-size: 15px;
+    }
+
+    .price-amount {
+        font-size: 24px;
+    }
+
+    .emi-info {
+        font-size: 13px;
+    }
+
+    .product-btn {
+        padding: 10px 0;
+        font-size: 13px;
+    }
+    .warranty-heading {
+      font-size: 24px;
+      text-align: center;
+      position: relative;
+      left: 34%;
+      width: 230px;
+    }
+  
+    .warranty-subheading {
+      font-size: 12px;
+      margin-bottom: 1.5rem;
+      position: relative;
+      left: 42%;
+      top: 136px;
+      width: 240px;
+    }
+    .image-1{
+      width: 90%;
+      position: relative;
+      left: 3%;
+      top: -28px;
+    }
+    .image-2{
+      width: 90%;
+      position: relative;
+      left: 3%;
+      top: -84px;
+    }
+    .image-3{
+      width: 90%;
+      position: relative;
+      left: 3%;
+      top: -147px;
+    }
+    .image-4{
+      width: 90%;
+      position: relative;
+      left: 3%;
+      margin-top: -68%;
+      border-radius: 18px;
+    }
+    .custom-selected{
+      position: relative;
+      left: 4%;
+    }
+    .know_everything{
+      font-size: 22px;
+    }
+    .lead-1{
+      position: relative;
+      top: -4px;
+      font-size: 10px;
+    }
+    .lead-2{
+      position: relative;
+      top: -52px;
+      font-size: 10px;
+    }
+    .lead-3{
+      position: relative;
+      top: -123px;
+      font-size: 10px;
+    }
+    .lead-4{
+      position: relative;
+      top: -176px;
+      font-size: 10px;
+    }
+    .display-1{
+      font-size: 25px;
+    }
+    .display-2{
+      font-size: 25px;
+      position: relative;
+      top: -50px;
+    }
+    .display-3{
+      font-size: 25px;
+        position: relative;
+        top: -118px;
+    }
+    .display-4{
+      font-size: 25px;
+      position: relative;
+      top: -175px;
+    }
+    #chassis {
+      margin-top: -10%;
+    }
+    .warranty-number {
+      font-size: 60px;
+    }
+  
+    .warranty-card {
+      min-width: 90%;
+    }
+    .topnav{
+      width: 100%;
+      position: relative;
+      left: 0%;
+      font-size: 2px;
+    }
+    .topnav a{
+      font-size: 9px;
+    }
+    .challenger-mode{
+      width: 100%;
+      height: 100vh;
+      margin-top: -25%;
+      margin-bottom: -38%;
+    }
+    .warranty-cards {
+      flex-direction: column;
+      width: 60%;
+      height: 309px;
+      left: 44%;
+      top: 307px;
+    }
+    .warranty-card {
+      width: 90%;
+      position: relative;
+      left: 5%;
+    }
+    .warranty-content{
+      position: relative;
+      left: -25%;
+      top: -875px;
+      /* width: 340px; */
+    }
+    .battery-image{
+      width: 100%;
+      height: 50vh;
+      margin-top: -7%;
+      display:none;
+    }
+    .content-overlay-1{
+        position: relative;
+        top: -234px;
+        left: 5%;
+        width: 200px;
+    }
+    .challenger-image{
+      height: 100vh;
+      margin-top: 10%;
+      display: none;
+    }
+    .content{
+      width: 100%;
+    }
+    .experience{
+      text-align: left;
+      font-size: 26px;
+      position: relative;
+      left: 14%;
+      width: 165px;
+      margin-top: 10%;
+    }
+    .simple{
+      font-size: 15px;
+      position: relative;
+      left: 13%;
+      width: 170px;
+      top: 0px;
+    }
+    .experience-image{
+      width:100%;
+    }
+    .bike-slider{
+      max-width: 100%;
+      height: 100vh;
+      display: none;
+    }
+    .custom-buttons .btn{
+      position: relative;
+      right: 20%;
+    }
+    .custom-buttons{
+      display: flex;
+    }
+    .reserve-now {
+      position: relative;
+      right: 20%;
+      font-size: 12px;
+    }
+    .custom-caption{
+      position: absolute;
+      top: 220px;
+      left: 12px;
+      width: 250px;
+    }
+    .custom-caption h1{
+      font-size: 25px;
+      position: relative;
+      right: 0%;
+    }
+    .map-container{
+        width: 80%;
+        position: relative;
+        left: 22px;
+        top: 12%;
+    }
+    #map-iframe{
+      width: 100%;
+    }
+    .experience-div{
+      margin-top: -100%;
+    }
+    .savings-calculator{
+      margin-top:-15%;
+    }
+    .savings-title{
+      position:  relative;
+      margin-top: -10%;
+    }
+    .description{
+      color: white;
+      font-size: 10px;
+      width: 250px;
+    }
+    .calculator-middle{
+      grid-template-columns: 1fr 1fr;
+      flex-direction: row;
+    }
+    .perfect{
+      font-size: 26px;
+    }
+    .challenger_logo {
+      width: 100%;
+    }
+    .main-heading{
+      font-size: 15px;
+    }
+    .sub-heading{
+      font-size: 18px;
+    }
+    .battery-image-mobile{
+      display:block;
+      margin-top: -28px;
+      width: 100%;
+    }
+    .location-title{
+      font-size: 15px;
+      width: 150px;
+      position: relative;
+      left: 6%;
+    }
+    .dealer-subtitle{
+      font-size: 8px;
+    }
+    .location-dropdown{
+      font-size:20px;
+      width: 150px;
+    }
+    .visit-title{
+      font-size: 18px;
+      width: 250px;
+    }
+    .disclaimer{
+      font-size: 10px;
+    }
+    .calculator-middle{
+      width: 100%;
+      position: relative;
+    }
+    .metric:first-child .value{
+              font-size: 16px;
+        position: relative;
+        left: 82px;
+        top: 8px;
+  }
+  .metric:last-child .value{
+                  font-size: 16px;
+        position: relative;
+        left: 95px;
+        top: 7px;
+      }
+  .metric .label, .metric .label-1{
+    position: relative;
+    left: 80px;
+  }
+  .tab{
+    border:2px solid black;
+  }
+   .Robust{
+    font-size: 20px;
+    position: relative;
+    left: 16px;
+    top: 8px;
+  }
+  .lead{
+    font-size: 10px;
+    position: relative;
+    left: 18px;
+    top: 0px;
+  }
+  .unit{
+    color:black;
+  }
+
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .experience-1{
+    font-size: 40px;;
+  }
+  .simple-1{
+    position: relative;
+    left: 10px;
+    width: 95%;
+  }
+  .unit{
+    color:black;
+  }
+    /* .design_develop-image {
+      width: 90%;
+      border-radius: 20px;
+    } */  
+  .Robust{
+      font-size: 13px;
+      position: relative;
+      left: 0;
+      top: 0px;
+      text-align: center;
+  }
+  .lead{
+    font-size: 10px;
+    position: relative;
+    left: 23px;
+    top: -15px;
+     width:200px;
+  }
+  .tab{
+    border:2px solid black;
+  }
+  .location-header {
+    position: relative;
+    left: 20px;
+    width: 100px;
+  }
+  .hand-icon {
+    position: relative;
+    top: -50px;
+  }
+  .avg{
+    font-size: 7px;
+  }
+  .metric-card{
+    width: 64%;
+    height: 84%;
+    position: relative;
+    right: 12%;
+    margin-bottom: 10px;
+  }
+  .metric:first-child .value{
+              font-size: 16px;
+        position: relative;
+        left: 12px;
+        top: -10px;
+  }
+  .metric:last-child .value{
+      font-size: 16px;
+      position: relative;
+      left: 14px;
+      top: -12px;
+  }
+  .progress-group{
+    position: relative;
+    left: 18%;
+  }
+  .progress-group-1{
+    position: relative;
+    left: 18%;
+  }
+  .calculator-middle-2{
+    width: 70%;
+    position: relative;
+    right: 8%;
+    top: -14px;
+    display: block;
+  }
+  .calculator-middle {
+    display: none;
+  }
+  .progress-label{
+    position: relative;
+    left: 10px;
+  }
+  .calculator-right-1{
+    position: relative;
+    left: 21%;
+    margin-top: -102%;
+    display: block;
+    width: 200px;
+  }
+  .calculator-right{
+    display:none;
+  }
+  .progress-bars-1{
+    gap: 0;
+    width: 68%;
+  }
+  .monthly-metrics{
+    position: inherit;
+    top: 26px;
+    width: 150px;
+  }
+  .card-value {
+    font-size: 14px;
+  }
+  .card-footnote{
+    font-size: 10px;
+  }
+  .map-image{
+    position: relative;
+    top: 20px;
+    right: 1%;
+    max-width: 10%;
+  }
+  .map-container {
+    width: 50%;
+    top:10px;
+  }
+  .dealer-card{
+    width: 90%;
+    position: relative;
+    left: 10px;
+  }
+  .dealer-name{
+    font-size: 15px;
+  }
+  .schedule-btn{
+    width: 40%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .perfetto_image_mobile{
+    display: block;
+    position: relative;
+    left: 18px;
+    width: 90%;
+  }
+  .perfetto-image{
+    display: none;
+  }
+  .map-iframe {
+    width: 50%;
+  }
+  .perfetto_logo{
+    width: 100%;
+  }
+  .bike-slider-mobile{
+    display: block;
+  }
+  .challenger {
+    font-size: 20px;
+  }
+  .challenge {
+    font-size: 25px;
+    position: relative;
+    top: 9px;
+  }
+  .status_qjo{
+    font-size: 28px;
+    width: 210px;
+  }
+  .scooter{
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+  }
+  .without-pollution{
+    font-size: 16px;
+  }
+  .produly-design{
+    font-size: 17px;
+    width: 250px;
+    position: relative;
+    left: 0%;
+  }
+  .built-india{
+    font-size: 30px;
+    width: 250px;
+    position: relative;
+    left: 0%;
+    margin-top: -4%;
+    top: 0px;
+  }
+  .quality_compromise{
+    font-size: 10px;
+    position: relative;
+    left: 0%;
+    font-weight: 700;
+    width: 200px;
+  }
+  .reserve-now-three-challenger{
+    position: relative;
+    left: 20%;
+    padding: 7px 20px;
+  }
+  .three-challenger{
+    position: relative;
+    top: 10%;
+    display:none;
+  }
+  .three-challenger-content{
+    position: relative;
+    top: -54px;
+    width: 80%;
+    left: 10px;
+  }
+  .three-challenger-mobile{
+    display: block;
+    position: relative;
+    right: 35%;
+    top: 10px;
+    max-width: 146%;
+  }
+  .progress-track{
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    position: relative;
+  }
+  .progress-bars{
+    position: relative;
+    right: 10%;
+  }
+  .challenger-mode-1{
+    display: block;
+    margin-top: -23%;
+  }
+  .challenger-mode{
+    display:none;
+  }
+  .reserve-now{
+    display:none;
+  }
+  .booking-now{
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+  }
+  .experience-div{
+    margin-top:-50%;
+  }
+
+  .graph-value-label {
+    display:none;
+  }
+  .savings-graph{
+    margin-top:-450%;
+  }
+  .savings-cards{
+    margin-top: 24px;
+  }
+  .graph-column{
+    position: relative;
+    left: 176px;
+  }
+  .graph-column-1{
+    position: relative;
+    left: 185px;
+  }
+  .graph-label-1{
+    position: relative;
+    left: 193px;
+  }
+  .graph-label{
+    position: relative;
+    left: 164px;
+    top: -306px;
+  }
+  .graph-value{
+    font-size: 13px;
+  }
+  .graph-value-label{
+    position: relative;
+    left: 10px;
+  }
+  .graph-bar-container-1{
+    position: relative;
+    left: 10px;
+  }
+  .calculator-section{
+    display: flex;
+  }
+  .custom-buttons .btn {
+    position: relative;
+    right: 20%;
+    width: 105px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display:none;
+  }
+  .heading{
+      font-size: 26px;
+      width: 200px;
+  }
+  .etrol_logo{
+    width:100%;
+  }
+  .subheading {
+    font-size: 25px;
+    width: 250px;
+  }
+  .product-card {
+    padding: 20px;
+    width: 68%;
+    position: absolute;
+    height: 54%;
+    top: 68%;
+    left: 16%;
+  }
+  .product-card-1{
+    width: 68%;
+    height: 54%;
+    position: absolute;
+    top: 68%;
+    left: 15%;
+    padding: 20px;
+  }
+  .warranty-type{
+    font-size: 15px;
+    width: 120px;
+  }
+  .warranty-label{
+    font-size: 13px;
+    position: relative;
+    right: 3px;
+  }
+    .product-title {
+      font-size: 20px;
+    }
+
+    .price-amount {
+        font-size: 24px;
+    }
+
+    .emi-info {
+        font-size: 13px;
+    }
+
+    .product-btn {
+        padding: 5px 0;
+        font-size: 13px;
+    }
+    .warranty-heading {
+      font-size: 35px;
+      text-align: center;
+      position: relative;
+      left: 34%;
+      top: 144px;
+      width: 300px;
+      margin-top: -60%;
+    }
+  
+    .warranty-subheading {
+      font-size: 12px;
+      margin-bottom: 1.5rem;
+      position: relative;
+      left: 42%;
+      top: 136px;
+      width: 240px;
+    }
+    .image-1{
+      width: 85%;
+      position: relative;
+      left: 6%;
+      top: -24px;
+    }
+    .image-2{
+      width: 85%;
+      position: relative;
+      left: 6%;
+      top: -69px;
+    }
+    .image-3{
+      width: 85%;
+      position: relative;
+      left: 6%;
+      top: -120px;
+    }
+    .image-4{
+      width: 85%;
+      position: relative;
+      left: 6%;
+      margin-top: -43%;
+      border-radius: 18px;
+    }
+    .know_everything{
+      font-size: 22px;
+    }
+    .lead-1{
+      position: relative;
+      top: -4px;
+      font-size: 10px;
+    }
+    .lead-2{
+      position: relative;
+      top: -45px;
+      font-size: 10px;
+    }
+    .lead-3{
+        position: relative;
+        top: -99px;
+        font-size: 10px;
+    }
+    .lead-4{
+    position: relative;
+    top: -145px;
+    font-size: 10px;
+    }
+    .display-1{
+      font-size: 25px;
+    }
+    .display-2{
+      font-size: 25px;
+      position: relative;
+      top: -43px;
+    }
+    .display-3{
+      font-size: 25px;
+      position: relative;
+      top: -98px;
+    }
+    .display-4{
+    font-size: 25px;
+    position: relative;
+    top: -141px;
+    }
+    #chassis {
+      margin-top: 0;
+      position: relative;
+      width: 90%;
+    }
+    #motor{
+     margin-top: 0;
+      position: relative;
+      width: 90%;
+    }
+    #battery {
+      margin-top: 0;
+      position: relative;
+      width: 90%;
+    }
+    #electronics{
+      margin-top: 0;
+      position: relative;
+      /* min-width: 133%; */
+    }
+  .Robust-electronics{
+      position: relative;
+      /* left: 13%; */
+top:0px;
+      font-size: 13px;
+      /* width: 350px; */
+    }
+    .lead-electronics{
+    position: relative;
+    left: 19%;
+    font-size: 10px;
+    width:200px;
+    }
+    .warranty-number {
+      font-size: 60px;
+    }
+  
+    .warranty-card {
+      min-width: 90%;
+    }
+    .topnav a{
+      font-size: 12px;
+    }
+    .challenger-mode{
+      width: 100%;
+      height: 100vh;
+      margin-top: -25%;
+      margin-bottom: -38%;
+    }
+    .warranty-cards {
+      flex-direction: column;
+      width: 60%;
+      height: 309px;
+      left: 44%;
+      margin-top: 108%;
+      top: 128px;
+    }
+    .warranty-card {
+      width: 90%;
+      position: relative;
+      left: 5%;
+    }
+    .warranty-content{
+      position: relative;
+      left: -25%;
+      top: -875px;
+      /* width: 340px; */
+    }
+    .battery-image{
+      width: 100%;
+      height: 50vh;
+      margin-top: -7%;
+      display:none;
+    }
+    .content-overlay-1{
+      position: relative;
+      top: -270px;
+      left: 15%;
+      width: 280px;
+    }
+    .challenger-image{
+      height: 100vh;
+      margin-top: 10%;
+      display: none;
+    }
+    .content{
+      width: 100%;
+    }
+    .experience{
+      text-align: left;
+      font-size: 26px;
+      position: relative;
+      left: 14%;
+      width: 165px;
+      margin-top: 10%;
+    }
+    .simple{
+      font-size: 15px;
+      /* position: relative;
+      left: 13%; */
+      width: 170px;
+      top: 0px;
+    }
+    .experience-image{
+      width:100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bike-slider{
+      max-width: 100%;
+      height: 100vh;
+      display: none;
+    }
+    .custom-buttons .btn{
+      position: relative;
+      right: 20%;
+    }
+    .custom-buttons{
+      display: flex;
+    }
+    .reserve-now {
+      position: relative;
+      right: 20%;
+      font-size: 12px;
+    }
+    .custom-caption{
+      position: absolute;
+      top: 285px;
+      left: 12px;
+      width: 250px;
+    }
+    .custom-caption h1{
+      font-size: 25px;
+      position: relative;
+      right: 0%;
+    }
+    .map-container{
+      width: 81%;
+      position: relative;
+      top: 34px;
+      left: 16px;
+    }
+    #map-iframe{
+      width: 100%;
+    }
+    .experience-div{
+      margin-top: -100%;
+    }
+    .savings-calculator{
+      margin-top:-15%;
+    }
+    .savings-title{
+      position:  relative;
+      margin-top: -10%;
+    }
+    .description{
+        color: white;
+        font-size: 10px;
+        width: 270px;
+    }
+    .calculator-middle{
+      grid-template-columns: 1fr 1fr;
+      flex-direction: row;
+    }
+    .perfect{
+      font-size: 26px;
+    }
+    .challenger_logo {
+      width: 100%;
+    }
+    .main-heading{
+       font-size: 18px;
+    }
+    .sub-heading{
+      font-size: 18px;
+    }
+    .battery-image-mobile{
+      display:block;
+      margin-top: -28px;
+      width: 100%;
+    }
+    .location-title{
+      font-size: 21px;
+      position: relative;
+      width: 300px;
+      left: 0%;
+    }
+    .location-dropdown{
+      font-size:20px;
+      width:200px;
+    }
+    .visit-title{
+      font-size: 18px;
+      width: 250px;
+      position: relative;
+      left: 20px;
+    }
+    .topnav{
+      width: 96%;
+      position: relative;
+      left: 2%;
+      font-size: 2px;
+    }
+    .topnav a {
+      font-size: 10px;
+    }
+    .know_everything-1{
+      display:block;
+    }
+    .know_everything{
+      display:none;
+    }
+    .text-white-1{
+              display: block;
+        color: white;
+        text-align: center;
+    }
+    .text-white-2{
+      display: none;
+    }
+    .learn-more-btn{
+      width: 50%;
+      font-size: 15px;
+      position: relative;
+      left: 20%;
+    }
+}
+@media (min-width:481px) and (max-width: 767px) {
+  .electronics-image{
+      max-width: 68%;
+  }
+  .learn-more-btn{
+      width:50%;
+      font-size:15px;
+    }
+   #chassis {
+      margin-top: 0;
+      position: relative;
+      width: 90%;
+    }
+    #motor{
+     margin-top: 0;
+      position: relative;
+      width: 90%;
+    }
+    #battery {
+      margin-top: 0;
+      position: relative;
+      width: 90%;
+    }
+    #electronics{
+      margin-top: 0;
+      position: relative;
+      min-width: 133%;
+    }
+  .Robust-electronics{
+      position: relative;
+      left: 19%;
+      font-size: 20px;
+      width: 430px;
+    }
+    .lead-electronics{
+    position: relative;
+    left: 19%;
+    font-size: 10px;
+    width:300px;
+    }
+  .Robust{
+    font-size: 22px;
+    position: relative;
+    top: -11px;
+  }
+  .lead{
+    font-size: 10px;
+    position: relative;
+    top: -15px;
+  }
+  .produly-design{
+    font-size: 22px;
+  }
+    .built-india {
+    font-size: 38px;
+    }
+  .tab{
+    border:2px solid black;
+  }
+  .status_qjo{
+    position: relative;
+    top: 1px;
+    font-size: 17px;
+  } 
+  .challenge{
+    font-size: 15px;
+    position: relative;
+    top: 14px;
+  }
+  .etrol_logo{
+      width: 28%;
+      position: relative;
+      top: 20px;
+  }
+  .custom-caption{
+      position: absolute;
+      top: 57%;
+      left: 5%;
+  }
+  .map-image{
+    position: relative;
+    top: 20px;
+    right: 1%;
+    max-width: 100%;
+  }
+  .three-challenger-content{
+      width: 350px;
+      position: relative;
+      left: 6%;
+  }
+  .visit-title{
+    width: 300px;
+    position: relative;
+    left: 4%;
+  }
+  .location-title{
+    font-size: 18px;
+    width: 270px;
+    position: relative;
+    left: 0;
+  }
+  .location-dropdown{
+    font-size: 20px;
+    width: 200px;
+    position: relative;
+    left: 5%;
+  }
+
+    .dealer-card{
+      width: 90%;
+      position: relative;
+      left: 10px; 
+    }
+    .know_everything-1{
+    display:block;
+    margin-top: 6%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    font-style: italic;
+    }
+    .know_everything{
+    display:none;
+    }
+    /* #chassis {
+      margin-top: 0%;
+      position: relative;
+      left: 5%;
+      width: 250px;
+    } */
+    .lead-1, .lead-2, .lead-3, .lead-4{
+      font-size: 11px;
+    }
+    .image-1{
+      width: 85%;
+      position: relative;
+      left: 6%;
+      top: -28px;
+    }
+    .image-2{
+      width: 85%;
+      position: relative;
+      left: 6%;
+    }
+    .image-3{
+      width: 85%;
+      position: relative;
+      left: 6%;
+    }
+    .image-4{
+      width: 85%;
+      position: relative;
+      left: 6%;
+      border-radius: 18px;
+    }
+    .topnav{
+        width: 82%;
+        position: relative;
+        left: 8%;
+    }
+    .topnav a{
+      font-size: 12px;
+    }
+    .metric-card{
+      width:80%;
+      
+    }
+    .hand-icon{
+      position: relative;
+      top: -58px;
+      right: 14px;
+    }
+    .progress-group{
+      position: relative;
+      left: 18%;
+    }
+    .progress-group-1{
+      position: relative;
+      left: 18%;
+    }
+    .metric-card{
+      width: 64%;
+      height: 84%;
+      position: relative;
+      right: 12%;
+      margin-bottom: 10px;
+    }
+    .metric:first-child .value{
+      font-size: 16px;
+      position: relative;
+      right: 42px;
+      top: 0px;
+    }
+    .metric:last-child .value{
+      font-size: 16px;
+      position: relative;
+      right: 18px;
+      top: 0px;
+    }
+    .calculator-middle-2{
+      width: 70%;
+      position: relative;
+      right: 6%;
+      top: 10px;
+      display: block;
+    }
+    .calculator-middle {
+      display: none;
+    }
+    .progress-label{
+      position: relative;
+      left: 10px;
+    }
+    .calculator-right-1{
+      position: relative;
+      left: 21%;
+      margin-top: -102%;
+      display: block;
+      width: 200px;
+    }
+    .calculator-right{
+      display:none;
+    }
+    .battery-image-mobile{
+      display:none;
+    }
+    .perfetto_image_mobile{
+      display: block;
+      position: relative;
+      left: 0;
+      width: 90%;
+      margin-bottom: 10%;
+    }
+    .perfetto-image{
+      display: none;
+    }
+    .map-container{
+      width: 90%;
+      position: relative;
+      top: 35px;
+      left: 2px;
+    }
+    #map-iframe{
+      width: 80%;
+    }
+    .bike-slider-mobile {
+      display: none;
+    }
+    .bike-slider{
+      display:block;
+    }
+    .main-heading{
+      font-size: 24px;
+    }
+    .challenger-mode-1{
+      display: block;
+      width: 100%;
+      margin-top: -16%;
+      height: 850px;
+      border-radius: 30px;
+    }
+    .challenger-mode {
+      display: none;
+    }
+    .three-challenger {
+      position: relative;
+      right: 10%;
+      top: 4%;
+    }
+    .battery-image{
+      margin-top: -5%;
+      display:block;    
+    }
+    .warranty-heading {
+      font-size: 31px;
+      width: 310px;
+      position: relative;
+      left: -24%;
+      top: 80px;
+    }
+
+    .warranty-subheading {
+      margin-bottom: 2rem;
+      width: 250px;
+      position: relative;
+      left: 8%;
+      font-size: 13px;
+      top: 86px;
+    }
+
+    .warranty-number {
+      font-size: 3.5rem;
+    }
+
+    .warranty-card {
+      padding: 25px;
+    }
+    .product-showcase .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .challenger-image {
+      max-width: 100%;
+      height: 100vh;
+      display:none;
+    }
+
+    .product-card {
+      position: relative;
+      width: 60%;
+      right: auto;
+      top: -155px;
+      transform: none;
+      margin-top: -100%;
+    }
+    .product-card-1{
+      position: relative;
+      width: 60%;
+      left: auto;
+      top: -155px;
+      transform: none;
+      margin-top: -100%;
+    }
+   
+    .challenger_logo{
+      width:30%;
+      position: relative;
+      top: 20px;
+    }
+    
+    .content-overlay-1{
+        position: relative;
+        top: -167px;
+        left: 21%;
+        width: 250px;
+    }
+    .heading{
+      font-size: 21px;
+      position: relative;
+      top: 13px;
+      width: 200px;
+    }
+    .subheading{
+      width: 260px;
+      font-size: 23px;
+      position: relative;
+      top: 0;
+    }
+    .description{
+      width: 310px;
+      position: relative;
+      /* top: 10px; */
+      font-size: 10px;
+      font-weight: 700;
+      color: white;
+    }
+    .challenger{
+      font-size: 25px;
+      position: relative;
+      top: 17px;
+    }
+    
+    .perfetto {
+      font-size: 25px;
+      position: relative;
+      top: 17px;
+    }
+    .without-pollution{
+      font-size: 15px;
+      position: relative;
+      top: 4px;
+    }
+    .scooter{
+      position: relative;
+      top: 2px;
+      font-size: 18px;
+    }
+    
+    .challenger-mode{
+      width: 100%;
+      height: 100vh;
+      margin-top: -20%;
+    }
+    .warranty-cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 190px;
+        position: relative;
+        left: 20%;
+        top: 78px;
+    }
+    .warranty-content{
+      margin-top: -80%;
+      width: 100px;
+    }
+    .experience-div{
+      margin-top:-50%;
+    }
+    .display-1{
+      font-size: 25px;
+    }
+    .display-2{
+      font-size: 25px;
+    }
+    .display-3{
+      font-size: 25px;
+    }
+    .display-4{
+      font-size: 25px;
+    }
+    .custom-buttons{
+      position: relative;
+      top: 0;
+      width: 100%;
+      right: 0px;
+    }
+    .warranty-type{
+      font-size: 13px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .warranty-label {
+      font-size: 13px;
+      font-family: 'Montserrat', sans-serif;
+  }
+  .know_everything{
+    font-size: 24px;
+  }
+  .text-white-2{
+    font-size: 10px;
+    display: none;
+  }
+  .text-white-1{
+    color: white;
+    display: block;
+    text-align:center;
+  }
+  .warranty-section{
+    margin-bottom:30px;
+  }
+  .simple{
+    width: 218px;
+    font-size: 16px;
+    /* position: relative;
+    left: 12%; */
+  }
+
+}
+
+@media (min-width:767px) and (max-width:1024px){
+  .electronics-image{
+      max-width: 68%;
+  }
+    .product-title{
+      position: relative;
+      top:-10px;
+    }
+  .side_column{
+    width:50%;
+  }
+  .metric{
+    position: relative;
+        left: 55px;
+    }
+  #cityDropdown{
+    width:70%;
+  }
+   #chassis {
+      margin-top: 0;
+      position: relative;
+      width: 90%;
+    }
+    .learn-more-btn{
+      width:50%;
+      font-size:15px;
+    }
+    #motor{
+     margin-top: 0;
+      position: relative;
+      width: 90%;
+    }
+    #battery {
+      margin-top: 0;
+      position: relative;
+      width: 90%;
+    }
+    #electronics{
+      margin-top: 0;
+      position: relative;
+      min-width: 133%;
+    }
+  .Robust-electronics{
+    position: relative;
+    /* left: 19%; */
+    font-size: 21px;
+    }
+    .lead-electronics{
+    position: relative;
+    left: 19%;
+    font-size: 15px;
+    }
+  .Robust{
+    font-size: 21px;
+    position: relative;
+    top: -11px;
+  }
+  .lead{
+    font-size: 15px;
+    position: relative;
+    top: -15px;
+  }
+  .topnav{
+    width:100%;
+    position: relative;
+    left:0;
+  }
+  .metric .value{
+        position: relative;
+        left: 0;
+  }
+  .metric:last-child .value{
+       
+         position: relative;
+        left: 20px;
+  }
+  .tab{
+    border:2px solid black;
+  }
+  .know_everything-1{
+    display:none;
+  }
+  .know_everything{
+    display:block;
+  }
+  .text-white-2{
+    font-size: 14px;
+    display: block;
+  }
+  .text-white-1{
+    color: white;
+    display: none;
+  }
+  .hand-icon{
+    left: 4px;
+    top: -72px;
+    width: 35px;
+    height: 34px;
+  }
+  .card-value{
+    font-size: 18px;
+  }
+  .main-heading{
+    font-size:20px ;
+  }
+  .map-image{
+    width: 80%;
+    position: relative;
+    top: 25px;
+  }
+  .simple{
+    width: 250px;
+    position: relative;
+    left: 10%;
+  }
+  .warranty-content{
+    width: 500px;
+  }
+  .without-pollution{
+    font-size: 20px;
+  }
+  .perfetto-image{
+    width: 100%;
+    height: 65vh;
+    margin-bottom: 8%;
+  }
+  .custom-caption{
+    position: absolute;
+    top: 56%;
+    left: 10%;
+  }
+  .challenger{
+    font-size: 25px;
+  }
+  .challenge{
+    font-size: 20px;
+  }
+  .status_qjo{
+    font-size: 20px;
+  }
+  .perfetto{
+    font-size: 30px;
+    position: relative;
+    top: 23px;
+  }
+  .three-challenger-content{
+      position: relative;
+      left: 5px;
+      top: -15px;
+      width: 500px;
+  }
+  .three-challenger{
+    width: 70%;
+    position: relative;
+    left: 8%;
+  }
+  .battery-image{
+    margin-top: -28px;
+  }
+  .warranty-cards {
+    width: 80%;
+    position: relative;
+    top: 202px;
+    left: 6%;
+  }
+  .challenger-mode {
+    width: 100%;
+    margin-top: -4%;
+    margin-bottom: -10%;
+  }
+  .warranty-subheading {
+    position: relative;
+    top: 220px;
+  }
+  .warranty-heading{
+    position: relative;
+    top: 225px;
+  }
+  .content-overlay-1{
+    position: relative;
+    top: -259px;
+  }
+  .subheading{
+    font-size: 30px;
+  }
+  .heading{
+    position: relative;
+    top: 0;
+    font-size: 30px;
+  }
+  .description{
+    font-size: 12px;
+    color: white;
+  }
+  .progress-bars{
+    position: relative;
+    left: 18%;
+  }
+  .content-overlay-1 {
+    position: relative;
+    top: -248px;
+    left: 22%;
+}
+  .product-card{
+    position: absolute;
+    right: 6%;
+  }
+  .product-card-1{
+    position: absolute;
+    left: 6%;
+  }
+  .display-1{
+    font-size: 40px;
+  }
+  .display-2{
+    font-size: 40px;
+  }
+  .display-3 {
+    font-size: 40px;
+  }
+  .display-4{
+    font-size: 40px;
+  }
+  .lead-1, .lead-2, .lead-3, .lead-4{
+    font-size: 13px;
+  }
+  .know_everything{
+    font-size: 32px;
+  }
+  .map-iframe{
+    width: 100%;
+    position: relative;
+    top: 50px;
+  }
+  .map-container{
+      max-width: 100%;
+      position: relative;
+      top: 23%;
+  }
+  .produly-design{
+    width: 400px;
+    font-size: 28px;
+  }
+  .built-india{
+    width: 400px;
+    font-size: 49px;
+    position: relative;
+    top: -10px;
+  }
+  .quality_compromise{
+    width: 300px;
+    font-size: 17px;
+  }
+  .metric-card{
+    width:80%;
+    max-height: 130px !important;
+  }
+  .scooter{
+    position: relative;
+    top: 28px;
+  }
+  .perfect{
+     position: relative;
+    top: 25px;
+  }
+  .perfetto_logo{
+    position: relative;
+    top: 20px;
+  }
+  .etrol_logo {
+    top: 19px;
+    position: relative;
+  }
+}
+
+@media (min-width:1025px) and (max-width:1280px) {
+
+  .tab{
+    border:2px solid black;
+  }
+  .map-image{
+    width: 80%;
+    position: relative;
+    top: 25px;
+  }
+  .map-container{
+    width: 93%;
+  }
+  .know_everything-1{
+    display:none;
+  }
+  .know_everything{
+    display:block;
+  }
+  .text-white-2{
+    font-size: 18px;
+    display: block;
+  }
+  .text-white-1{
+    color: white;
+    display: none;
+  }
+  .simple {
+    left: 17%;
+    width: 250px;
+  }
+  .metric-card{
+    width: 62%;
+    position: relative;
+    left: 10%;
+  }
+  .hand-icon{
+    position: relative;
+    top: -62px;
+  }
+  .warranty-number{
+    font-size: 40px;
+  }
+  .warranty-type{
+    font-size: 14px;
+  }
+  .warranty-label{
+    font-size: 14px;
+  }
+  .three-challenger{
+    position: relative;
+    left: 5%;
+  }
+  .content-overlay-1{
+    position: relative;
+    top: -232px;
+    left: 22%;
+  }
+  .description {
+    color:white;
+    font-size: 14px;
+  }
+  .subheading{
+    font-size: 30px;
+  }
+  .heading{
+    font-size: 25px;
+  }
+  .status_qjo{
+    font-size: 20px;
+  }
+  .challenger {
+    font-size: 20px;
+  }
+  .perfetto{
+    font-size: 42px;
+  }
+  .warranty-cards{
+    width: 80%;
+    position: relative;
+    top: 220px;
+    left: -3%;
+  }
+  .challenger-mode {
+    width: 100%;
+    margin-top: -6%;
+    margin-bottom: -10%;
+  }
+  .warranty-subheading{
+    position: relative;
+    top: 230px;
+  }
+  .warranty-heading{
+    position: relative;
+    top: 230px;
+  }
+  .product-card{
+    position: absolute;
+    right: 10%;
+  }
+  .product-card-1{
+    position: absolute;
+    left: 10%;
+  }
+  .experience-div{
+    margin-top: 4%;
+  }
+  .three-challenger-content{
+    position: relative;
+    left: 0;
+  }
+  .produly-design{
+   font-size: 26px;
+  }
+  .built-india{
+    font-size:40px;
+  }
+  
+}
+@media (min-width:1281px) and (max-width:1440px) {
+  .three-challenger-content{
+    position: relative;
+    left: 0;
+  }
+  .three-challenger{
+    width: 100%;
+  }
+  .produly-design{
+    font-size: 28px;
+  }
+  .built-india{
+    font-size: 48px;
+  }
+   .map-image{
+    width: 94%;
+    position: relative;
+    top: 25px;
+  }
+  .map-container{
+    width: 93%;
+  }
+  .content-overlay-1{
+      position: relative;
+      top: -380px;
+      left: 22%;
+  }
+  .subheading{
+    font-size: 36px;
+  }
+  .description{
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+  }
+  .product-card{
+    position: absolute;
+    right: 13%;
+  }
+  .learn-more-btn{
+    position: relative;
+    top:20px;
+  }
+  .product-card-1{
+    position: absolute;
+    left: 13%;
+  }
+  .know_everything-1{
+    display:none;
+  }
+  .know_everything{
+    display:block;
+  }
+  .text-white-2{
+    font-size: 18px;
+    display: block;
+text-align:center;
+  }
+  .text-white-1{
+    color: white;
+    display: none;
+  }
+  .topnav{
+    width: 90%;
+    position: relative;
+    left: 5%;
+  }
+}
+
+@media (min-width:1441px) and (max-width:1580px) {
+  .three-challenger-content{
+    position: relative;
+    left: 0;
+  }
+   .three-challenger{
+    width: 100%;
+  }
+  .produly-design{
+    font-size: 28px;
+  }
+  .built-india{
+    font-size: 48px;
+  }
+  .content-overlay-1{
+      top: -330px;
+      left: 22%;
+  }
+  .subheading{
+    font-size: 36px;
+  }
+  .description{
+    font-size: 15px;
+  }
+  .product-card{
+    position: absolute;
+    right: 16%;
+  }
+  .product-card-1{
+    position: absolute;
+    left: 16%;
+  }
+  .know_everything-1{
+    display:none;
+  }
+  .know_everything{
+    display:block;
+  }
+  .text-white-2{
+        font-size: 20px;
+        display: block;
+  }
+  .text-white-1{
+    color: white;
+    display: none;
+  }
+}
+@media(min-width:1581px) and (max-width:1680px){
+  .content-overlay-1{
+      top: -330px;
+      left: 22%;
+  }
+   .three-challenger-content{
+    position: relative;
+    left: 0;
+  }
+   .three-challenger{
+    width: 100%;
+  }
+  .produly-design{
+    font-size: 28px;
+  }
+  .built-india{
+    font-size: 48px;
+  }
+}
+/*Other extra Responsive*/
+@media (min-width:360px) and (max-width:380px) {
+  .warranty-heading {
+    font-size: 28px;
+    text-align: center;
+    position: relative;
+    left: 28%;
+    top: 305px;
+    width: 300px;
+}
+.warranty-subheading {
+  font-size: 12px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  left: 40%;
+  top: 300px;
+  width: 203px;
+}
+.warranty-cards {
+    flex-direction: column;
+    width: 60%;
+    height: 309px;
+    left: 44%;
+    margin-top: 108%;
+    top: 128px;
+}
+.experience-div{
+  margin-top: 30%;
+}
+.warranty-number {
+    font-size: 35px;
+    position: relative;
+    right: 6px;
+}
+.warranty-type {
+    font-size: 15px;
+    width: 120px;
+    position: relative;
+    right: 16px;
+}
+.content-overlay-1{
+    position: relative;
+    top: -230px;
+    left: 2px;
+    width: 300px;
+}
+.heading{
+  width: 200px;
+  font-size: 24px;
+}
+.subheading{
+  width: 220px;
+  font-size: 20px;
+}
+.description{
+  width: 310px;
+}
+.hand-icon{
+    position: relative;
+    top: -50px;
+    left: 10px;
+    width: 20%;
+}
+.avg{
+  font-size: 9px;
+  font-weight: 500;
+}
+}
+@media (min-width:381px) and (max-width:420px) {
+  .warranty-heading {
+    font-size: 31px;
+    text-align: center;
+    position: relative;
+    /* left: 30%; */
+    top: 235px;
+    width: 300px; 
+}
+.hand-icon{
+  position: relative;
+  top: -50px;
+  left: 12px;
+}
+.warranty-subheading {
+    font-size: 12px;
+    margin-bottom: 3.5rem;
+    position: relative;
+    left: 45%;
+    top: 231px;
+    width: 210px;
+}
+.warranty-cards {
+    flex-direction: column;
+    width: 60%;
+    position: relative;
+    left: 43%;
+    top: 85px;
+}
+.avg{
+  font-size: 9px;
+}
+}
+@media(min-width:400px) and (max-width:480px){
+    .experience-div{
+    margin-top: -110%;
+  }
+}
+@media(min-width:420px) and (max-width:480px){
+  .warranty-cards{
+    position: relative;
+    left: 43%;
+    top: -42px;
+  }
+  .warranty-heading{
+    /* position: relative;
+    left: 40%; */
+    width: 88%;
+  }
+  .warranty-subheading{
+    position: relative;
+    left: 50%;
+    font-size: 14px;
+  }
+  .hand-icon{
+    position: relative;
+    top: -50px;
+    right: 25px;
+  }
+ 
+}
+
+@media(min-width:550px) and (max-width:767px){
+  .experience-div{
+    margin-top: -38%;
+  }
+  .hand-icon{
+    right: 30px;
+    top: -66px;
+  }
+}
+
+@media(min-width:360px) and (max-width:400px){
+  .experience-div{
+    margin-top: -500px;
+  }
+}
+@media (min-width:767px) and (max-width:991px) {
+  .hand-icon {
+    left: 4px;
+    top: -72px;
+    width: 35px;
+    height: 34px;
+  }
+  .warranty-cards{
+    position: relative;
+    left: -40px;
+    top: 285px;
+ }
+ .warranty-card{
+  min-width: 180px;
+ }
+ .warranty-number{
+  font-size: 45px;
+ }
+ .warranty-type{
+  font-size: 12px;
+ }
+ .warranty-heading{
+    width: 340px;
+    font-size: 33px;
+    position: relative;
+    top: 342px;
+    left: 0;
+ }
+ .warranty-subheading{
+    width: 300px;
+    position: relative;
+    top: 325px;
+    left: 7%;
+    font-size: 15px;
+ }
+ .challenger-mode {
+  width: 100%;
+  margin-bottom: -18%;
+}
+.product-card{
+    position: absolute;
+    right: 6%;
+    width: 33%;
+}
+.product-card-1{
+  position: absolute;
+  left: 6%;
+  width: 33%;
+}
+.challenger-image{
+  width: 100%;
+  height:65vh;
+  }
+  .content-overlay-1{
+    position: relative;
+    top: -228px;
+    left: 160px;
+    width: 320px; 
+  }
+
+  .heading {
+    position: relative;
+    top: 0;
+    font-size: 26px;
+  }
+  .warranty-label{
+    font-size: 10px;
+  }
+  .experience{
+    position: relative;
+    right: 5%;
+  }
+  .three-challenger-content{
+      position: relative;
+      left: 18%;
+  }
+  }
+  /* graph css */
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .calculator-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 1rem;
+      position: relative;
+      bottom: 5px;
+    }
+    /* .monthly-metrics{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  left: 0%;
+  } */
+  .progress-bars{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    left: 18%;
+  }
+  .calculator-middle{
+    position: relative;
+    /* left: 10%; */
+    top: 0%;
+    flex-direction: column;
+    height:fit-content;
+  }
+  .battery-image{
+    margin-top: -28px;
+  }
+}
+@media  (max-width: 768px) {
+  .calculator-container {
+    grid-template-columns: 1fr;
+    margin-top: -15%;
+  }
+  .caluculator-same-row{
+    grid-template-columns: 1fr 1fr;
+  }
+  .calculator-middle{
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+  }
+  .calculator-right {
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    right: 11%;
+  }
+  .middle-right-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+    display:flex;
+  }
+  .product-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .monthly-metrics {
+      flex-direction: row;
+      gap: 1rem;
+      position: relative;
+      left: 3px;
+  }
+  .progress-bars{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: 32%;
+    width: 150px;
+    gap: 7rem;
+  }
+  .calculator-left{
+    width: 100%;
+  }
+  
+} 
+
+@media(min-width:360px) and (max-width:400px) {
+  .calculator-right-1 {
+      position: relative;
+      left: 21%;
+      margin-top: -114%;
+      display: block;
+      width: 191px;
+}
+}
+
+@media (min-width:401px) and (max-width:430px){
+  .calculator-right-1 {
+    position: relative;
+    left: 21%;
+    margin-top: -106%;
+    display: block;
+    width: 200px;
+}
+}
+
+@media (min-width:431px) and (max-width:480px){
+  .calculator-right-1 {
+    position: relative;
+    left: 21%;
+    margin-top: -90%;
+    display: block;
+    width: 200px;
+}
+.three-challenger-content{
+  position: relative;
+  left: 10%;
+}
+.three-challenger-mobile{
+  position: relative;
+  right: 42%;
+}
+.reserve-now-three-challenger{
+    position: relative;
+    left: 14%;
+}
+.warranty-type{
+  position: relative;
+  left: 10%;
+}
+.warranty-label{
+  position: relative;
+  left: 0%;
+}
+.content-overlay-1{
+    position: relative;
+    top: -320px;
+}
+}
+@media(min-width:481px) and (max-width:520px) {
+  .calculator-right-1 {
+    position: relative;
+    left: 12%;
+    margin-top: -84%;
+    display: block;
+    width: 200px;
+}
+}
+
+@media(min-width:521px) and (max-width:767px) {
+  .calculator-right-1 {
+    position: relative;
+    left: 12%;
+    margin-top: -74%;
+    display: block;
+    width: 200px;
+}
+}
+
+@media(min-width:991px) and (max-width:1024px){
+  .three-challenger{
+    position: relative;
+    left: 100px;
+    width: 100%;
+  }
+  .hand-icon{
+    position: relative;
+    top: -55px;
+    left: -20px;
+  }
+}
+
+@media(min-width:768px) and (max-width:992px){
+  .simple {
+    position: relative;
+    left: 30%;
+  }
+}
+
+@media(min-width:481px) and (max-width:500px){
+  .challenger_logo{
+    position: relative;
+    top: 4px;
+    width: 50%;
+  }
+  .bike-slider-mobile {
+      display: block;
+      width: 100%;
+  }
+  .custom-selected{
+    position: relative;
+    left: 4%;
+  }
+  .bike-slider{
+    display:none;
+  }
+  .custom-caption{
+      position: absolute;
+      top: 34%;
+      left: 5%;
+  }
+  .etrol_logo{
+    width: 50%;
+    position: relative;
+    top: 8px;
+  }
+  .custom-caption h1{
+      font-size: 25px;
+      position: relative;
+      top: 26px;
+  }
+  .without-pollution{
+    position: relative;
+    top: 35px;
+    font-size: 25px;
+  }
+  
+  .challenge {
+    position: relative;
+    top: 10px;
+    font-size: 19px;
+  }
+  .status_qjo{
+    position: relative;
+    top: 10px;
+    font-size: 34px;
+  }
+  .perfect{
+    position: relative;
+    top: 10px;
+    font-size: 26px;
+  }
+  .scooter{
+    position: relative;
+    top: 10px;
+    font-size: 30px;
+  }
+}
+
+@media(min-width:500px) and (max-width:620px){
+  .custom-buttons {
+    position: relative;
+    top: -46px;
+    width: 100%;
+    right: 6px;
+  }
+  .perfect{
+    font-size: 14px;
+    position: relative;
+    top: 17px;
+  }
+  .perfetto_logo{
+    position: relative;
+    top: 23px;
+    width: 38%;
+  }
+}
+
+@media(min-width:621px) and (max-width:767px){
+  .custom-caption{
+    position: absolute;
+    top: 68%;
+    left: 5%;
+  }
+  .challenger_logo{
+    width: 36%;
+  }
+  .challenge{
+      font-size: 16px;
+      position: relative;
+      top: 13px;
+  }
+  .custom-buttons 
+  { 
+    position: relative;
+    top: -51px;;
+  }
+  .status_qjo{
+      position: relative;
+      top: -1px;
+      font-size: 20px;
+  }
+  .perfetto_logo{
+    width: 50%;
+    position: relative;
+    top: 12px;
+  }
+  .perfect{
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+  }
+  .custom-buttons{
+      position: relative;
+      top: -30px;
+      width: 100%;
+  }
+  .etrol_logo {
+    width: 42%;
+    position: relative;
+    top: 18px;
+  }
+  .without-pollution{
+    font-size: 19px;
+    position: relative;
+    top: 6px;
+  }
+  .perfetto{
+    font-size: 24px;
+  }
+  .scooter{
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+  }
+}
+@media(min-width:1024px) and (max-width:1366px) {
+   .monthly-metrics{
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        left: 10%;
+    }
+}
+@media(min-width:410px) and (max-width:450px) {
+  .product-card{
+    height:50% !important;
+  }
+  .product-card-1{
+    height: 50% !important;
+  }
+}
+@media(min-width:450px) and (max-width:480px) {
+  .product-card{
+    height:47% !important;
+  }
+  .product-card-1{
+    height: 47% !important;
+  }
+}

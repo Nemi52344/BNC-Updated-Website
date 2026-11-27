@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" data-type="product" data-radius="soft" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BNC Challenger: electric bike for Indian roads</title>
+<meta name="description" content="The Challenger S110 and S125 from BNC Motors: an exoskeletal steel chassis, a 3 kW hub motor and a removable Etrol 40 battery that charges from a 6A socket.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BNC Challenger: electric bike for Indian roads">
+<meta property="og:description" content="Two models, up to 180 km a charge, on an exoskeletal steel chassis. The battery lifts out and charges from a 6A socket.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets_v4/img/favicon.png" type="image/png">
+<meta name="theme-color" content="#ffffff">
+<!-- <link rel="canonical" href="https://[the client's domain]/challenger"> -->
+<meta name="site-kind" content="other">
+<meta name="page-type" content="product">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Figtree:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #ffffff; --p-surface: #f2f2f2; --p-ink: #0a0a0a; --p-muted: #6b6b6b;
+  --p-accent: #d92b21; --p-accent-ink: #ffffff; --p-action: #d92b21; --p-action-ink: #ffffff;
+  --p-inv-bg: #000000; --p-inv-surface: #010101; --p-inv-ink: #ffffff; --p-inv-muted: #868686;
+  --p-inv-accent: #d92b21; --p-inv-accent-ink: #ffffff; --p-inv-action: #d92b21; --p-inv-action-ink: #ffffff;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-text: "Figtree", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.04em;
+  --display-stretch: 96%;
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script src="assets/backgrounds/backgrounds.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
+<link rel="modulepreload" href="assets/moments/pinned-chapters/moment.js">
+<!-- page CSS: only inside visuals -->
+<style>
+  .nav__logo > img { height: 30px; width: auto; display: block; }
+  /* the colour picker: four named colours, the bike under them on the page ground */
+  .bike { margin: var(--s-6) 0 0; min-height: 0; }
+  .bike > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .swatches { border: 0; padding: 0; margin: 0; min-width: 0; }
+  .swatches > legend { padding: 0; margin-bottom: var(--s-2); }
+  .swatches__row { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); }
+  .swatch { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; cursor: pointer; font-weight: 500; }
+  .swatch > input { appearance: none; -webkit-appearance: none; margin: 0; flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--c); border: 1px solid var(--line-strong); cursor: pointer; }
+  .swatch > input:checked { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--ink); }
+  /* the chassis film: its own wide ratio */
+  #chassis .frame { --ratio: 40%; }
+  /* the statement's photograph, under its words */
+  #idea .frame { margin-top: var(--s-7); }
+  /* the parts wall: four close-ups, 2px apart */
+  .wall { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; border-radius: var(--r-lg); overflow: clip; }
+  .wall > img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  /* the name across the wrap, with room for its descender */
+  .closing__cta { min-width: 0; }
+  .close__word { font-size: min(calc((100vw - 2 * var(--gut)) * 0.244), 312px); padding-bottom: 0.14em; max-width: 100%; min-width: 0; }
+  /* short screens (a 1366x768 laptop, a small window): a section grows with what it holds instead of running into the next */
+  @media (max-height: 800px) {
+    main > section:not(.is-live), footer.closing { height: auto; min-height: calc(var(--h, 1) * 100svh); }
+    main > section[data-moment="pinned-chapters"]:not(.is-live) { min-height: 100svh; }
+    #models .bike { flex: none; }
+    .bike > img { height: auto; max-height: 62svh; }
+    #idea .frame.fill { flex: none; aspect-ratio: 1500 / 620; }
+  }
+  @media (max-height: 800px) and (min-width: 1024px) { main > section.hero { height: max(100svh, 700px); } }
+  @media (max-width: 1023px) { .bike { margin-top: var(--s-7); } .bike > img { height: auto; } }
+  @media (max-width: 1023px) { #chassis .frame { --ratio: 62%; } }
+</style>
+<link rel="stylesheet" href="assets_v4/next/bnav.css">
+</head>
+<body>
+<!-- type: product (site-kind other)
+     deal: hero photo, nav nav-split, close close-word, footer footer-columns, rhythm dark-band, buttons solid,
+           mark stack (the client's own logo stands in its place), palette white-signal-red, type bricolage
+     moments: word-highlight (the statement), pinned-chapters (the battery) -->
+
+<header class="bnav bnav--light">
+	<a class="bnav__logo" href="index.html"><img src="assets_v4/img/logo_big.png" alt="BNC Motors" width="616" height="348"></a>
+	<nav class="bnav__links" aria-label="Main">
+		<a href="index.html" aria-current="page">Challenger</a>
+		<a href="messenger.html">Messenger</a>
+		<a href="etrol.html">Etrol</a><a href="about.html">About</a><a href="business.html">B2B</a>
+	</nav>
+	<a class="bnav__btn" href="buy.html#reach">Book Now</a>
+	<details class="bnav__menu">
+		<summary aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2.5 5.5h13M2.5 9h13M2.5 12.5h13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+		<nav aria-label="Main, compact"><a href="index.html">Challenger</a><a href="messenger.html">Messenger</a><a href="etrol.html">Etrol</a><a href="about.html">About</a><a href="business.html">B2B</a></nav>
+	</details>
+</header>
+
+<main id="top">
+  <!-- HERO: photo. The client's studio photograph of the S125, the words in the box on its calm left side. -->
+  <section class="hero hero--photo" data-enter data-calm="left" aria-labelledby="hero-h">
+    <img class="hero__bg" src="assets_v4/img/challenger_v3/hero-studio-1440.webp" srcset="assets_v4/img/challenger_v3/hero-studio-phone.webp 800w, assets_v4/img/challenger_v3/hero-studio-1440.webp 1440w, assets_v4/img/challenger_v3/hero-studio.webp 2880w" sizes="100vw" width="2880" height="1620" alt="A Challenger S125 electric motorbike with a red frame, seen from the front left in a green studio" style="--ly-pos: 100% 50%; --ly-pos-phone: 50% 50%" fetchpriority="high" data-source="client" data-subject="product">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <h1 id="hero-h">Electric bike for Indian roads</h1>
+        <p class="hero__lead">The BNC Challenger is a multipurpose electric bike on an exoskeletal steel chassis. Its battery lifts out, charges from any 6A socket and runs up to 180&nbsp;km.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="customer_enquiry.html">Book a Challenger</a><a class="btn btn--secondary" href="#models">Compare the two models</a></div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- MODELS: the range and the colours. The swatch changes the picture. -->
+  <section class="section" id="models" aria-labelledby="models-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="section-head span-6">
+          <h2 id="models-h">Models: S110 and S125</h2>
+          <p>The S110 runs up to 90&nbsp;km on a 2.1&nbsp;kWh battery. The S125 carries 4.2&nbsp;kWh for up to 180&nbsp;km.</p>
+        </div>
+        <fieldset class="swatches span-6 start-7">
+          <legend class="t-label">Four colours</legend>
+          <div class="swatches__row">
+            <label class="swatch"><input type="radio" name="colour" value="red" style="--c: #d62a22" checked>Crimson Red</label>
+            <label class="swatch"><input type="radio" name="colour" value="black" style="--c: #1b1b1b">Panther Black</label>
+            <label class="swatch"><input type="radio" name="colour" value="blue" style="--c: #2f7cc9">Azure Blue</label>
+            <label class="swatch"><input type="radio" name="colour" value="green" style="--c: #8a8f72">Commando Green</label>
+          </div>
+          <p id="bike-colour" class="muted" aria-live="polite">It’s a picker-upper.</p>
+        </fieldset>
+      </div>
+      <figure class="bike fill"><img id="bike-img" src="assets_v4/img/challenger_v3/side-red.webp" srcset="assets_v4/img/challenger_v3/side-red-700.webp 700w, assets_v4/img/challenger_v3/side-red.webp 1260w" sizes="(max-width: 639px) 100vw, 1280px" loading="lazy" alt="The Challenger electric motorbike from the side in Crimson Red" width="1260" height="860" data-source="client" data-subject="product"></figure>
+    </div>
+  </section>
+
+  <!-- CHASSIS: the client's own motion video of the bare chassis.
+       CLIENT FILE chassis film: assets_v4/videos/challenger_v3/chassis.mp4 (1600x640, H.264, cut from challenger_skeleton3.mp4) and its poster chassis-poster.webp -->
+  <section class="section" id="chassis" aria-labelledby="chassis-h">
+    <div class="wrap">
+      <div class="section-head section-head--row">
+        <div>
+          <h2 id="chassis-h">A steel chassis that carries 200&nbsp;kg</h2>
+          <p>The exoskeletal double cradle frame is high-tensile steel, built for 200&nbsp;kg and more.</p>
+        </div>
+        <a class="link" href="index.html">See the Challenger in 3D</a>
+      </div>
+      <figure class="frame frame--photo fit-screen">
+        <video class="frame__img" controls playsinline preload="metadata" poster="assets_v4/img/challenger_v3/chassis-poster.webp" aria-label="The bare Challenger chassis turning on its stand">
+          <source src="assets_v4/videos/challenger_v3/chassis.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </div>
+  </section>
+
+  <!-- word-highlight: BNC's own statement about the Challenger -->
+  <section class="section statement" id="idea" data-moment="word-highlight" aria-label="What the Challenger leaves out">
+    <div class="wrap">
+      <p class="t-label">What it leaves out</p>
+      <p class="mo-wh__text">No BS like music player, flashing disco lights. Just <strong>a great driving experience.</strong></p>
+      <figure class="frame frame--photo fill"><img class="frame__img" src="assets_v4/img/challenger_v3/night-green.webp" srcset="assets_v4/img/challenger_v3/night-green-phone.webp 540w, assets_v4/img/challenger_v3/night-green.webp 1500w" sizes="(max-width: 639px) 100vw, 1280px" alt="A Commando Green Challenger S125 at night, from the side, with light trails behind it" width="1500" height="620" loading="lazy" data-source="client" data-subject="product close up"></figure>
+    </div>
+  </section>
+
+  <!-- RIDE: pair -->
+  <section class="section" id="ride" aria-labelledby="ride-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="ride-h">Climbs a 14-degree gradient</h2>
+        <p>Rough roads, rain, hills: you’re covered.</p>
+      </div>
+      <div class="grid">
+        <figure class="pl-photo span-6"><img src="assets_v4/img/challenger_v3/ride-road.webp" srcset="assets_v4/img/challenger_v3/ride-road-700.webp 700w, assets_v4/img/challenger_v3/ride-road.webp 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="A rider on a blue Challenger leaning into a bend on a tree-lined road" width="1280" height="960" loading="lazy" data-source="client" data-subject="use"></figure>
+        <figure class="pl-photo span-6"><img src="assets_v4/img/challenger_v3/ride-cobble.webp" srcset="assets_v4/img/challenger_v3/ride-cobble-700.webp 700w, assets_v4/img/challenger_v3/ride-cobble.webp 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="A rider turning a blue Challenger on a cobbled square" width="1280" height="960" loading="lazy" data-source="client" data-subject="use"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- pinned-chapters: the battery in three steps -->
+  <section class="section" id="battery" style="--h: 2" data-moment="pinned-chapters" aria-labelledby="battery-h">
+    <div class="wrap mo-pc__grid">
+      <div class="mo-pc__text">
+        <h2 id="battery-h">Etrol 40, the battery you lift out</h2>
+        <ol class="mo-pc__steps">
+          <li class="mo-pc__step">
+            <h3>Lift out the Etrol 40</h3>
+            <p>The pack is removable. Carry it indoors by its handle.</p>
+            <figure class="mo-pc__visual"><img src="assets_v4/img/challenger_v3/etrol-pack.webp" srcset="assets_v4/img/challenger_v3/etrol-pack-700.webp 700w, assets_v4/img/challenger_v3/etrol-pack.webp 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="The Etrol 40 battery pack with its carry handle" width="1280" height="960" loading="lazy" data-source="client" data-subject="battery"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Charge from any 6A socket</h3>
+            <p>The portable charger plugs into a standard 6A socket, at home or at work.</p>
+            <figure class="mo-pc__visual"><img src="assets_v4/img/challenger_v3/etrol-charging.webp" srcset="assets_v4/img/challenger_v3/etrol-charging-700.webp 700w, assets_v4/img/challenger_v3/etrol-charging.webp 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="An Etrol 40 pack charging from a wall socket in a living room" width="1280" height="960" loading="lazy" data-source="client" data-subject="battery in use"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Covered for 5 years</h3>
+            <p>IP67 rated, tested above 300°C internal temperature and compliant with AIS-156 Amendment 3, Phase 2. The standard warranty runs 5 years.</p>
+            <figure class="mo-pc__visual"><img src="assets_v4/img/challenger_v3/etrol-dark.webp" srcset="assets_v4/img/challenger_v3/etrol-dark-700.webp 700w, assets_v4/img/challenger_v3/etrol-dark.webp 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="An Etrol 40 pack standing on a dark floor" width="1280" height="960" loading="lazy" data-source="client" data-subject="battery"></figure>
+          </li>
+        </ol>
+        <p><a class="link" href="etrol.html">Read about the Etrol 40</a></p>
+      </div>
+      <div class="mo-pc__visuals frame"></div>
+    </div>
+  </section>
+
+  <!-- SPECS: the dark band. The rows beside four close-ups of the parts they name. -->
+  <section class="section ground-inverse" id="specs" aria-labelledby="specs-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="specs-h">Specs of the S110 and S125</h2>
+        <p>Built to last, with minimal maintenance.</p>
+      </div>
+      <div class="grid grid--top">
+        <ul class="rows rows--spec span-6">
+          <li><span class="rows__name">Motor</span><span class="rows__value">3&nbsp;kW peak, BLDC hub motor</span></li>
+          <li><span class="rows__name">Top speed, High mode</span><span class="rows__value">65&nbsp;km/h S110, 70&nbsp;km/h S125</span></li>
+          <li><span class="rows__name">Range</span><span class="rows__value">Measured in Low mode</span></li>
+          <li><span class="rows__name">Boot</span><span class="rows__value">30 litres on the S110</span></li>
+          <li><span class="rows__name">Wheels</span><span class="rows__value">14-inch alloy</span></li>
+          <li><span class="rows__name">Tyres</span><span class="rows__value">90/90 R14 tubeless</span></li>
+        </ul>
+        <div class="wall span-6 start-7">
+          <img src="assets_v4/img/challenger_v3/part-hub.webp" srcset="assets_v4/img/challenger_v3/part-hub-500.webp 500w, assets_v4/img/challenger_v3/part-hub.webp 1000w" sizes="(max-width: 639px) 50vw, 25vw" alt="The hub motor inside the rear wheel" width="1000" height="750" loading="lazy" data-source="client" data-subject="hub motor">
+          <img src="assets_v4/img/challenger_v3/part-disc.webp" srcset="assets_v4/img/challenger_v3/part-disc-500.webp 500w, assets_v4/img/challenger_v3/part-disc.webp 1000w" sizes="(max-width: 639px) 50vw, 25vw" alt="The disc brake behind the alloy wheel" width="1000" height="750" loading="lazy" data-source="client" data-subject="disc brake">
+          <img src="assets_v4/img/challenger_v3/part-cluster.webp" srcset="assets_v4/img/challenger_v3/part-cluster-500.webp 500w, assets_v4/img/challenger_v3/part-cluster.webp 1000w" sizes="(max-width: 639px) 50vw, 25vw" alt="The digital display between the handlebars" width="1000" height="750" loading="lazy" data-source="client" data-subject="display">
+          <img src="assets_v4/img/challenger_v3/part-headlamp.webp" srcset="assets_v4/img/challenger_v3/part-headlamp-500.webp 500w, assets_v4/img/challenger_v3/part-headlamp.webp 1000w" sizes="(max-width: 639px) 50vw, 25vw" alt="The ring headlamp lit in the dark" width="1000" height="750" loading="lazy" data-source="client" data-subject="headlamp">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Book a Challenger</h2><p class="t-lead">Send an enquiry for the S110 or the S125, in any of the four colours.</p></div>
+        <a class="btn btn--primary" href="customer_enquiry.html">Book a Challenger</a>
+      </div>
+      <p class="close__word" aria-hidden="true">Challenger</p>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><img src="assets_v4/img/challenger_v3/bnc-logo.png" alt="BNC Motors" width="106" height="60" loading="lazy"></a>
+          <p class="footer__lede">Electric two-wheelers from BNC Motors.</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Challenger</h3><ul><li><a href="#models">Models</a></li><li><a href="#chassis">Chassis</a></li><li><a href="#battery">Battery</a></li><li><a href="#specs">Specs</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>More from BNC</h3><ul><li><a href="messenger.html">Messenger</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Dealers</h3><ul><li><a href="dealer_enquiry.html">Send a dealership enquiry</a></li><li><a href="assets_v4/upload/challenger.pdf">Download the brochure</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Company</h3><ul><li><a href="index.html">BNC Motors</a></li><li><a href="index.html">See the Challenger in 3D</a></li><li><a href="privacy_policy.html">Privacy</a></li><li><a href="terms_and_condition.html">Terms</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 BNC Motors</span>
+        <div class="socials"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script>
+/* the colour picker: a swatch swaps the bike's picture, its alt text and the colour's line */
+(function () {
+  var img = document.getElementById('bike-img'), line = document.getElementById('bike-colour');
+  var c = {
+    red:   ['Crimson Red', 'It’s a picker-upper.'],
+    black: ['Panther Black', 'It’s my happy colour.'],
+    blue:  ['Azure Blue', 'I’m a “blue sky thinker”.'],
+    green: ['Commando Green', 'The colour of youth and growth.']
+  };
+  Object.keys(c).forEach(function (k) { if (k !== 'red') { new Image().src = 'assets_v4/img/challenger_v3/side-' + k + '.webp'; } });
+  document.querySelectorAll('input[name="colour"]').forEach(function (r) {
+    r.addEventListener('change', function () {
+      var v = c[r.value]; if (!v) return;
+      var b = 'assets_v4/img/challenger_v3/side-' + r.value;
+      img.srcset = b + '-700.webp 700w, ' + b + '.webp 1260w';
+      img.src = b + '.webp';
+      img.alt = 'The Challenger electric motorbike from the side in ' + v[0];
+      line.textContent = v[1];
+    });
+  });
+})();
+</script>
+</body>
+</html>

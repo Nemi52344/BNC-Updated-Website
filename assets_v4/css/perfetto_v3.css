@@ -1,0 +1,3628 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: auto;
+}
+
+.changing-image {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+}
+
+.average_scooter {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin-bottom: 6%;
+}
+
+.display_text {
+    margin-top: -44%;
+}
+
+.perfetto_logo {
+    margin-top: 30%;
+    width: 100%;
+    height: 40%;
+    position: relative;
+    right: 21%;
+}
+
+.perfomance {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.hearts_content {
+    height: 65%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.location-image {
+    width: 40%;
+    position: relative;
+    left: -17%;
+    top: 244px;
+}
+
+.location-text {
+    margin-top: -16%;
+    position: relative;
+    right: 20%;
+    top: -25%;
+}
+
+.smart-simple {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 40px;
+    color: #121E4C;
+}
+
+.dual-charger {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.hr {
+    border-color: rgb(216, 213, 213);
+    width: 55%;
+}
+
+.charging-device {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.money .circle-button1 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons3 {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+#book-ride-button {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.buttons {
+    position: absolute;
+    top: 85%;
+    left: 20%;
+    display: flex;
+    gap: 10px;
+}
+
+.book-your-ride,
+.reserve-now {
+    padding: 7px 7px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 160px;
+    font-size: 15px;
+    height: 40px;
+}
+
+.book-your-ride {
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+.reserve-now {
+    background-color: rgb(255, 254, 254);
+    border: none;
+    color: black;
+    text-decoration: none;
+}
+
+.reserve-now:hover {
+    color: black;
+}
+
+
+/* power perfomance style start */
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.2);
+    padding: 55px;
+    height: 90%;
+    width: 100%;
+    margin-top: -2%;
+}
+
+.power {
+    margin: 45px;
+}
+
+.tagline {
+    text-align: left;
+    font-size: 35px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 20px;
+    margin-left: 3%;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    bottom: 10px;
+}
+
+.content-area {
+    display: flex;
+    align-items: center;
+}
+
+.image-containers {
+    position: relative;
+    width: 100%;
+    height: 78%;
+    top: 5%;
+    border-radius: 20px;
+}
+
+.top-speed {
+    position: relative;
+    left: 4%;
+}
+
+#kmhr {
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    top: -15%;
+    left: 20%;
+}
+
+.range_up_to {
+    position: relative;
+    top: 240px;
+    right: 246px;
+    font-size: 20px;
+}
+
+.speed-info {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.speed-number {
+    font-size: 90px;
+    font-weight: 500;
+    line-height: 1;
+    font-family: "Montserrat", Medium;
+    position: relative;
+    top: -6%;
+    left: 10%;
+}
+
+.speed-text {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: justify;
+    font-family: "Montserrat", SemiBold
+}
+
+#range {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    position: relative;
+    left: -17%;
+    top: 200px;
+}
+
+.info span {
+    margin-left: 15px;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: left;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+}
+
+.smooth-ride1 {
+    width: 90%;
+    border-radius: 20px;
+    margin-top: -5%;
+    margin-bottom: 50px;
+}
+
+.powerful_motors {
+    font-size: 80px;
+    font-family: "Montserrat", medium;
+    font-weight: 600;
+}
+
+.smooth_ride {
+    position: relative;
+    left: 22%;
+    text-align: center;
+}
+
+
+/* power perfomance style end */
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blue-perfetto-image {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin-top: -50%;
+    left: 42%;
+}
+
+
+/* head light div start*/
+
+.head-light {
+    width: 100%;
+    display: block;
+    height: 190px;
+    margin-top: -4%;
+}
+
+.warranty-section {
+    position: relative;
+}
+
+.warranty-info {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    width: 24%;
+}
+
+.warranty-text {
+    position: absolute;
+    top: 20%;
+    font-size: 59px;
+    font-weight: 700;
+    color: white;
+    left: 44%;
+    font-family: "Montserrat", sans-serif;
+}
+
+#warranty_km {
+    font-size: 26px;
+    font-weight: 600;
+    position: absolute;
+    top: 84%;
+    left: 18%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.button {
+    position: absolute;
+    top: 42%;
+    right: 34%;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 8px;
+    width: 8%;
+}
+
+
+/* head light div end */
+
+
+/*baterry and motors div start*/
+
+.battery-points-1 {
+       font-size: 60px;
+    font-weight: 500;
+    margin-bottom: -14px;
+    margin-top: -40%;
+    position: relative;
+    left: -23px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.battery-capacity {
+   font-size: 25px;
+    margin-bottom: 5px;
+    margin-left: -9%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.efficient-rides {
+    font-size: 18px;
+    color: #5e5d5d;
+    line-height: 1.5;
+    position: relative;
+    left: -8%;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 0;
+}
+
+.battery-points-2 {
+       font-size: 60px;
+    font-weight: 500;
+    margin-bottom: -14px;
+    margin-top: -26%;
+    position: relative;
+    left: -42px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.motor-power {
+      margin-bottom: 5px;
+    font-size: 25px;
+    margin-left: -42px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.smooth-performance {
+    font-size: 18px;
+    color: #5e5d5d;
+    position: relative;
+    right: 16%;
+    text-align: left;
+}
+
+.battery-image {
+    margin-left: -30%;
+    max-width: 350px;
+}
+
+.motor-image {
+    max-width: 430px;
+    margin-top: 20%;
+    margin-left: -120px;
+}
+
+
+/* .kw{
+    font-size: 10px;
+}
+.kwh{
+    font-size: 10px;
+} */
+
+
+/*baterry and motors div end*/
+
+
+/*  store to your div start  */
+
+.store_to_your {
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.heart_content {
+    margin-top: 2%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.underseat {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 10%;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+}
+
+.storage {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+}
+
+.front {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 10%;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+}
+
+.storage-1 {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+}
+
+.front_bag_holder {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    position: relative;
+    top: 10%;
+}
+
+.grabrail {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 10%
+}
+
+.backrest {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.made_families {
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    position: relative;
+    bottom: -15%;
+}
+
+.metal-hr {
+    width: 80%;
+    position: relative;
+    bottom: 13px;
+}
+
+.more_scooter {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+}
+
+.high-perfomance {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    position: relative;
+    top: -20px;
+}
+
+
+/*  store to your div end  */
+
+
+/* battery and motor start div*/
+
+.battery {
+    display: flex;
+}
+
+.metal-text {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.number {
+    font-size: 70px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.image-text {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+    position: relative;
+    top: -18px;
+}
+
+.number-text {
+    font-family: "Montserrat", sans-serif;
+}
+
+.metal-body {
+    font-weight: 900;
+    position: relative;
+    left: -120px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-size: 42px;
+    font-style: italic;
+}
+
+.built_last {
+    font-size: 1.8em;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    position: relative;
+    right: 15%;
+    font-weight: 600;
+}
+
+.image-container-1 {
+    position: relative;
+}
+
+.image-circle {
+    width: 200px;
+    height: 165px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 40%;
+    margin-top: 50px;
+}
+
+.warranty-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.impress {
+    color: #357868;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    font-style: italic;
+}
+
+.money {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.display-image {
+    width: 100%;
+    margin-top: -14%;
+}
+
+.user-friendly {
+    font-weight: 700;
+}
+
+
+/* battery and motor end div*/
+
+
+/* Dual usb charger div start*/
+
+
+/* .money{
+    font-weight: 700;
+} */
+
+.front-image {
+    max-width: 100%;
+}
+
+
+/* .display-image{
+    width:50%;
+    margin-top:6%;
+} */
+
+.display {
+    margin-top: 30%;
+    font-size: 30px;
+    font-weight: 900;
+    font-style: italic;
+    font-family: "Montserrat", sans-serif
+}
+
+.user-friendly {
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Montserrat", sans-serif
+}
+
+
+/* Dual usb charger div end*/
+
+
+/* mobil app start */
+
+.mobile-app {
+    color: white;
+    font-size: 35px;
+    font-weight: 900;
+    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+}
+
+.monitor {
+    color: white;
+    font-weight: 700;
+}
+
+.mobile-image-1 {
+    width: 90%;
+    position: relative;
+    top: 25px;
+    left: 40px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.mobile-image-2 {
+    width: 100%;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.mobile-image-3 {
+    width: 90%;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: 16px;
+    right: 23px;
+}
+
+.mobile-image-4 {
+    max-width: 513px;
+    position: relative;
+    top: 13%;
+}
+
+
+/* mobil app end */
+
+
+/* change image div start*/
+
+.change_buttons {
+    position: relative;
+}
+
+.buttons4 {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.circle-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle-button:hover {
+    transform: scale(1.1);
+}
+
+.white {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.red {
+    background-color: #9E2F2E;
+}
+
+.blue {
+    background-color: #2D336B;
+}
+
+.green {
+    background-color: #315743;
+}
+
+
+/* change image div end*/
+
+
+/* table format */
+
+.detailed_spec_border_line1 {
+    border-top: 1px solid #9f9f9f6b;
+    /* border-bottom: 2px solid #9f9f9f6b; */
+    /* padding:2px; */
+    /* margin-top:5px; */
+}
+
+.detailed-spec {
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    bottom: -18%;
+}
+
+.table-header {
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+}
+
+.side_points {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.weight {
+    font-weight: 700;
+}
+
+.battery_charging {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    ;
+}
+
+.battery-points {
+    margin-top: 8%;
+}
+
+.motor-points {
+    margin-top: 8%;
+}
+
+.perfetto {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.perfetto_center {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.perfetto_center-1 {
+    position: relative;
+    left: 34px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.perfetto_ex {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mobile-view {
+    display: none;
+}
+
+.mobile-1 {
+    display: none;
+}
+
+.mobile-2 {
+    display: none;
+}
+
+.hearts_content-1 {
+    border-radius: 10px;
+    height: 65%;
+}
+
+.hearts_content-2 {
+    border-radius: 10px;
+    height: 65%;
+}
+
+.hearts_content-3 {
+    border-radius: 10px;
+    height: 65%;
+}
+
+.hearts_content-4 {
+    border-radius: 10px;
+    height: 65%;
+}
+
+.smooth-performance-2 {
+    display: none;
+}
+
+.location-image-1 {
+    display: none;
+}
+
+.display-image-1 {
+    display: none;
+}
+
+
+/* table format end*/
+
+@media(min-width:320px) and (max-width:360px) {
+    .location-image-1 {
+        display: block;
+        width: 80%;
+        position: relative;
+        left: 10%;
+        border-radius: 20px;
+        margin-top: 24%;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile-view {
+        display: block;
+    }
+    .slider-image {
+        display: none;
+    }
+    .mobile-1 {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .mobile-2 {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .battery-1 {
+        flex-direction: row;
+    }
+    .warranty-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .warranty-item {
+        width: 100%;
+        text-align: center;
+    }
+    .perfetto_logo {
+        min-width: 30%;
+        height: 3%;
+        position: relative;
+        right: 33%;
+        top: -147px;
+        margin-top: -37%;
+    }
+    .range_up_to {
+        position: relative;
+        top: 12px;
+        font-size: 15px;
+        right: 12%;
+    }
+    #kmhr {
+        font-size: 15px;
+        position: relative;
+        top: -34px;
+        left: 34%;
+    }
+    .perfomance {
+        font-size: 11px;
+    }
+    .perfetto_center {
+        font-size: 11px;
+    }
+    .perfetto_center-1 {
+        font-size: 11px;
+    }
+    .perfetto_ex {
+        font-size: 11px;
+    }
+    .perfetto {
+        font-size: 11px;
+    }
+    .image-text {
+        font-size: 14px;
+        position: relative;
+        top: 16px;
+        left: 20%;
+    }
+    #range {
+        font-size: 14px;
+        position: relative;
+        left: -4%;
+    }
+    .blue-perfetto-image {
+        width: 50%;
+        position: relative;
+        top: -16px;
+    }
+    .display {
+        font-size: 13px;
+        position: relative;
+        top: -189px;
+        left: 52%;
+        width: 100px;
+    }
+    .money {
+        position: relative;
+        left: 14px;
+        font-size: 17px;
+    }
+    .charging-device {
+        font-size: 8px;
+        position: relative;
+        left: 63px;
+        top: 0;
+    }
+    .dual-charger {
+        font-size: 13px;
+        position: relative;
+        left: 18%;
+        top: 5px;
+    }
+    .user-friendly {
+        width: 148px;
+        font-size: 8px;
+        top: -204px;
+        position: relative;
+        left: 145px;
+    }
+    .hr {
+        width: 76%;
+        position: relative;
+        left: 17px;
+    }
+    .smart-simple {
+        position: relative;
+        left: 14px;
+        font-size: 21px;
+    }
+    .carousel-indicators {
+        position: relative;
+    }
+    .made_families {
+        font-size: 20px;
+    }
+    .store_to_your {
+        font-size: 22px;
+        text-align: center;
+    }
+    .buttons3 {
+        position: absolute;
+        top: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    .carousel-dots {
+        bottom: 5px;
+        position: relative;
+        top: 23%;
+        margin-left: 28%;
+    }
+    .buttons {
+        bottom: 20px;
+        flex-direction: row;
+        align-items: center;
+        top: -53%;
+        left: 30%;
+    }
+    #container {
+        max-width: 368px;
+        padding: 20px;
+        margin-top: 16px;
+        min-height: 264px;
+    }
+    .book-your-ride {
+        position: relative;
+        left: -28px;
+        top: -10px;
+        min-width: 0;
+        font-size: 12px;
+    }
+    .reserve-now {
+        position: absolute;
+        left: 0px;
+        top: 4%;
+        font-size: 14px;
+        min-width: 113px;
+        margin-top: -13%;
+    }
+    .power {
+        margin: 0;
+    }
+    .speed-text {
+        position: relative;
+        top: 6%;
+        left: 29%;
+        font-size: 16px;
+    }
+    .image-containers {
+        min-height: 130px;
+    }
+    .tagline {
+        font-size: 17px;
+        font-weight: 700;
+    }
+    .detailed_code {
+        max-width: 65%;
+    }
+    .detailed-spec {
+        font-size: 26px;
+    }
+    .powerful_motors {
+        font-size: 31px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .smooth_ride {
+        text-align: center;
+        bottom: 15px;
+        position: relative;
+        left: 2px;
+    }
+    .head-light {
+        height: 200px;
+        margin-top: -10%;
+    }
+    .impress {
+        font-size: 20px;
+        position: relative;
+        left: 16px;
+    }
+    .metal-body {
+        font-size: 18px;
+        position: relative;
+        left: -22%;
+    }
+    .built_last {
+        font-size: 18px;
+    }
+    .logo img {
+        width: 43%;
+        margin-left: -27%;
+        margin-top: -16%;
+    }
+    .warranty-text {
+        font-size: 46px;
+        margin-left: -10%;
+        margin-top: -4%;
+    }
+    #warranty_km {
+        font-size: 19px;
+        margin-left: -10%;
+        margin-top: 8%;
+    }
+    .button {
+        width: 100px;
+        margin-top: 12%;
+        position: absolute;
+        left: 35%;
+        top: 34%;
+    }
+    .image-container-1 {
+        height: 150px;
+    }
+    /* .metal-body{
+        margin-left: -26px
+     } */
+    .more_scooter {
+        font-size: 16px;
+    }
+    .heart_content {
+        font-size: 14px;
+        text-align: center;
+    }
+    .image-circle {
+        margin-left: 0%;
+        top: -32px;
+        max-width: 100px;
+        max-height: 100px;
+        position: relative;
+        left: 13%;
+        margin-bottom: -7px;
+        bottom: 48px;
+    }
+    .number-text {
+        text-align: center;
+        position: relative;
+        top: -56px;
+        right: 24px;
+    }
+    .number {
+        font-size: 45px;
+        margin-bottom: 0;
+        margin-top: 45%;
+        margin-left: 0%;
+        text-align: center;
+        position: relative;
+        top: 17px;
+    }
+    .mobile-image-2 {
+        width: 96%;
+    }
+    .mobile-image-1 {
+        margin-top: 5%;
+        width: 82%;
+        position: relative;
+        left: 39%;
+        top: 12px;
+    }
+    .battery-points-1 {
+        margin-top: -25%;
+        position: relative;
+        left: 108%;
+        top: -22px;
+        width: 148px;
+    }
+    .battery-points-2 {
+        position: relative;
+        left: 101%;
+        top: 10px;
+        margin-top: -28%;
+        width: 150px;
+    }
+    .motor-power {
+        margin-left: 0%;
+        font-size: 20px;
+        margin-top: 2%;
+        width: 150px;
+        position: relative;
+        left: 68px;
+        top: 12px;
+    }
+    .battery-capacity {
+        margin-left: 0%;
+        font-size: 17px;
+        margin-top: 3%;
+        position: relative;
+        width: 150px;
+        left: 111%;
+        top: -12px;
+    }
+    .efficient-rides {
+        font-size: 13px;
+        position: relative;
+        left: 74px;
+        text-align: justify;
+        width: 160px;
+        top: -7px;
+        color: black;
+    }
+    .battery-image {
+        margin-left: -20%;
+        margin-top: -14%;
+        width: 68%;
+        position: relative;
+        bottom: -52px;
+    }
+    .battery-points {
+        position: relative;
+        top: -80px;
+        left: 15%;
+        margin-top: -10%;
+        width: 100px;
+    }
+    .smooth-performance-2 {
+        position: relative;
+        left: 95%;
+        width: 170px;
+        top: 13px;
+        font-size: 14px;
+        text-align: justify;
+        display: block;
+    }
+    .motor-image {
+        width: 72%;
+        margin-top: -11%;
+        margin-left: -76px;
+        position: relative;
+        bottom: -8px;
+        margin-bottom: -57px;
+        left: 20px;
+    }
+    .motor-points {
+        position: relative;
+        top: -80px;
+        left: 15%;
+        margin-top: -10%;
+        width: 100px;
+    }
+    .smooth-performance {
+        /* font-size: 15px;
+        position: relative;
+        right: 4px;
+        text-align: center; */
+        display: none;
+    }
+    .table-header {
+        font-size: 12px;
+        font-weight: 800;
+    }
+    .speed-number {
+        font-size: 31px;
+        text-align: center;
+        margin-top: 12px;
+        margin-right: 54px;
+        position: relative;
+        top: -19px;
+        left: 36%;
+    }
+    .buttons4 {
+        margin-top: 3%;
+        width: 100px;
+    }
+    .battery_charging {
+        font-size: 11px;
+        font-weight: 800;
+    }
+    /* .power{
+        margin-top: -50%;
+    } */
+    .underseat {
+        font-size: 20px;
+    }
+    .front {
+        font-size: 20px;
+    }
+    .front_bag_holder {
+        font-size: 20px;
+    }
+    .storage {
+        font-size: 16px;
+    }
+    .storage-1 {
+        font-size: 16px;
+    }
+    .backrest {
+        font-size: 16px;
+    }
+    .hearts_content {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 14%;
+    }
+    .hearts_content-1 {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 14%;
+        border-radius: 10px;
+    }
+    .hearts_content-2 {
+        width: 70%;
+        height: 80%;
+        position: relative;
+        left: 14%;
+        border-radius: 10px;
+    }
+    .hearts_content-3 {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 14%;
+        margin-top: 5%;
+    }
+    .grabrail {
+        font-size: 20px;
+    }
+    .location-image {
+        width: 80%;
+        position: relative;
+        left: 12%;
+        top: 20px;
+    }
+    .info {
+        font-size: 45px;
+        position: relative;
+        top: -7px;
+        left: 8px;
+    }
+    .info span {
+        font-size: 15px;
+    }
+    .location-text {
+        position: relative;
+        top: 70%;
+    }
+    .mobile-app {
+        text-align: center;
+    }
+    .monitor {
+        text-align: center;
+        font-size: 20px;
+    }
+    .mobile-image-4 {
+        width: 100%;
+        position: relative;
+        top: 8%;
+        right: 0%;
+    }
+    .mobile-image-3 {
+        width: 82%;
+        position: relative;
+        right: 23%;
+        top: 20px;
+    }
+    .smooth-ride1 {
+        width: 92%;
+        height: 200px;
+        margin-top: -33px;
+        display: none;
+    }
+    .circle-button {
+        width: 10px;
+        height: 10px;
+    }
+    .display-image-1 {
+        display: block;
+        position: relative;
+        top: 4%;
+    }
+    .display-image {
+        display: none;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+
+ /* satizz css code changes */
+    .left_15 {
+        margin-left: 15px !important
+    }
+    .changing-image,
+    .slider-btn,
+    .web_view_slider {
+        display: none;
+    }
+    .mobile_view_slider {
+        display: block !important;
+    }
+    .col-5.fw-bold.perfetto_center {
+        margin-left: -8%;
+    }
+
+ /* satizz css code end changes */
+
+    .location-image-1 {
+        display: block;
+        width: 80%;
+        position: relative;
+        left: 10%;
+        border-radius: 20px;
+        margin-top: 22%;
+    }
+    /* .desktop{
+        display:none;
+    } */
+    .mobile-view {
+        display: block;
+    }
+    .slider-image {
+        display: block;
+    }
+    .mobile-1 {
+        width: 100%;
+        display: block;
+    }
+    .mobile-2 {
+        width: 100%;
+        display: block;
+    }
+    .battery-1 {
+        flex-direction: row;
+    }
+    .warranty-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .warranty-item {
+        width: 100%;
+        text-align: center;
+    }
+    .perfetto_logo {
+        width: 70%;
+        height: 9%;
+        position: relative;
+        right: 30%;
+        top: -230px;
+        margin-top: 46px;
+    }
+    .range_up_to {
+        position: relative;
+        top: 12px;
+        font-size: 15px;
+        right: 12%;
+    }
+    #kmhr {
+        font-size: 15px;
+        position: relative;
+        top: -34px;
+        left: 34%;
+    }
+    .perfomance {
+        font-size: 11px;
+    }
+    .perfetto_center {
+        font-size: 11px;
+        position: relative;
+        left: 0;
+    }
+    .perfetto_center-1 {
+        font-size: 11px;
+        position: relative;
+        left: 0;
+    }
+    .perfetto_ex {
+        font-size: 11px;
+    }
+    .perfetto {
+        font-size: 11px;
+    }
+    .image-text {
+        font-size: 14px;
+        position: relative;
+        top: 16px;
+        left: 20%;
+    }
+    #range {
+        font-size: 14px;
+        position: relative;
+        left: -4%;
+    }
+    .blue-perfetto-image {
+        width: 50%;
+        position: relative;
+        top: -16px;
+    }
+    .display {
+        font-size: 13px;
+        position: relative;
+        top: -219px;
+        left: 52%;
+        width: 100px;
+    }
+    .money {
+        position: relative;
+        left: 14px;
+        font-size: 17px;
+    }
+    .charging-device {
+        font-size: 10px;
+        position: relative;
+        left: 63px;
+        top: 0;
+    }
+    .dual-charger {
+        font-size: 13px;
+        position: relative;
+        left: 16%;
+        top: 5px;
+    }
+    .user-friendly {
+        width: 180px;
+        font-size: 8px;
+        top: -232px;
+        position: relative;
+        left: 145px;
+    }
+    .hr {
+        width: 76%;
+        position: relative;
+        left: 17px;
+    }
+    .smart-simple {
+        position: relative;
+        left: 14px;
+        font-size: 21px;
+    }
+    .carousel-indicators {
+        position: relative;
+    }
+    .made_families {
+        font-size: 20px;
+    }
+    .store_to_your {
+        font-size: 22px;
+        text-align: center;
+    }
+    .buttons3 {
+        position: absolute;
+        top: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    .carousel-dots {
+        bottom: 5px;
+        position: relative;
+        top: 23%;
+        margin-left: 28%;
+    }
+    .buttons {
+        bottom: 20px;
+        flex-direction: row;
+        align-items: center;
+        top: -53%;
+        left: 30%;
+    }
+    #container {
+        max-width: 368px;
+        padding: 20px;
+        margin-top: 16px;
+        min-height: 264px;
+    }
+    .book-your-ride {
+        position: relative;
+        left: -28px;
+        top: -10px;
+        min-width: 0;
+        font-size: 12px;
+    }
+    .reserve-now {
+        position: absolute;
+        left: -14%;
+        min-width: 82px;
+        margin-top: 0%;
+    }
+    .power {
+        margin: 0;
+    }
+    .speed-text {
+        position: relative;
+        top: 6%;
+        left: 29%;
+        font-size: 16px;
+    }
+    .image-containers {
+        min-height: 130px;
+    }
+    .tagline {
+        font-size: 17px;
+        font-weight: 700;
+    }
+    .detailed_code {
+        max-width: 65%;
+    }
+    .detailed-spec {
+        font-size: 26px;
+    }
+    .powerful_motors {
+        font-size: 31px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .smooth_ride {
+        text-align: center;
+        bottom: 15px;
+        position: relative;
+        left: 2px;
+    }
+    .head-light {
+        height: 200px;
+        margin-top: -10%;
+    }
+    .impress {
+        font-size: 20px;
+        position: relative;
+        left: 16px;
+    }
+    .metal-body {
+        font-size: 18px;
+        position: relative;
+        left: -22%;
+    }
+    .built_last {
+        font-size: 18px;
+    }
+    .logo img {
+        width: 43%;
+        margin-left: -27%;
+        margin-top: -16%;
+    }
+    .warranty-text {
+        font-size: 46px;
+        margin-left: -10%;
+        margin-top: -4%;
+    }
+    #warranty_km {
+        font-size: 19px;
+        margin-left: -10%;
+        margin-top: 8%;
+    }
+    .button {
+        width: 100px;
+        margin-top: 12%;
+        position: absolute;
+        left: 35%;
+        top: 34%;
+    }
+    .image-container-1 {
+        height: 150px;
+    }
+    /* .metal-body{
+        margin-left: -26px
+     } */
+    .more_scooter {
+        font-size: 16px;
+    }
+    .heart_content {
+        font-size: 14px;
+        text-align: center;
+    }
+    .image-circle {
+        margin-left: 0%;
+        top: -32px;
+        max-width: 100px;
+        max-height: 100px;
+        position: relative;
+        left: 13%;
+        margin-bottom: -7px;
+        bottom: 48px;
+    }
+    .number-text {
+        text-align: center;
+        position: relative;
+        top: -56px;
+        right: 24px;
+    }
+    .number {
+        font-size: 45px;
+        margin-bottom: 0;
+        margin-top: 45%;
+        margin-left: 0%;
+        text-align: center;
+        position: relative;
+        top: 17px;
+    }
+    .mobile-image-2 {
+        width: 96%;
+    }
+    .mobile-image-1 {
+        margin-top: 5%;
+        width: 82%;
+        position: relative;
+        left: 39%;
+        top: 12px;
+    }
+    .battery-points-1 {
+        margin-top: -25%;
+        position: relative;
+        left: 160%;
+        top: -22px;
+        width: 148px;
+    }
+    .battery-points-2 {
+        position: relative;
+        left: 164%;
+        top: 10px;
+        margin-top: -28%;
+        width: 150px;
+    }
+    .motor-power {
+        margin-left: 8%;
+        font-size: 20px;
+        margin-top: 2%;
+        width: 150px;
+        position: relative;
+        left: 114px;
+        top: 12px;
+    }
+    .battery-capacity {
+        margin-left: 0%;
+        font-size: 17px;
+        margin-top: 3%;
+        position: relative;
+        width: 150px;
+        left: 170%;
+        top: -12px;
+    }
+    .efficient-rides {
+        font-size: 13px;
+        position: relative;
+        left: 122px;
+        text-align: justify;
+        width: 160px;
+        top: -7px;
+        color: black;
+    }
+    .battery-image {
+        margin-left: -14%;
+        margin-top: -14%;
+        width: 68%;
+        position: relative;
+        bottom: -52px;
+    }
+    .battery-points {
+        position: relative;
+        top: -80px;
+        left: 15%;
+        margin-top: -10%;
+        width: 100px;
+    }
+    .smooth-performance-2 {
+        position: relative;
+        left: 171%;
+        width: 169px;
+        top: 13px;
+        font-size: 14px;
+        text-align: justify;
+        display: block;
+    }
+    .motor-image {
+        width: 72%;
+        margin-top: -11%;
+        margin-left: -60px;
+        position: relative;
+        bottom: -8px;
+        margin-bottom: -57px;
+    }
+    .motor-points {
+        position: relative;
+        top: -80px;
+        left: 15%;
+        margin-top: -10%;
+        width: 100px;
+    }
+    .smooth-performance {
+        /* font-size: 15px;
+        position: relative;
+        right: 4px;
+        text-align: center; */
+        display: none;
+    }
+    .table-header {
+        font-size: 12px;
+        font-weight: 800;
+    }
+    .speed-number {
+        font-size: 31px;
+        text-align: center;
+        margin-top: 12px;
+        margin-right: 54px;
+        position: relative;
+        top: -19px;
+        left: 36%;
+    }
+    .buttons4 {
+        margin-top: 3%;
+        width: 100px;
+    }
+    .battery_charging {
+        font-size: 11px;
+        font-weight: 800;
+    }
+    /* .power{
+        margin-top: -50%;
+    } */
+    .underseat {
+        font-size: 20px;
+    }
+    .front {
+        font-size: 20px;
+    }
+    .front_bag_holder {
+        font-size: 20px;
+    }
+    .storage {
+        font-size: 16px;
+    }
+    .storage-1 {
+        font-size: 16px;
+    }
+    .backrest {
+        font-size: 16px;
+    }
+    .hearts_content {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 14%;
+    }
+    .hearts_content-1 {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 14%;
+        border-radius: 10px;
+    }
+    .hearts_content-2 {
+        width: 70%;
+        height: 80%;
+        position: relative;
+        left: 14%;
+        border-radius: 10px;
+    }
+    .hearts_content-3 {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 14%;
+        margin-top: 5%;
+    }
+    .grabrail {
+        font-size: 20px;
+    }
+    .location-image {
+        width: 80%;
+        position: relative;
+        left: 12%;
+        top: 20px;
+    }
+    .info {
+        font-size: 45px;
+        position: relative;
+        top: -7px;
+        left: 8px;
+    }
+    .info span {
+        font-size: 15px;
+    }
+    .location-text {
+        position: relative;
+        top: 70%;
+    }
+    .mobile-app {
+        text-align: center;
+    }
+    .monitor {
+        text-align: center;
+        font-size: 20px;
+    }
+    .mobile-image-4 {
+        width: 100%;
+        position: relative;
+        top: 8%;
+        right: 0%;
+    }
+    .mobile-image-3 {
+        width: 82%;
+        position: relative;
+        right: 23%;
+        top: 20px;
+    }
+    .smooth-ride1 {
+        width: 92%;
+        height: 200px;
+        margin-top: -33px;
+        display: none;
+    }
+    .circle-button {
+        width: 10px;
+        height: 10px;
+    }
+    .display-image-1 {
+        display: block;
+        position: relative;
+        top: 4%;
+    }
+    .display-image {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .perfetto_logo {
+        width: 76%;
+        height: 4%;
+        margin-left: -16px;
+        margin-top: 135px;
+        position: relative;
+        top: -47px;
+    }
+    .reserve-now {
+        position: relative;
+        margin-top: 0;
+        left: -71px;
+        top: 64px;
+        font-size: 14px;
+        min-width: 90px;
+    }
+    .range_up_to {
+        position: relative;
+        top: -14px;
+        font-size: 15px;
+        right: 10%;
+    }
+    .smooth-ride1 {
+        width: 77%;
+        margin-top: -9%;
+        height: 150px;
+        position: relative;
+        top: -2%;
+        display: none;
+    }
+    .location-image-1 {
+        display: block;
+        width: 68%;
+        position: relative;
+        left: 18%;
+        border-radius: 20px;
+        margin-top: 10%;
+    }
+    .location-image {
+        width: 70%;
+        position: relative;
+        left: 12%;
+        top: -13px;
+    }
+    .info {
+        font-size: 45px;
+        position: relative;
+        top: -35px;
+        left: 1%;
+    }
+    .info span {
+        font-size: 15px;
+    }
+    #range {
+        font-size: 16px;
+        position: relative;
+        left: -4%;
+    }
+    .location-text {
+        position: relative;
+        top: 70%;
+    }
+    .charging-device {
+        font-size: 11px;
+        position: relative;
+        left: 15px;
+    }
+    .dual-charger {
+        font-size: 15px;
+        position: relative;
+        left: 15px;
+    }
+    .hr {
+        width: 76%;
+        position: relative;
+        left: 17px;
+    }
+    .smart-simple {
+        position: relative;
+        left: 14px;
+        font-size: 28px;
+    }
+    .display {
+        font-size: 18px;
+    }
+    .user-friendly {
+        font-size: 10px;
+    }
+    .hr {
+        width: 86%;
+    }
+    .impress {
+        font-size: 25px;
+    }
+    .circle-button {
+        width: 10px;
+        height: 10px;
+    }
+    .store_to_your {
+        font-size: 26px;
+    }
+    .made_families {
+        font-size: 35px;
+    }
+    .buttons3 {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    .buttons {
+        position: absolute;
+        top: 14%;
+        left: 20%;
+        display: flex;
+        gap: 10px;
+    }
+    .carousel-dots {
+        position: relative;
+        top: 24%;
+    }
+    #container {
+        min-width: 100%;
+        height: 84%;
+    }
+    #kmhr {
+        font-size: 16px;
+        position: relative;
+        top: -22%;
+        left: 32%;
+    }
+    .tagline {
+        font-size: 18px;
+    }
+    .image-containers {
+        height: 100px;
+    }
+    .speed-number {
+        margin-left: 23%;
+        text-align: center;
+        font-size: 31px;
+        position: relative;
+        top: -13%;
+        margin-top: 3%;
+    }
+    .speed-text {
+        position: relative;
+        left: 27%;
+        font-size: 14px;
+        text-align: center;
+        top: 0%;
+    }
+    .powerful_motors {
+        position: relative;
+        left: 8%;
+        font-size: 45px;
+        font-weight: 500;
+    }
+    .smooth_ride {
+        text-align: left;
+        font-size: 15px;
+        position: relative;
+        bottom: 10px;
+    }
+    .head-light {
+        height: 180px;
+        margin-top: -8%;
+    }
+    .warranty-text {
+        font-size: 35px;
+        position: absolute;
+        top: 30%;
+        left: 40%;
+    }
+    #warranty_km {
+        font-size: 17px;
+        position: absolute;
+        left: 17%;
+        top: 100%;
+    }
+    .button {
+        width: 19%;
+        position: absolute;
+        right: 8%;
+    }
+    .battery-points-1 {
+        margin-top: -17%;
+        position: relative;
+        left: 30%;
+    }
+    .battery-capacity {
+        margin-left: 24%;
+        margin-top: 13px;
+        font-size: 22px;
+        width: 300px;
+    }
+    .efficient-rides {
+        font-size: 17px;
+        position: relative;
+        right: 0;
+        text-align: center;
+    }
+    .battery-image {
+        margin-left: 0%;
+        margin-top: -10%;
+    }
+    .smooth-performance-2 {
+        display: none;
+    }
+    .motor-image {
+        margin-top: -7%;
+        margin-left: 2%;
+    }
+    .battery-points-2 {
+        position: relative;
+        left: 30%;
+        margin-top: -20%;
+        width: 200px;
+    }
+    .motor-power {
+        margin-left: 30%;
+        margin-top: 2%;
+        font-size: 22px;
+    }
+    .smooth-performance {
+        font-size: 17px;
+        position: relative;
+        left: 2%;
+        text-align: center;
+    }
+    .image-circle {
+        position: relative;
+        right: 40%;
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .number {
+        font-size: 25px;
+        position: relative;
+        left: 10%;
+    }
+    .image-text {
+        font-size: 13px;
+        text-align: center;
+        position: relative;
+        top: 0;
+    }
+    .mobile-image-1 {
+        width: 90%;
+        position: relative;
+        top: 10px;
+        left: 28px;
+    }
+    .mobile-image-2 {
+        width: 100%;
+    }
+    .mobile-app {
+        text-align: center;
+    }
+    .monitor {
+        text-align: center;
+    }
+    .mobile-image-4 {
+        width: 100%;
+        position: relative;
+        top: 12%;
+        right: 3%;
+    }
+    .mobile-image-3 {
+        width: 90%;
+        position: relative;
+        top: 10px;
+        right: 16px;
+    }
+    .table-header {
+        font-size: 20px;
+    }
+    .power {
+        margin-top: 5%;
+    }
+    .underseat {
+        font-size: 20px;
+    }
+    .front {
+        font-size: 20px;
+    }
+    .front_bag_holder {
+        font-size: 20px;
+    }
+    .grabrail {
+        font-size: 20px;
+    }
+    .metal-body {
+        font-size: 20px;
+        position: relative;
+        left: -33px;
+    }
+    .built_last {
+        left: 1%;
+        font-size: 14px;
+        position: relative;
+    }
+    .heart_content {
+        font-size: 20px;
+    }
+    .hearts_content {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 33px;
+    }
+    .hearts_content-1 {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 14%;
+        border-radius: 10px;
+    }
+    .hearts_content-2 {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 14%;
+        top: 10px;
+        border-radius: 10px;
+    }
+    .hearts_content-3 {
+        width: 70%;
+        height: 66%;
+        position: relative;
+        left: 14%;
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .smooth-performance-2 {
+        display: none;
+    }
+    .display-image {
+        min-width: 230%;
+        height: auto;
+    }
+    .display {
+        margin-top: 10%;
+    }
+    .top-speed {
+        margin-top: 6%;
+    }
+    #kmhr {
+        font-size: 19px;
+    }
+    .info span {
+        font-size: 20px;
+    }
+    .perfetto_logo {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 13%;
+        right: 28%;
+        margin-left: -8%;
+    }
+    .reserve-now {
+        position: relative;
+        margin-left: -28px;
+        margin-top: 16%;
+        top: -50px;
+        font-size: 14px;
+        min-width: 150px;
+    }
+    .hr {
+        width: 90%;
+    }
+    .dual-charger {
+        font-size: 27px;
+        position: relative;
+        left: 3%;
+    }
+    .charging-device {
+        font-size: 16px;
+        position: relative;
+        left: 3%;
+    }
+    .smart-simple {
+        position: relative;
+        left: 3%;
+    }
+    .impress {
+        font-size: 30px;
+    }
+    /* .number{
+        font-size: 10px;
+    } */
+    .image-text {
+        font-size: 15px;
+        position: relative;
+        left: 10px;
+        top: 0;
+    }
+    .power {
+        margin-top: 0%;
+    }
+    .powerful_motors {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+    }
+    .metal-body {
+        margin-left: 23px;
+    }
+    .smooth-ride1 {
+        margin-top: 10px;
+        height: 100%;
+        min-width: 100%;
+        position: relative;
+        top: -10%;
+        left: 0;
+    }
+    .heart_content {
+        font-size: 30px;
+    }
+    #range {
+        font-size: 18px;
+    }
+    .perfetto_center-1 {
+        font-size: 17px;
+    }
+    .perfetto_center {
+        font-size: 17px;
+    }
+    .location-text {
+        position: relative;
+        left: 9%;
+        top: -56%;
+    }
+    .location-image {
+        width: 58%;
+        position: relative;
+        top: 284px;
+        left: -27%;
+    }
+    .carousel-dots {
+        bottom: 5px;
+        position: relative;
+        top: 37%;
+        margin-left: 29%;
+    }
+    .buttons {
+        bottom: 20px;
+        flex-direction: row;
+        align-items: center;
+        top: -77%;
+        left: 160px;
+        min-width: 10%;
+    }
+    #container {
+        min-width: 120%;
+        margin-top: 30px;
+        position: relative;
+        right: 10%;
+    }
+    .image-containers {
+        height: 185px;
+        margin-bottom: 0;
+    }
+    .tagline {
+        font-size: 30px;
+    }
+    .speed-number {
+        text-align: center;
+        margin-top: 6%;
+        position: relative;
+        left: 14%;
+        font-size: 55px;
+    }
+    .speed-text {
+        text-align: left;
+        font-size: 19px;
+    }
+    .head-light {
+        height: 200px;
+        margin-top: -5%;
+    }
+    .warranty-text {
+        /* margin-left:-18%; */
+        position: absolute;
+        left: 37%;
+        font-size: 55px;
+    }
+    .button {
+        width: 16%;
+        font-size: 16px;
+        position: absolute;
+        right: 12%;
+    }
+    .store_to_your {
+        font-size: 40px;
+    }
+    .underseat {
+        font-size: 17px;
+        margin-top: 0%;
+    }
+    .storage {
+        font-size: 18px;
+    }
+    .storage-1 {
+        font-size: 18px;
+    }
+    .backrest {
+        font-size: 18px;
+    }
+    .front {
+        font-size: 18px;
+        margin-top: 0%;
+    }
+    .grabrail {
+        font-size: 18px;
+        margin-top: 0%;
+    }
+    .front_bag_holder {
+        font-size: 18px;
+        position: relative;
+        top: 0;
+    }
+    .image-circle {
+        max-width: 120px;
+        position: relative;
+        right: 5%;
+        max-height: 120px;
+    }
+    .front-image {
+        max-width: 450px;
+        margin-top: -19%;
+    }
+    .mobile-app {
+        text-align: center;
+    }
+    .monitor {
+        text-align: center;
+    }
+    .mobile-image-1 {
+        width: 72%;
+        position: relative;
+        left: 34px;
+    }
+    .mobile-image-2 {
+        width: 84%;
+        position: relative;
+        left: -30px;
+    }
+    .mobile-image-4 {
+        width: 200%;
+        position: relative;
+        right: 130px;
+        top: 11%;
+    }
+    .mobile-image-3 {
+        width: 74%;
+        position: relative;
+        right: 75px;
+    }
+    .battery-image {
+        max-width: 300px;
+        margin-left: -70%;
+    }
+    .motor-image {
+        max-width: 300px;
+        /* margin-left: -73%; */
+        position: relative;
+        left: 35px;
+    }
+    .battery-points-1 {
+        position: relative;
+        left: -20px;
+        margin-top: -30%;
+    }
+    .battery-capacity {
+        font-size: 16px;
+        position: relative;
+        left: 0px;
+        top: 4px;
+    }
+    .motor-power {
+        font-size: 16px;
+        position: relative;
+        left: 44px;
+    }
+    .buttons3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    .smooth-performance {
+        font-size: 17px;
+        text-align: left;
+        position: relative;
+        left: 0;
+        width: 210px;
+    }
+    .smooth_ride {
+        text-align: left;
+    }
+    .efficient-rides {
+        font-size: 16px;
+        position: relative;
+        right: 0%;
+        text-align: left;
+    }
+    .battery-points-2 {
+        position: relative;
+        left: -8px;
+    }
+    .info {
+        position: relative;
+        left: -34%;
+        top: 280px;
+        font-size: 60px;
+    }
+    .number {
+        font-size: 45px;
+        position: relative;
+        left: 10%;
+    }
+    .range_up_to {
+        position: relative;
+        top: 300px;
+        left: -38%;
+    }
+    .smooth-performance-2 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1150px) {
+    #container {
+        position: relative;
+        right: 6%;
+    }
+    .smooth-performance-2 {
+        display: none;
+    }
+    .front-image {
+        max-width: 100%;
+        margin-top: -19%;
+    }
+    .info {
+        position: relative;
+        left: -7%;
+        top: 175px;
+        font-size: 80px;
+    }
+    .location-image {
+        width: 40%;
+        position: relative;
+        left: -6%;
+        top: 214px;
+    }
+    .range_up_to {
+        position: relative;
+        right: 16%;
+        top: 213px;
+    }
+    .smooth-ride1 {
+        width: 89%;
+        position: relative;
+        right: 6%;
+    }
+    .location-text {
+        position: relative;
+        left: -15%;
+        top: -28%;
+    }
+    .carousel-dots {
+        position: relative;
+        top: 85%;
+        margin-left: 32%;
+    }
+    .image-containers {
+        height: 170px;
+    }
+    .speed-text {
+        text-align: left;
+        font-size: 26px;
+    }
+    .impress {
+        font-size: 30px;
+    }
+    .money {
+        font-size: 25px;
+    }
+    .charging-device {
+        font-size: 18px;
+    }
+    .dual-charger {
+        font-size: 28px
+    }
+    .warranty-text {
+        font-size: 60px;
+        position: absolute;
+        left: 40%;
+    }
+    .metal-body {
+        font-size: 40px;
+        margin-left: 0%;
+    }
+    .built_last {
+        font-size: 24px;
+        position: relative;
+        right: 15%;
+        font-weight: 500;
+    }
+    .more_scooter {
+        font-size: 20px;
+    }
+    .made_families {
+        font-size: 30px;
+    }
+    .store_to_your {
+        font-size: 30px;
+    }
+    .heart_content {
+        font-size: 20px;
+    }
+    .image-circle {
+        max-width: 150px;
+        position: relative;
+        right: 18%;
+        max-height: 150px;
+    }
+    .number {
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+    }
+    .head-light {
+        height: 200px;
+        margin-top: -4%;
+    }
+    .button {
+        position: absolute;
+        left: 66%;
+        width: 10%;
+    }
+    .battery-points-2 {
+        font-size: 60px;
+        position: relative;
+        left: 15%;
+    }
+    .motor-power {
+        font-size: 17px;
+        position: relative;
+        left: 78px;
+    }
+    .battery-points-1 {
+        font-size: 60px;
+        position: relative;
+        left: 14%;
+    }
+    .battery-capacity {
+        font-size: 16px;
+        position: relative;
+        left: 48px;
+        top: 5px;
+    }
+    .smooth-performance {
+        position: relative;
+        right: -20%;
+        font-size: 15px;
+    }
+    .efficient-rides {
+        font-size: 15px;
+        position: relative;
+        left: 30px;
+    }
+    .motor-image {
+        position: relative;
+        left: 30px;
+    }
+    .smooth-ride {
+        max-width: 400px;
+    }
+    .buttons3 {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    .buttons {
+        position: absolute;
+        top: 35%;
+        left: 20%;
+        display: flex;
+        gap: 10px;
+    }
+    .mobile-image-2 {
+        width: 69%;
+        position: relative;
+        right: 2%;
+    }
+    .mobile-image-3 {
+        width: 60%;
+        position: relative;
+        right: 41%;
+    }
+    .mobile-image-1 {
+        width: 59%;
+        position: relative;
+        left: 52%;
+    }
+    .mobile-image-4 {
+        width: 164%;
+        position: relative;
+        top: 33%;
+        right: 92%;
+    }
+    .reserve-now {
+        position: relative;
+        font-size: 14px;
+        min-width: 150px;
+        top: 200px;
+        margin-top: 14%;
+    }
+    .perfetto_logo {
+        position: relative;
+        width: 100%;
+        top: -43px;
+        right: 21%;
+    }
+}
+
+
+/* 
+@media screen and (max-width: 1280px) {
+
+    .warranty-text{
+        font-size: 100px;
+        margin-left: 0%;
+        margin-top: -4%;
+    }
+  
+} */
+
+@media (min-width: 1150px) and (max-width: 1280px) {
+    .button {
+        position: absolute;
+        left: 66%;
+        width: 10%;
+    }
+    .mobile-image-3 {
+        width: 70%;
+        position: relative;
+        right: 33%;
+    }
+    .impress {
+        font-size: 35px;
+    }
+    .store_to_your {
+        font-size: 35px;
+    }
+    .heart_content {
+        font-size: 28px;
+    }
+    .made_families {
+        font-size: 30px;
+    }
+    .more_scooter {
+        font-size: 20px;
+    }
+    .smooth-ride1 {
+        width: 89%;
+    }
+    .location-text {
+        position: relative;
+        top: -28%;
+        left: -12%;
+    }
+    .location-image {
+        width: 40%;
+        position: relative;
+        left: -8%;
+        top: 200px;
+    }
+    .info {
+        position: relative;
+        left: -11%;
+        top: 149px;
+        font-size: 84px;
+    }
+    .speed-text {
+        font-size: 26px;
+        position: relative;
+        left: 0%;
+    }
+    .range_up_to {
+        position: relative;
+        right: 20%;
+        top: 195px;
+    }
+    .buttons3 {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    .mobile-image-2 {
+        width: 80%
+    }
+    .mobile-image-4 {
+        width: 177%;
+        position: relative;
+        right: 63%;
+        top: 36%;
+    }
+    .mobile-image-1 {
+        width: 68%;
+        position: relative;
+        left: 45%;
+        ;
+    }
+    .image-circle {
+        max-width: 140px;
+        max-height: 140px;
+    }
+    .battery-points-2 {
+        position: relative;
+        left: 0;
+    }
+    .battery-points-1 {
+        position: relative;
+        left: -1%;
+    }
+    .battery-capacity {
+        font-size: 21px;
+        position: relative;
+        left: 17px;
+    }
+    .motor-power {
+       font-size: 23px;
+        position: relative;
+        left: 24%;
+    }
+    .smooth-performance {
+        font-size: 15px;
+        position: relative;
+        left: 10px;
+    }
+    .efficient-rides {
+        font-size: 15px;
+        position: relative;
+        left: -4px;
+    }
+    .charging-device {
+        font-size: 18px;
+    }
+    .dual-charger {
+        font-size: 28px
+    }
+    .reserve-now {
+        position: relative;
+        top: -300px;
+        margin-top: 35%;
+    }
+    .perfetto_logo {
+        margin-top: 15%;
+        margin-left: 3%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1550px) {
+    .button {
+        position: absolute;
+        left: 66%;
+        width: 10%;
+    }
+    .store_to_your {
+        font-size: 35px;
+    }
+    .heart_content {
+        font-size: 28px;
+    }
+    .made_families {
+        font-size: 30px;
+    }
+    .more_scooter {
+        font-size: 20px;
+    }
+    .impress {
+        font-size: 35px;
+    }
+    .mobile-image-4 {
+        width: 50%;
+        position: relative;
+        top: 5%;
+    }
+    .reserve-now {
+        position: relative;
+        top: -363px;
+    }
+    .perfetto_logo {
+        width: 100%;
+        position: relative;
+        right: 2%;
+        top: -60px;
+    }
+    .buttons3 {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    .mobile-image-2 {
+        width: 20%;
+    }
+    .mobile-image-1 {
+        width: 16%;
+    }
+    .charging-device {
+        font-size: 18px;
+    }
+    .dual-charger {
+        font-size: 28px
+    }
+    .info {
+        position: relative;
+        top: 175px;
+        left: -18%;
+    }
+    .range_up_to {
+        position: relative;
+        top: 220px;
+        left: -28%;
+    }
+    .mobile-image-3 {
+        width: 16%;
+    }
+}
+
+@media (min-width: 1550px) and (max-width: 1700px) {
+    .button {
+        position: absolute;
+        left: 62%;
+        width: 10%;
+    }
+    .buttons3 {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    .smooth-ride1 {
+        max-width: 100%;
+    }
+    .charging-device {
+        font-size: 18px;
+    }
+    .dual-charger {
+        font-size: 26px
+    }
+    .mobile-image-4 {
+        width: 50%;
+        position: relative;
+        top: 5%;
+    }
+}
+
+@media (min-width:300px) and (max-width:359px) {
+    .underseat {
+        font-size: 13px;
+    }
+    .front {
+        font-size: 13px;
+    }
+    .front_bag_holder {
+        font-size: 13px;
+    }
+    .grabrail {
+        font-size: 13px;
+    }
+}
+
+@media (min-width:481px) and (max-width:575px) {
+    .image-circle {
+        max-width: 150px;
+        position: relative;
+        left: 32%;
+        max-height: 150px;
+    }
+    .number {
+        text-align: center;
+        position: relative;
+        font-size: 50px;
+        top: 0%;
+        left: 20%;
+        margin-top: -24%;
+    }
+    .image-text {
+        position: relative;
+        left: 25%;
+        font-size: 20px;
+        top: -30%;
+    }
+}
+
+@media (min-width:1280px) and (max-width:1380px) {
+    .smooth-ride1 {
+        width: 90%;
+    }
+    .location-image {
+        width: 50%;
+        position: relative;
+        top: 232px;
+        left: -13%;
+    }
+    .location-text {
+        position: relative;
+        top: -28%;
+    }
+    .mobile-image-2 {
+        width: 80%;
+    }
+    .mobile-image-3 {
+        width: 72%;
+        position: relative;
+        right: 54px;
+    }
+    .mobile-image-1 {
+        width: 70%;
+        position: relative;
+        left: 74px;
+    }
+    .charging-device {
+        font-size: 18px;
+    }
+    .dual-charger {
+        font-size: 26px
+    }
+    .battery-points-2 {
+        position: relative;
+        left: -18%;
+        margin-top: -35%;
+    }
+    .battery-points-1 {
+        position: relative;
+        left:-7%;
+        margin-top: -35%;
+    }
+    .battery-capacity {
+        position: relative;
+        left: 0%;
+        font-size: 20px;
+    }
+    .motor-power {
+        position: relative;
+        left: 0%;
+        font-size: 20px;
+    }
+    .mobile-image-4 {
+        width: 320px;
+        position: relative;
+        top: 37%;
+        right: 69%;
+    }
+}
+
+@media (min-width:1380px) and (max-width:1700px) {
+    .mobile-image-4 {
+        width: 314px;
+        position: relative;
+        top: 37%;
+        right: 60%;
+    }
+    .mobile-image-2 {
+        width: 80%;
+    }
+    .mobile-image-3 {
+        width: 72%;
+        position: relative;
+        right: 54px;
+    }
+    .mobile-image-1 {
+        width: 70%;
+        position: relative;
+        left: 74px;
+    }
+    .smooth-ride1 {
+        width: 90%;
+        position: relative;
+        top: -22px;
+    }
+    .location-image {
+        width: 45%;
+        position: relative;
+        top: 215px;
+        left: -130px;
+    }
+    .range_up_to {
+        position: relative;
+        top: 218px;
+        left: -240px;
+    }
+    .info {
+        position: relative;
+        top: 180px;
+        left: -154px;
+    }
+    .location-text {
+        position: relative;
+        top: -28%;
+    }
+    .battery-points-2 {
+        position: relative;
+        margin-top: -35%;
+    }
+    .battery-points-1 {
+        position: relative;
+        /* left: -27%;  */
+        margin-top: -35%;
+    }
+    .battery-capacity {
+        position: relative;
+        left: 0%;
+        font-size: 20px;
+    }
+    .motor-power {
+        position: relative;
+        left: 0%;
+        font-size: 20px;
+    }
+}
+
+
+/* 
+@media (min-width:764px) and (max-width:990px){
+    .powerful_motors{
+        text-align: right;
+        font-size: 53px;
+        font-weight: 500;
+    }
+    .location-image{
+        width: 50%;
+        position: relative;
+        left: 10%;
+    }
+    .smooth-ride1{
+        position: relative;
+        top: 5%;
+        width: 100%;
+    }
+    .location-text {
+        position: relative;
+        left: -126px;
+        top: 80%;
+    }
+    .info{
+        position: relative;
+        left: 13%;
+    }
+  
+}    */
+
+@media (min-width:992px) and (max-width:1024px) {
+    .display-image {
+        min-width: 100%;
+        height: auto;
+        margin-bottom: 20%;
+        position: relative;
+        top: 8%;
+    }
+    .display {
+        margin-top: 10%;
+    }
+    .user-friendly {
+        font-size: 15px;
+    }
+    .info {
+        position: relative;
+        left: 4%;
+        top: 314px;
+    }
+    .battery-capacity {
+       font-size: 16px;
+        position: relative;
+        left: 39px;
+        top: 7px;
+    }
+    .range_up_to {
+        position: absolute;
+        top: 360px;
+        left: 21%;
+    }
+    .smooth-ride1 {
+        margin-top: 10px;
+        height: 100%;
+        min-width: 103%;
+        position: relative;
+        top: -10%;
+        left: 0;
+    }
+    .battery-image {
+        position: relative;
+        left: 45%;
+    }
+    .battery-points-1 {
+        position: relative;
+        left: 11%;
+        font-size: 42px;
+    }
+    .efficient-rides {
+        font-size: 15px;
+        position: relative;
+        left: 20px;
+    }
+    .battery-points-2 {
+        position: relative;
+        left: -14%;
+        font-size: 42px;
+        margin-top: -15%;
+    }
+    .motor-power {
+        position: relative;
+        left: 6%;
+        top: 5px;
+    }
+    .smooth-performance {
+        position: relative;
+        left: -30px;
+        font-size: 15px;
+    }
+    .location-image {
+        width: 28%;
+        position: relative;
+        left: 7%;
+        top: 290px;
+    }
+    .location-text {
+        position: relative;
+        left: -37%;
+        top: -110px;
+    }
+    /* .perfetto_logo {
+        margin-top: -156%;
+        margin-left: 0%;
+        width: 50%;
+    } */
+    /* .reserve-now {
+        position: relative;
+        left: 40px;
+        margin-top: -145%;
+        font-size: 14px;
+        min-width: 150px;
+    } */
+}
+
+@media(min-width:1200px) and (max-width:1280px) {
+    .smooth-ride1 {
+        width: 90%;
+    }
+    .location-image {
+        width: 40%;
+        position: relative;
+        left: -8%;
+        top: 264px;
+    }
+    .range_up_to {
+        position: relative;
+        left: -20%;
+        top: 263px;
+    }
+    .info {
+        position: relative;
+        left: -13%;
+        top: 231px;
+    }
+    .battery-points-2 {
+        position: relative;
+        margin-top: -50%;
+        left: -8%;
+    }
+    .motor-power {
+        position: relative;
+        left: 8%;
+    }
+    .smooth-performance {
+        position: absolute;
+        left: -2%;
+    }
+    .battery-capacity {
+        position: relative;
+        left: 7%;
+    }
+}
+
+@media (min-width: 1550px) and (max-width: 1980px) {
+    .reserve-now {
+        margin-top: -50%;
+        position: relative;
+        top: -100px;
+        left: 4%;
+    }
+    .perfetto_logo {
+        height: 40%;
+        position: relative;
+        right: 0%;
+        top: -150px;
+        width: 100%;
+    }
+}
+
+
+/* @media (min-width:1024px) and (max-width:1366px) {
+    .perfetto_logo {
+        margin-top: -156%;
+        margin-left: 0%;
+        width: 50%;
+    }
+    .reserve-now {
+        position: relative;
+        left: 40px;
+        margin-top: -145%;
+        font-size: 14px;
+        min-width: 150px;
+    }
+} */
+
+@media (min-width:576px) and (max-width:767px) {
+    .battery-image {
+        width: 222%;
+    }
+    .motor-image {
+        width: 220%;
+    }
+    /* .battery-points-1{
+
+    } */
+    .battery-capacity {
+        position: relative;
+        left: 6%;
+    }
+    .efficient-rides {
+        font-size: 15px;
+        color: black;
+        text-align: justify;
+        left: 112px;
+        position: relative;
+    }
+    .smooth-performance {
+        display: none;
+    }
+    .smooth-performance-2 {
+        display: block;
+        text-align: justify;
+        position: relative;
+        left: 110px;
+    }
+}
+
+
+/* @media (min-width:768px) and (max-width:1366px) {
+    .perfetto_logo {
+        width: 50%;
+        position: relative;
+        right: 20%;
+        top: -108px;;
+    }
+    .reserve-now {
+        position: relative;
+        top: -231px;
+    }
+ } */
+
+@media(min-width:380px) and (max-width:480px) {
+    .user-friendly {
+        position: relative;
+        left: 47%;
+        top: -254px;
+    }
+    .display {
+        top: -244px;
+    }
+    .charging-device {
+        font-size: 9px;
+        left: 57px;
+    }
+    /* satizz css code changes */
+    .left_15 {
+        margin-left: 15px !important
+    }
+    .changing-image,
+    .slider-btn,
+    .web_view_slider {
+        display: none;
+    }
+    .mobile_view_slider {
+        display: block !important;
+    }
+    .col-5.fw-bold.perfetto_center {
+        margin-left: -8%;
+    }
+}
+
+@media(min-width:451px) and (max-width:480px) {
+    .user-friendly {
+        position: relative;
+        left: 47%;
+        top: -271px;
+    }
+    .display {
+        top: -260px;
+    }
+    .charging-device {
+        font-size: 9px;
+        left: 71px;
+    }
+}
+
+.custom-caption {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    padding: 20px 30px;
+    border-radius: 8px;
+    color: #fff;
+    max-width: 450px;
+}
+
+.custom-caption h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.custom-caption h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.custom-caption h3 {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.custom-caption h4 {
+    font-size: 38px;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.custom-caption p {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.custom-buttons {
+    margin-top: 50px;
+}
+
+.custom-buttons .btn {
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+.booking-now {
+    background-color: #fff;
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: black;
+}
+
+.reserve-now {
+    background-color: #fff;
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: black;
+    top: -70px;
+}
+
+
+/* satiz css */
+
+p.smooth-info {
+    margin-top: 17%;
+}
+
+/* .impress {
+    font-size: 28px;
+} */
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider-btn.left {
+    left: 10px;
+}
+
+.slider-btn.right {
+    right: 10px;
+}
+
+.mobile_view_slider {
+    display: none;
+}

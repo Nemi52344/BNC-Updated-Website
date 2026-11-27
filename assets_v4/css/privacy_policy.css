@@ -1,0 +1,41 @@
+h2
+{
+    font-family: fantasy;
+    color: black;
+    text-align: initial;
+    font-size: 39px;
+    padding: 15px;
+    
+}
+.main-border
+{
+    height: 79px;
+    border-radius: 13px;
+    background-color: whitesmoke;
+}
+
+.txtHankenGrotesk-ThinBlacks {
+    font-family: "HankenGrotesk-Thin";
+    font-size: 16px;
+    color: #ffff;
+    font-weight: bold;
+    padding: 7px;
+    margin-top: 17px;
+  }
+
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header-title {
+    font-size: 4rem !important;
+    color: white !important;
+    
+  }
+  
+  @media screen and (max-width: 600px) {
+    .header-title {
+      font-size: 24px;
+    }
+  }

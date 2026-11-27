@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BNC B2B: fleet leasing, AMC and electric bikes for business</title>
+<meta name="description" content="Electric bikes for fleets and deliveries. India Post, Domino’s and quick-commerce riders run on BNC bikes: 200 kg and more on the Challenger, 250 kg on the Messenger C110, and a battery that lifts out to charge.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BNC B2B: fleets, leasing and AMC">
+<meta property="og:description" content="Electric bikes built for the working day. Tell us about your fleet.">
+<meta name="theme-color" content="#f4f4f2" id="theme-color">
+<link rel="icon" href="assets_v4/img/favicon.png">
+<script>document.documentElement.classList.add('js');
+/* light by default; the switch at the top right turns the page dark and the choice is kept */
+(function(){var t='light';try{t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('reveal-theme')||'light';}catch(e){}
+document.documentElement.dataset.theme=(t==='dark')?'dark':'light';})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets_v4/next/next.css">
+<style>
+  /* THE BUSINESS (B2B) PAGE (2026-11-25): for a company that wants bikes for its riders. Same system as the booking,
+     Etrol and About pages: rounded frames, pill actions, every section inside one screen on a desktop window.
+     Every fact is one BNC has already published: its site (loads, range, battery, app, warranty), its news page (India
+     Post, Mumbai, January 2026) and its own blog (the milk round and its running-cost estimate, marked as BNC's
+     estimate). There is NO fleet price, discount, lease, service contract or fleet software here: BNC has published
+     none. Add them when BNC supplies them.
+     Pictures: real photographs only, 1050px wide or more, none shown larger than it is (the group's own, from the
+     iDelivery site's img/real folder) and BNC's studio pictures of the two bikes. No video stills (too soft), no
+     generated pictures, no factory pictures.
+     The form has no server behind it: it opens the visitor's own email, addressed to BNC, with the answers filled in. */
+  .h2{font-weight:500;font-size:clamp(30px,3.6vw,56px);line-height:1.06;letter-spacing:-.035em;text-wrap:balance}
+  .head{display:grid;justify-items:center;text-align:center;gap:16px;margin-bottom:clamp(24px,3vw,40px)}
+  .head p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:60ch}
+  .sec{padding:clamp(48px,6vw,96px) var(--edge)}
+
+  /* first screen: the words at the left, the India Post riders setting off at the right */
+  .biz{margin-top:84px;padding:clamp(16px,2.4vw,40px) var(--edge) 0;min-height:calc(100vh - 84px);min-height:calc(100svh - 84px);
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:center}
+  .biz__txt{display:grid;gap:18px;justify-items:start}
+  .biz h1{font-weight:500;font-size:clamp(40px,5vw,84px);line-height:1;letter-spacing:-.045em;text-wrap:balance}
+  .biz p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:44ch}
+  .biz .cta{margin-top:6px}
+  .biz__pic{margin:0;justify-self:end;width:min(100%,680px);border-radius:14px;overflow:hidden;background:#d9d6d0;
+    aspect-ratio:4/3;max-height:calc(100vh - 150px);max-height:calc(100svh - 150px)}
+  .biz__pic img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+  @media (max-width:860px){ .biz{grid-template-columns:minmax(0,1fr);min-height:0;padding-top:16px} .biz__pic{justify-self:stretch;width:100%;aspect-ratio:4/3;max-height:none;order:-1} }
+
+  /* four numbers */
+  .nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px)}
+  .num dd{font-weight:500;font-size:clamp(48px,5.2vw,88px);line-height:.9;letter-spacing:-.06em;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .num dd small{font-size:.3em;font-weight:400;letter-spacing:-.02em;margin-left:.12em;color:var(--soft)}
+  .num dt{display:none}
+  .num p{margin-top:18px;color:var(--soft);max-width:28ch}
+  @media (max-width:640px){ .nums{grid-template-columns:minmax(0,1fr);gap:28px} }
+
+  /* who runs on BNC: the customers' marks on white tiles (a mark keeps its own colours, so the tile is white in both
+     modes), then three customer cards */
+  .custs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .cust{display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+  .cust__pic{position:relative;aspect-ratio:16/10;background:#d9d6d0;flex:none}
+  .cust__pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--p,50% 50%)}
+  .cust__pic--mark{background:#fff;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+  .cust__pic--mark img{position:static;width:min(62%,300px);height:auto;object-fit:contain}
+  .cust__pic--three{display:flex;align-items:center;justify-content:center;gap:8%;padding:0 8%} .cust__pic--three img{width:auto;max-width:28%;height:auto;max-height:34%}
+  .cust__txt{padding:clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:10px;align-items:flex-start;flex:1}
+  .cust h3{font-weight:500;font-size:clamp(22px,2vw,30px);letter-spacing:-.025em;line-height:1.1}
+  .cust p{color:var(--soft);line-height:1.5;font-size:15px}
+  .cust .more{margin-top:auto}
+  .credit{margin-top:14px;font-size:var(--t-label);color:var(--dim);text-align:right}
+  @media (max-width:860px){ .custs{grid-template-columns:minmax(0,1fr)} .cust{flex-direction:row} .cust__pic{flex:0 0 42%;aspect-ratio:auto;min-height:170px} }
+  @media (max-width:520px){ .cust{flex-direction:column} .cust__pic{flex:none;aspect-ratio:16/10;min-height:0} }
+
+
+  /* three services: lease, own, AMC. Each card: a photograph, one line, what it includes, one action. No terms or prices
+     are published, so each ends in "Ask for ..." */
+  .svcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .svc{border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+  .svc__txt{padding:clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:10px;align-items:flex-start;flex:1}
+  .svc .n{font-size:13px;font-weight:500;color:var(--dim);font-variant-numeric:tabular-nums}
+  .svc h3{font-weight:500;font-size:clamp(26px,2.5vw,38px);letter-spacing:-.03em;line-height:1.06;margin-top:clamp(20px,3vw,48px)}
+  .svc--dark{background:#0f1012;color:#fff;border-color:#0f1012} .svc.svc--dark p,.svc.svc--dark .n{color:#c5cacf} .svc.svc--dark ul,.svc.svc--dark li{border-color:rgba(255,255,255,.18)} .svc.svc--dark .more{border-color:#fff;color:#fff}
+  .svc p{color:var(--soft);line-height:1.5;font-size:15px}
+  .svc ul{list-style:none;margin:4px 0 6px;padding:0;width:100%;border-top:1px solid var(--line)}
+  .svc li{padding:10px 0 10px 26px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.35;position:relative}
+  .svc li::before{content:"";position:absolute;left:2px;top:15px;width:10px;height:5px;border-left:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg)}
+  .svc .more{margin-top:auto}
+  @media (max-width:900px){ .svcs{grid-template-columns:minmax(0,1fr)} }
+
+  /* fleet tracking: what the app does for a fleet at the left, the app at the right, on a dark band */
+  .trk{margin:0 12px;border-radius:14px;background:#1c1d20;color:#fff;overflow:hidden;display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);gap:clamp(24px,3vw,56px);align-items:center;
+    padding:clamp(28px,3.6vw,60px) clamp(16px,3vw,48px) clamp(28px,3.6vw,60px) clamp(20px,5vw,84px)}
+  .trk .tag{background:rgba(255,255,255,.12);color:#fff;border:0}
+  .trk__txt{display:grid;gap:16px;justify-items:start}
+  .trk__txt h2{font-weight:500;font-size:clamp(32px,3.5vw,58px);line-height:1.03;letter-spacing:-.04em;text-wrap:balance}
+  .trk__txt p{color:#c5cacf;font-size:var(--t-lead);line-height:1.5;max-width:38ch}
+  .trk ul{list-style:none;margin:4px 0 0;padding:0;width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;border-top:1px solid rgba(255,255,255,.16)}
+  .trk li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15px;font-weight:500}
+  .trk img{display:block;justify-self:end;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 220px);max-height:calc(100svh - 220px);-webkit-mask-image:linear-gradient(#000 88%,transparent);mask-image:linear-gradient(#000 88%,transparent)}
+  @media (max-width:1000px){ .trk{grid-template-columns:minmax(0,1fr);padding:clamp(28px,5vw,48px) clamp(16px,4vw,40px)} .trk img{justify-self:center} }
+  @media (max-width:480px){ .trk ul{grid-template-columns:minmax(0,1fr)} }
+
+  /* the two bikes */
+  .bikes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .bcard{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;border-radius:14px;overflow:hidden;color:#fff;text-decoration:none;min-height:clamp(220px,22vw,320px);transition:transform .2s}
+  .bcard:hover{transform:translateY(-2px)}
+  .bcard--c{background:#010101} .bcard--m{background:#fefefe;color:#0c0d0f;border:1px solid var(--line)} .bcard.bcard--m small{color:#4a4f55}
+  .bcard > span{padding:clamp(20px,2.6vw,40px);display:grid;gap:8px;align-content:center}
+  .bcard b{font-weight:500;font-size:clamp(24px,2.4vw,38px);letter-spacing:-.03em;line-height:1.05}
+  .bcard small{font-size:15px;color:#c9cdd2;line-height:1.45}
+  .bcard i{font-style:normal;font-weight:600;font-size:14px;margin-top:10px;display:inline-flex;align-items:center;gap:8px}
+  .bcard img{display:block;width:100%;height:100%;max-height:clamp(220px,22vw,320px);object-fit:contain;padding:12px 12px 12px 0}
+  @media (max-width:860px){ .bikes{grid-template-columns:minmax(0,1fr)} }
+
+  /* talk to BNC: the words and the direct lines at the left, the short form at the right */
+  .talk{margin:0 12px;border-radius:14px;background:#0f1012;color:#fff;padding:clamp(24px,3.4vw,60px) clamp(16px,4vw,72px);
+    display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,72px);align-items:center}
+  .talk__txt{display:grid;gap:16px;justify-items:start}
+  .talk__txt p{color:#c5cacf;font-size:var(--t-lead);line-height:1.5;max-width:40ch}
+  .talk__txt .tag{background:rgba(255,255,255,.12);color:#fff;border:0}
+  .talk__lines{margin-top:8px;display:grid;gap:6px;font-weight:500}
+  .talk__lines a{color:#fff}
+  .form{border-radius:12px;background:var(--card);color:var(--ink);padding:clamp(18px,2.4vw,36px);display:grid;gap:18px}
+  .form fieldset{border:0;display:grid;gap:8px}
+  .form legend,.form label > span{font-size:var(--t-label);color:var(--dim);margin-bottom:8px;display:block}
+  .seg{display:flex;flex-wrap:wrap;gap:8px}
+  .seg label{position:relative;cursor:pointer}
+  .seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .seg span{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border:1px solid var(--line);border-radius:999px;font-weight:500;font-size:15px;transition:border-color .15s,background .15s,color .15s}
+  .form .seg label > span{display:inline-flex;margin-bottom:0;font-size:15px;color:var(--ink)}
+  .seg input:checked + span,.form .seg input:checked + span{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .seg input:focus-visible + span{outline:2px solid var(--ink);outline-offset:3px}
+  .seg label:hover span{border-color:var(--ink)}
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form input[type="text"],.form input[type="tel"]{width:100%;min-height:50px;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);font:500 16px var(--f)}
+  .form input:focus{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+  .form .note{font-size:var(--t-label);color:var(--dim);line-height:1.5}
+  .form .err{font-size:var(--t-label);color:#b3261e;min-height:1.2em}
+  @media (max-width:980px){ .talk{grid-template-columns:minmax(0,1fr)} }
+  @media (max-width:520px){ .fields{grid-template-columns:minmax(0,1fr)} }
+
+  /* form graphics (2026-11-27): a small line icon in each choice, and the bike choice as three picture cards */
+  .form .seg label > span svg{flex:none;margin-right:8px}
+  .pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .pick label{position:relative;cursor:pointer;display:block}
+  .pick input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .form .pick label > span{display:flex;flex-direction:column;margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg);color:var(--ink);font-size:15px;font-weight:500;transition:border-color .15s,box-shadow .15s}
+  .pick label > span{height:100%}
+  .pick i{position:relative;display:grid;place-items:center;aspect-ratio:16/10;background:#fff;flex:none}
+  .pick i img{position:absolute;left:8%;top:9%;width:84%;height:84%;object-fit:contain}
+  .pick b{flex:1}
+  .pick i img.sm{left:13%;top:14%;width:74%;height:76%}
+  .pick i svg{width:38%;height:auto;color:#9aa0a6}
+  .pick b{font-weight:500;padding:10px 12px 11px;display:flex;align-items:center;justify-content:space-between;gap:8px;line-height:1.2}
+  .pick b::after{content:"";flex:none;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line)}
+  .pick input:checked + span{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+  .pick input:checked + span b::after{border-color:var(--ink);background:var(--ink);box-shadow:inset 0 0 0 3px var(--bg)}
+  .pick input:focus-visible + span{outline:2px solid var(--ink);outline-offset:3px}
+  .pick label:hover > span{border-color:var(--ink)}
+  @media (max-width:420px){ .pick b{font-size:13px;padding:8px 8px 9px} .pick b::after{display:none} }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <a class="nav__logo" href="index.html"><img src="assets_v4/img/logo_big.png" alt="BNC Motors" width="616" height="348"></a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="index.html">Challenger</a>
+    <a href="messenger.html">Messenger</a>
+    <a href="etrol.html">Etrol</a>
+    <a href="about.html">About</a>
+    <a href="business.html" aria-current="page">B2B</a>
+  </nav>
+  <a class="btn solid" href="buy.html#reach">Book Now</a>
+  <details class="menu">
+    <summary aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2.5 5.5h13M2.5 9h13M2.5 12.5h13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+    <nav class="menu__list" aria-label="Main, compact"><a href="index.html">Challenger</a><a href="messenger.html">Messenger</a><a href="etrol.html">Etrol</a><a href="about.html">About</a><a href="business.html" aria-current="page">B2B</a></nav>
+  </details>
+  <button class="mode" id="mode" type="button" aria-label="Switch between light and dark mode" aria-pressed="false">
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 1.75a7.25 7.25 0 0 1 0 14.5z" fill="currentColor"/></svg>
+  </button>
+</header>
+
+<main id="main">
+  <!-- PICTURE SLOT biz: a real photograph, 1400px wide, of a fleet customer's rider on the bike -->
+  <section class="biz" aria-labelledby="biz-h">
+    <div class="biz__txt">
+      <h1 id="biz-h">Built for the working day.</h1>
+      <div class="cta">
+        <a class="btn solid" href="#talk">Talk to us</a>
+        <a class="btn ghost" href="#plans">Leasing and AMC</a>
+      </div>
+    </div>
+    <figure class="biz__pic"><img src="assets_v4/img/business/india-post-fleet-1480.webp" srcset="assets_v4/img/business/india-post-fleet-800.webp 800w, assets_v4/img/business/india-post-fleet-1480.webp 1480w" sizes="(max-width:860px) 100vw, 680px" alt="India Post postmen and postwomen in red helmets lined up on their new red Challengers, marigold garlands on the handlebars" width="1480" height="1110" fetchpriority="high"></figure>
+  </section>
+
+  <section class="sec" aria-label="BNC for business in four numbers">
+    <dl class="nums">
+      <div class="num"><dt>Fleet</dt><dd>200<small>e-bikes</small></dd><p>Rolled out for India Post’s postmen and postwomen in Mumbai.</p></div>
+      <div class="num"><dt>Range</dt><dd>180<small>km</small></dd><p>On two Etrol packs. 90 km on one.</p></div>
+      <div class="num"><dt>Warranty</dt><dd>7<small>years</small></dd><p>On the chassis. 5 on the battery, 3 on the motor.</p></div>
+    </dl>
+  </section>
+
+  <section class="sec" id="work" aria-labelledby="work-h" style="padding-top:0">
+    <div class="head">
+      <h2 class="h2" id="work-h">Who runs on BNC</h2>
+    </div>
+    <!-- PICTURE SLOTS work 1 to 3: a real photograph of each customer's bikes at work. Domino's has none yet: its mark stands in. -->
+    <div class="custs">
+      <article class="cust">
+        <div class="cust__pic cust__pic--mark"><img src="assets_v4/img/business/clients/india-post.png" alt="India Post" width="482" height="312" loading="lazy" style="width:min(40%,180px)"></div>
+        <div class="cust__txt">
+          <h3>India Post</h3>
+          <p>200 e-bikes for postmen and postwomen in Mumbai, rolled out in January 2026 for last-mile delivery.</p>
+          <a class="more" href="bnc_motors_news.html">Read the news <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      <article class="cust">
+        <div class="cust__pic cust__pic--mark"><img src="assets_v4/img/business/clients/dominos.svg" alt="Domino’s" loading="lazy"></div>
+        <div class="cust__txt">
+          <h3>Domino’s</h3>
+          <p>Delivery riders on BNC bikes: a battery that lifts out to charge between shifts, and room for the box.</p>
+        </div>
+      </article>
+      <article class="cust">
+        <div class="cust__pic cust__pic--mark cust__pic--three"><img src="assets_v4/img/business/clients/zepto.svg" alt="Zepto" loading="lazy"><img src="assets_v4/img/business/clients/blinkit.svg" alt="Blinkit" loading="lazy"><img src="assets_v4/img/business/clients/instamart.svg" alt="Swiggy Instamart" loading="lazy"></div>
+        <div class="cust__txt">
+          <h3>Zepto, Blinkit, Instamart</h3>
+          <p>Riders on short, fast runs all day. Two packs give 180 km before the bike needs a socket.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="plans" aria-labelledby="plans-h" style="padding-top:0">
+    <div class="head">
+      <h2 class="h2" id="plans-h">Lease it. Own it. Keep it running.</h2>
+    </div>
+    <!-- no pictures here: only professional photographs, 1600px or more, would do (user, 2026-11-26: no bad quality images) -->
+    <div class="svcs">
+      <article class="svc">
+        <div class="svc__txt">
+          <span class="n">01 · Pay monthly</span>
+          <h3>Fleet leasing</h3>
+          <p>Put a fleet on the road without the capital outlay.</p>
+          <ul><li>One monthly invoice, GST-ready</li><li>Scheduled maintenance included</li><li>Add bikes when you are ready</li></ul>
+          <a class="more" href="#talk">Ask for lease terms <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      <article class="svc">
+        <div class="svc__txt">
+          <span class="n">02 · Buy outright</span>
+          <h3>Own your fleet</h3>
+          <p>The bikes stay on your books, under BNC’s warranty.</p>
+          <ul><li>Better prices as you scale</li><li>Buy in batches, city by city</li><li>7 years on the chassis, 5 on the battery, 3 on the motor</li></ul>
+          <a class="more" href="#talk">Ask for a fleet price <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      <article class="svc svc--dark">
+        <div class="svc__txt">
+          <span class="n">03 · Yearly contract</span>
+          <h3>Annual maintenance contract</h3>
+          <p>Scheduled service for every bike in your fleet, under one contract.</p>
+          <ul><li>Service at set intervals</li><li>Report a fault and book a service from the app</li><li>Every service on record</li></ul>
+          <a class="more" href="#talk">Ask for AMC terms <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="trk" id="track" aria-labelledby="track-h">
+    <div class="trk__txt">
+      <h2 id="track-h">Know where every bike is</h2>
+      <p>Each bike reports to BNC and to your phone, so a fault is seen early and a bike is never lost.</p>
+      <ul><li>Live location</li><li>Geo-fence alerts</li><li>Speed limiting</li><li>Electronic locking</li><li>Towing and accident alerts</li><li>Trip history and distance</li></ul>
+    </div>
+    <!-- PICTURE SLOT track: the app picture from the booking page (the customer's details in it are blurred) -->
+    <img src="assets_v4/img/home/app-phones-1200.webp" srcset="assets_v4/img/home/app-phones-1200.webp 1200w, assets_v4/img/home/app-phones-2000.webp 2000w" sizes="(max-width:1000px) 92vw, 54vw" alt="Five phone screens of the BNC app: the vehicle list, a Challenger's status, a swapping station on a map, live tracking and booking details" width="2000" height="980" loading="lazy">
+  </section>
+
+  <section class="sec" id="bikes" aria-labelledby="bikes-h">
+    <div class="head">
+      <h2 class="h2" id="bikes-h">Pick the bike for the job</h2>
+    </div>
+    <div class="bikes">
+      <a class="bcard bcard--m" href="messenger.html"><span><b>Messenger C110</b><small>Carries 250 kg. A 900 mm seat and a rear carrier.</small><i>Explore Messenger <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></i></span>
+        <img src="assets_v4/img/home/model-messenger-full-1200.webp" srcset="assets_v4/img/home/model-messenger-full-1200.webp 1200w, assets_v4/img/home/model-messenger-full-2000.webp 2000w" sizes="(max-width:860px) 55vw, 28vw" alt="The BNC Messenger C110 from the side" width="2000" height="1125" loading="lazy"></a>
+      <a class="bcard bcard--c" href="index.html"><span><b>Challenger</b><small>Carries 200 kg and more. A 30-litre boot under the seat.</small><i>Explore Challenger <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></i></span>
+        <img src="assets_v4/img/home/model-challenger-1000.webp" srcset="assets_v4/img/home/model-challenger-1000.webp 1000w, assets_v4/img/home/model-challenger-1800.webp 1800w" sizes="(max-width:860px) 55vw, 28vw" alt="The BNC Challenger in red and black, from the side" width="1000" height="667" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section class="talk" id="talk" aria-labelledby="talk-h">
+    <div class="talk__txt">
+      <h2 class="h2" id="talk-h">Tell us about your fleet</h2>
+      <p>Leasing, buying or AMC: tell us how many bikes, which city and what they carry. We come back to you with the bike and the numbers.</p>
+      <div class="talk__lines">
+        <a href="tel:+914224722561">+91 422 4722561</a>
+        <a href="mailto:info@bncmotors.in">info@bncmotors.in</a>
+      </div>
+    </div>
+    <form class="form" id="fleet-form" novalidate>
+      <div class="fields">
+        <label><span>Your name</span><input type="text" name="name" autocomplete="name" required></label>
+        <label><span>Company</span><input type="text" name="company" autocomplete="organization" required></label>
+        <label><span>Mobile number</span><input type="tel" name="mobile" autocomplete="tel" inputmode="numeric" required></label>
+        <label><span>City</span><input type="text" name="city" autocomplete="address-level2" required></label>
+      </div>
+      <fieldset>
+        <legend>I need</legend>
+        <div class="seg">
+          <label><input type="radio" name="need" value="Fleet leasing" checked><span><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="14" height="12" rx="2"/><path d="M3 8.5h14M7 3v3M13 3v3"/></svg>Leasing</span></label>
+          <label><input type="radio" name="need" value="To buy the fleet"><span><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6.5l7.5 7.5-6.5 6.5L3 9.5z"/><circle cx="6.6" cy="6.6" r="1.1"/></svg>To buy</span></label>
+          <label><input type="radio" name="need" value="AMC"><span><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.6 3.4a4 4 0 0 0-4.7 5.3L3 13.6 6.4 17l4.9-4.9a4 4 0 0 0 5.3-4.7l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>AMC</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>How many bikes</legend>
+        <div class="seg">
+          <label><input type="radio" name="size" value="1 to 10" checked><span><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="2.6"/></svg>1 to 10</span></label>
+          <label><input type="radio" name="size" value="11 to 50"><span><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="4.5" cy="10" r="2"/><circle cx="10" cy="10" r="2"/><circle cx="15.5" cy="10" r="2"/></svg>11 to 50</span></label>
+          <label><input type="radio" name="size" value="More than 50"><span><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="4.5" cy="6.5" r="1.7"/><circle cx="10" cy="6.5" r="1.7"/><circle cx="15.5" cy="6.5" r="1.7"/><circle cx="4.5" cy="13.5" r="1.7"/><circle cx="10" cy="13.5" r="1.7"/><circle cx="15.5" cy="13.5" r="1.7"/></svg>More than 50</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Bike</legend>
+        <div class="pick">
+            <label><input type="radio" name="model" value="Messenger C110" checked><span><i><img src="assets_v4/img/home/model-messenger-full-1200.webp" alt="" width="1200" height="676" loading="lazy"></i><b>Messenger C110</b></span></label>
+            <label><input type="radio" name="model" value="Challenger"><span><i><img class="sm" src="assets_v4/img/home/model-challenger-1000.webp" alt="" width="1000" height="666" loading="lazy"></i><b>Challenger</b></span></label>
+            <label><input type="radio" name="model" value="Not sure yet"><span><i><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="15"/><path d="M15.5 16a4.5 4.5 0 1 1 6.6 4c-1.4.8-2.1 1.700-2.1 3.200"/><circle cx="20" cy="28" r=".6" fill="currentColor"/></svg></i><b>Not sure yet</b></span></label>
+          </div>
+      </fieldset>
+      <div>
+        <p class="err" id="fleet-err" role="alert"></p>
+        <button class="btn solid" type="submit">Send enquiry</button>
+        <p class="note" style="margin-top:12px">This opens your email with your answers filled in, addressed to BNC. Want to sell BNC bikes instead? <a href="dealer_enquiry.html">Become a dealer</a>.</p>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <div><a class="foot__logo" href="index.html"><img src="assets_v4/img/logo_big.png" alt="BNC Motors" width="616" height="348" loading="lazy"></a></div>
+  <div><h3>Products</h3><ul><li><a href="index.html">Challenger</a></li><li><a href="messenger.html">Messenger C110</a></li><li><a href="etrol.html">Etrol battery</a></li></ul></div>
+  <div><h3>Company</h3><ul><li><a href="about.html">About BNC</a></li><li><a href="business.html">B2B: fleets and leasing</a></li><li><a href="bnc_blog_page.html">Blogs</a></li><li><a href="bnc_motors_news.html">News</a></li><li><a href="bnc_motors_careers.html">Careers</a></li><li><a href="dealer_enquiry.html">Dealership enquiry</a></li><li><a href="customer_enquiry.html">Customer enquiry</a></li></ul></div>
+  <div><h3>Registered office</h3>
+    <address>BNC Motors Private Limited, Unit No. 3, Saiman Thottam, Udayampalayam, Chinnavedampatti, Coimbatore, Tamil Nadu 641006, India<br>
+    <a href="tel:+91-01206089947">+91 01206089947</a> · <a href="tel:+914224722561">+91 422 4722561</a><br><a href="mailto:info@bncmotors.in">info@bncmotors.in</a></address></div>
+  <div class="foot__base">
+    <span>© BNC Motors. The running-cost figures are BNC’s estimate for a daily milk round and will vary with use.</span>
+    <span><a href="privacy_policy.html">Privacy policy</a> · <a href="terms_and_condition.html">Terms</a> · <a href="https://instagram.com/bnc_ev">Instagram</a> · <a href="https://www.youtube.com/channel/UC3GkzuhgPDDbDUu1EIiJXtQ">YouTube</a> · <a href="https://www.linkedin.com/company/bnc-motors/">LinkedIn</a> · <a href="https://www.facebook.com/BNC-108993001267446/">Facebook</a></span>
+  </div>
+</footer>
+
+<script src="assets_v4/next/site.js"></script>
+<script>
+/* the fleet form: check the four fields, then open the visitor's own email, addressed to BNC, with the answers in it.
+   Nothing is sent from this page and nothing is stored. */
+(function(){
+  var f=document.getElementById('fleet-form'); if(!f) return; var err=document.getElementById('fleet-err');
+  f.addEventListener('submit',function(e){ e.preventDefault(); var d=new FormData(f);
+    var v=function(k){ return String(d.get(k)||'').trim(); };
+    var name=v('name'), company=v('company'), mobile=v('mobile').replace(/[^0-9+]/g,''), city=v('city');
+    if(name.length<2){ err.textContent='Please enter your name.'; f.elements.name.focus(); return; }
+    if(company.length<2){ err.textContent='Please enter your company.'; f.elements.company.focus(); return; }
+    if(mobile.replace(/\D/g,'').length<10){ err.textContent='Please enter a 10-digit mobile number.'; f.elements.mobile.focus(); return; }
+    if(city.length<2){ err.textContent='Please enter your city.'; f.elements.city.focus(); return; }
+    err.textContent='';
+    var body=['Fleet enquiry from the BNC website','','Name: '+name,'Company: '+company,'Mobile: '+mobile,'City: '+city,'Need: '+v('need'),'Bikes needed: '+v('size'),'Bike: '+v('model'),'','What our riders carry and how far they go each day:',''].join('\n');
+    location.href='mailto:info@bncmotors.in?subject='+encodeURIComponent('Fleet enquiry: '+company)+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>

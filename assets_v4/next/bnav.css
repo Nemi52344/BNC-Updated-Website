@@ -1,0 +1,42 @@
+/* The site's top bar for pages that do not load next.css (the older pages, the Messenger page, the 3D page).
+   Same bar as the home page: logo, Challenger, Messenger, Etrol battery, Find a dealer; a menu button on small screens. */
+.bnav{position:fixed;top:12px;left:12px;right:12px;z-index:1000;display:flex;align-items:center;gap:28px;height:60px;padding:0 12px 0 20px;border-radius:18px;
+  background:#141518;border:1px solid rgba(255,255,255,.14);font-family:'Montserrat',system-ui,sans-serif;box-sizing:border-box;text-align:left;line-height:1.2}
+.bnav *{box-sizing:border-box}
+.bnav__logo{display:flex;align-items:center} .bnav__logo img{height:26px;width:auto;max-width:none;filter:invert(1)}
+.bnav__links{display:flex;gap:28px;margin-left:auto}
+.bnav__links a{font-size:14px;font-weight:500;text-decoration:none;color:#c5cacf;padding:8px 0;border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+.bnav__links a:hover,.bnav__links a[aria-current="page"]{color:#fff;border-bottom-color:#fff}
+.bnav__btn{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:#fff;color:#0c0d0f;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;transition:transform .15s}
+.bnav__btn:hover{color:#0c0d0f;text-decoration:none;transform:translateY(-1px)} .bnav__btn:active{transform:translateY(1px)}
+.bnav__menu{display:none;position:relative}
+.bnav__menu summary{list-style:none;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.22);color:#fff;display:grid;place-items:center;cursor:pointer}
+.bnav__menu summary::-webkit-details-marker{display:none}
+.bnav__menu nav{position:absolute;right:0;top:52px;min-width:200px;padding:8px;border-radius:16px;background:#141518;border:1px solid rgba(255,255,255,.14);display:grid}
+.bnav__menu nav a{padding:12px 14px;border-radius:10px;color:#fff;text-decoration:none;font-size:15px;font-weight:500}
+.bnav__menu nav a:hover{background:rgba(255,255,255,.08)}
+.bnav a:focus-visible,.bnav summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+/* light version */
+.bnav--light{background:#fff;border-color:rgba(12,13,15,.12)}
+.bnav--light .bnav__logo img{filter:none}
+.bnav--light .bnav__links a{color:#474b52} .bnav--light .bnav__links a:hover,.bnav--light .bnav__links a[aria-current="page"]{color:#0c0d0f;border-bottom-color:#0c0d0f}
+.bnav--light .bnav__btn{background:#0c0d0f;color:#fff} .bnav--light .bnav__btn:hover{color:#fff}
+.bnav--light .bnav__menu summary{border-color:rgba(12,13,15,.2);color:#0c0d0f}
+.bnav--light .bnav__menu nav{background:#fff;border-color:rgba(12,13,15,.12)} .bnav--light .bnav__menu nav a{color:#0c0d0f} .bnav--light .bnav__menu nav a:hover{background:rgba(12,13,15,.06)}
+@media (max-width:860px){ .bnav{gap:12px} .bnav__links{display:none} .bnav__btn{margin-left:auto} .bnav__menu{display:block} }
+@media (max-width:400px){ .bnav{left:8px;right:8px;padding:0 8px 0 12px;gap:8px} .bnav__btn{padding:0 12px;font-size:13px} .bnav__logo img{height:22px} }
+
+/* phones: the older pages' Bootstrap rows and their scroll-to-top button reach past the right edge of the window, which
+   let the whole page slide sideways (found in the phone check, 2026-11-26). Nothing may be wider than the window. */
+/* on body only: with nothing set on html the browser hands this to the window itself. Setting it on html as well turned
+   body into a second scrolling box on pages that give body a fixed height, and the page stopped scrolling. */
+body{overflow-x:hidden}
+/* the two causes themselves, so a phone cannot slide the page even by dragging: the scroll-to-top button was pushed
+   3em past the right edge, and Bootstrap rows were 5px wider than their containers on each side */
+@media (max-width:860px){
+  #scroll-top-button{margin-right:0 !important}
+  .container,.container-fluid{padding-left:15px !important;padding-right:15px !important}
+}
+@media (max-width:860px){ .row[class*=" g-"],.row[class*=" gx-"]{margin-left:0 !important;margin-right:0 !important} }
+/* the old site's "no picture" placeholder file is not a picture, so it showed as a broken-image mark on every news card */
+img[src$="no-image.png"]{display:none !important}

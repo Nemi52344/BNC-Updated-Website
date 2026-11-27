@@ -1,0 +1,14 @@
+# Static site: the folder is published as it is, no build step.
+[build]
+  publish = "."
+
+# A review copy: search engines are asked not to list it (remove this block when it becomes the real site).
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/assets_v4/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

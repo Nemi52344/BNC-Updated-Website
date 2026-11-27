@@ -1,0 +1,125 @@
+.career_mainSection
+{
+background-color:#000000;
+}
+.mainDiv
+{
+background-color:#000000;
+margin-top:10%;
+}
+
+.career_card
+{
+	margin-bottom: 20px;
+	background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 51%;
+    left: 33em !important;
+     display: inline-block;
+    flex-direction: column;
+}
+
+.career-card-body
+{
+padding:20px;
+}
+
+.career-card-body img
+{
+float:right;
+width:5%;
+}
+
+.career-card-body .ul_list
+{
+list-style:none;
+left:0;
+}
+
+.career-card-body .li_list
+{
+display:inline-block;
+}
+
+.skill-description
+{
+font-family:Arial, Helvetica, sans-serif;
+font-size:14px;
+letter-spacing:0.2rem;
+}
+
+.career_norecords
+{
+height:60vh;
+}
+
+.description_detail
+{
+font-family:"Times New Roman", Times, serif;
+font-size:1.2rem;
+font-weight:500;
+}
+
+ @media (max-width: 575.98px) {
+    .career_card {
+      width: 100%;
+      top: 0;
+      left: 0em !important;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .career_card {
+      width: 100%;
+      top: 0;
+      left: 0 !important;
+      margin: 0 auto;
+    }
+	.mainDiv
+{
+margin-top:20%;
+}
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .career_card {
+      width: 100%;
+      top: 0;
+      left: 0 !important;
+      margin: 0 auto;
+    }
+    .mainDiv
+{
+margin-top:15%;
+}
+  }
+  
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .career_card {
+      width: 100%;
+      top: 0;
+      left: 0 !important;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width:1200px) and (max-width:1600px) {
+    .career_card {
+      width: 80%;
+      top: 0;
+      left: 10em !important;
+      margin: 0 auto;
+    }
+	
+@media (min-width:1600px) and (max-width:1800px) {
+    .career_card {
+      width: 80%;
+      top: 0;
+      left: 10em !important;
+      margin: 0 auto;
+    }
+  

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About BNC Motors: electric bikes designed and built in Coimbatore</title>
+<meta name="description" content="BNC’s mission and vision: to help the world move to clean energy, starting with electric two-wheelers. Built in India, built for the world.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About BNC Motors">
+<meta property="og:description" content="Electric bikes and their battery, designed and built in Coimbatore.">
+<meta name="theme-color" content="#f4f4f2" id="theme-color">
+<link rel="icon" href="assets_v4/img/favicon.png">
+<script>document.documentElement.classList.add('js');
+/* light by default; the switch at the top right turns the page dark and the choice is kept */
+(function(){var t='light';try{t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('reveal-theme')||'light';}catch(e){}
+document.documentElement.dataset.theme=(t==='dark')?'dark':'light';})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets_v4/next/next.css">
+<style>
+  /* THE ABOUT PAGE (2026-11-25). Same system as the booking and Etrol pages: rounded frames, centred headings, pill
+     actions, every section inside one screen on a desktop window.
+     Every fact here is one BNC has already published: its site (bikes, battery, warranty, dealers, "we don't
+     compromise"), its news page (the three news lines) and its registered office. BNC has no About text of its own
+     yet, so there is NO founding year, founder, team or vision statement on this page: add them when BNC supplies them.
+     Pictures: BNC's own photographs and renders. No factory pictures. */
+  .h2{font-weight:500;font-size:clamp(30px,3.6vw,56px);line-height:1.06;letter-spacing:-.035em;text-wrap:balance}
+  .head{display:grid;justify-items:center;text-align:center;gap:16px;margin-bottom:clamp(24px,3vw,40px)}
+  .head p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:60ch}
+  .sec{padding:clamp(48px,6vw,96px) var(--edge)}
+
+  /* THE STATEMENTS: two full screens of words alone (mission, vision; the ambition screen was removed at the user's request, 2026-11-26). No picture, no card, no buttons.
+     Each heading is split into words by the script at the foot of the page. */
+  .who{min-height:100vh;min-height:100svh;padding:clamp(96px,12vh,140px) var(--edge) clamp(28px,4vh,48px);display:grid;grid-template-rows:1fr auto;justify-items:center;text-align:center}
+  .who__say{align-self:center;display:grid;gap:clamp(18px,2.4vw,32px);justify-items:center;will-change:opacity,transform}
+  .who h1,.say h2{font-weight:500;font-size:clamp(34px,5.6vw,104px);line-height:1.02;letter-spacing:-.045em;max-width:17ch;text-wrap:balance}
+  .who h1 > .then{display:block;color:var(--dim)}
+  .who__by{color:var(--soft);font-size:15px;line-height:1.5}
+  .w{display:inline-block}
+  /* 1. the mission: its words rise in one after another when the page opens */
+  @media (prefers-reduced-motion:no-preference){
+    .js .who .tag,.js .who__by{animation:whoin .9s cubic-bezier(.2,.7,.2,1) backwards} .js .who__by{animation-delay:1.1s}
+    .js .who h1 .w{animation:wordin .8s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(.12s + var(--i) * 70ms)}
+    @keyframes whoin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+    @keyframes wordin{from{opacity:0;transform:translateY(.42em);filter:blur(6px)}to{opacity:1;transform:none;filter:none}} }
+  /* 2 and 3. vision and ambition: the screen holds while the page scrolls, and the words fill in one by one */
+  .say{height:190vh;height:190svh}
+  .say__pin{position:sticky;top:0;height:100vh;height:100svh;padding:clamp(88px,11vh,130px) var(--edge) clamp(24px,4vh,48px);display:grid;align-content:center;justify-items:center;gap:clamp(18px,2.4vw,32px);text-align:center}
+  .say__more{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:46ch}
+  @media (prefers-reduced-motion:no-preference){
+    .js .say .w{opacity:var(--o,.14);transition:opacity .25s linear}
+    .js .say__more{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+    .js .say.done .say__more{opacity:1;transform:none} }
+  @media (prefers-reduced-motion:reduce){ .say{height:auto} .say__pin{position:static} }
+
+  /* four numbers */
+  .nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,48px)}
+  .num dd{font-weight:500;font-size:clamp(48px,5.2vw,88px);line-height:.9;letter-spacing:-.06em;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .num dd small{font-size:.3em;font-weight:400;letter-spacing:-.02em;margin-left:.12em;color:var(--soft)}
+  .num dt{display:none}
+  .num p{margin-top:18px;color:var(--soft);max-width:28ch}
+  @media (max-width:900px){ .nums{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 20px} }
+
+  /* core values: six, each a statement the old website makes in its own words */
+  .vals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .val{border-radius:12px;background:var(--card);border:1px solid var(--line);padding:clamp(18px,1.8vw,28px);display:flex;flex-direction:column;min-height:clamp(150px,13vw,190px)}
+  .val .n{font-size:13px;font-weight:500;color:var(--dim);font-variant-numeric:tabular-nums;margin-bottom:auto;padding-bottom:16px}
+  .val h3{font-weight:500;font-size:clamp(20px,1.8vw,26px);letter-spacing:-.02em;line-height:1.15}
+  .val p{margin-top:8px;color:var(--soft);font-size:15px;line-height:1.5}
+  .val--dark{background:#0f1012;color:#fff;border-color:#0f1012} .val--dark p,.val--dark .n{color:#c5cacf}
+  .vals--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  /* one screen per group of principles: the heading large at one side, four cards two by two at the other */
+  .pr{min-height:100vh;min-height:100svh;padding:clamp(96px,12vh,140px) var(--edge) clamp(32px,5vh,64px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.25fr);gap:clamp(24px,4vw,80px);align-items:center}
+  .pr h2{font-weight:500;font-size:clamp(40px,5.6vw,100px);line-height:.98;letter-spacing:-.045em;text-wrap:balance}
+  .pr--flip{grid-template-columns:minmax(0,1.25fr) minmax(0,.8fr)} .pr--flip h2{order:2;text-align:right}
+  .pr__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .pr .val{min-height:clamp(170px,24vh,260px)}
+  .pr .val h3{font-size:clamp(20px,1.9vw,28px)}
+  @media (max-width:900px){ .pr,.pr--flip{grid-template-columns:minmax(0,1fr);min-height:0;gap:20px;padding:clamp(56px,9vw,88px) var(--edge)} .pr--flip h2{order:0;text-align:left} .pr .val{min-height:150px} }
+  @media (max-width:520px){ .pr__grid{grid-template-columns:minmax(0,1fr)} .pr .val{min-height:0} }
+  .valhead{font-weight:500;font-size:clamp(18px,1.5vw,22px);letter-spacing:-.01em;color:var(--soft);margin:clamp(24px,3vw,40px) 0 14px}
+  .head + .valhead{margin-top:0}
+  @media (max-width:1100px){ .vals--4{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:480px){ .vals--4{grid-template-columns:minmax(0,1fr)} }
+  @media (max-width:900px){ .vals{grid-template-columns:repeat(2,minmax(0,1fr))} .val{min-height:140px} }
+  @media (max-width:480px){ .vals{grid-template-columns:minmax(0,1fr)} }
+
+  /* what BNC builds itself: four cards, a close-up above each */
+  .made{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .part{border-radius:12px;overflow:hidden;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+  .part__pic{display:block;position:relative;aspect-ratio:4/3;overflow:hidden;background:#0b0c0e;flex:none}
+  .part__pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--p,50% 50%)}
+  .part div{padding:clamp(16px,1.6vw,24px)}
+  .part h3{font-weight:500;font-size:clamp(20px,1.8vw,26px);letter-spacing:-.02em;line-height:1.15}
+  .part p{margin-top:8px;color:var(--soft);font-size:15px;line-height:1.5}
+  @media (max-width:900px){ .made{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:480px){ .made{grid-template-columns:minmax(0,1fr)} }
+
+  /* what BNC makes: the two bikes and the battery */
+  .line{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .mk{display:flex;flex-direction:column;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);transition:transform .2s}
+  .mk:hover{transform:translateY(-2px)}
+  .mk__pic{display:block;position:relative;aspect-ratio:16/10;background:#fefefe;flex:none}
+  .mk__pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:5%}
+  .mk--dark .mk__pic{background:#010101}
+  .mk__txt{display:grid;gap:8px;padding:clamp(18px,2vw,28px)}
+  .mk b{font-weight:500;font-size:clamp(22px,2vw,30px);letter-spacing:-.025em;line-height:1.1}
+  .mk small{font-size:15px;color:var(--soft);line-height:1.45}
+  .mk i{font-style:normal;font-weight:600;font-size:14px;margin-top:8px;display:inline-flex;align-items:center;gap:8px}
+  @media (max-width:860px){ .line{grid-template-columns:minmax(0,1fr)} .mk{flex-direction:row} .mk__pic{flex:0 0 42%;aspect-ratio:auto;min-height:150px} }
+
+  /* in the news, and where BNC is */
+  /* news: three small cards, the same card as the values above; then the address as one quiet row */
+  .newsrow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .newsrow li{border-radius:12px;background:var(--card);border:1px solid var(--line);padding:clamp(18px,1.8vw,28px);display:flex;flex-direction:column;min-height:clamp(130px,11vw,170px)}
+  .newsrow span{font-size:13px;color:var(--dim);margin-bottom:auto;padding-bottom:16px}
+  .newsrow b{font-weight:500;font-size:clamp(17px,1.4vw,20px);line-height:1.3;letter-spacing:-.01em}
+  .newsmore{display:flex;justify-content:center;margin-top:clamp(20px,2.4vw,32px)}
+  .find{margin-top:clamp(40px,5vw,72px);padding:clamp(20px,2.4vw,32px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr) auto;gap:clamp(16px,3vw,48px);align-items:center}
+  .find h3{font-weight:500;font-size:clamp(20px,1.8vw,26px);letter-spacing:-.02em;line-height:1.15}
+  .find address{font-style:normal;color:var(--soft);font-size:15px;line-height:1.55}
+  .find address a{color:var(--ink)}
+  .find .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+  .find .btn{min-height:42px;padding:0 18px;font-size:15px}
+  @media (max-width:900px){ .newsrow{grid-template-columns:minmax(0,1fr)} .newsrow li{min-height:0} .newsrow span{padding-bottom:10px}
+    .find{grid-template-columns:minmax(0,1fr);gap:14px} .find .links{justify-content:flex-start} }
+
+  /* the closing line */
+  .end{margin:0 12px;border-radius:14px;background:#f1e4e2;color:#0c0d0f;padding:clamp(40px,5vw,80px) clamp(20px,5vw,84px);display:grid;justify-items:center;text-align:center;gap:20px}
+  :root[data-theme="dark"] .end{background:#241615;color:#f4f5f6}
+  .end p{max-width:52ch;font-size:var(--t-lead);opacity:.8}
+  .end .btn.ghost{border-color:currentColor;color:inherit}
+  :root:not([data-theme="dark"]) .end .btn.solid{background:#0c0d0f;color:#fff;border-color:#0c0d0f}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <a class="nav__logo" href="index.html"><img src="assets_v4/img/logo_big.png" alt="BNC Motors" width="616" height="348"></a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="index.html">Challenger</a>
+    <a href="messenger.html">Messenger</a>
+    <a href="etrol.html">Etrol</a>
+    <a href="about.html" aria-current="page">About</a><a href="business.html">B2B</a>
+  </nav>
+  <a class="btn solid" href="buy.html#reach">Book Now</a>
+  <details class="menu">
+    <summary aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2.5 5.5h13M2.5 9h13M2.5 12.5h13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+    <nav class="menu__list" aria-label="Main, compact"><a href="index.html">Challenger</a><a href="messenger.html">Messenger</a><a href="etrol.html">Etrol</a><a href="about.html" aria-current="page">About</a><a href="business.html">B2B</a></nav>
+  </details>
+  <button class="mode" id="mode" type="button" aria-label="Switch between light and dark mode" aria-pressed="false">
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 1.75a7.25 7.25 0 0 1 0 14.5z" fill="currentColor"/></svg>
+  </button>
+</header>
+
+<main id="main">
+  <section class="who" aria-labelledby="who-h">
+    <div class="who__say">
+      <h1 id="who-h" data-words>To help the world move to clean energy, <span class="then">starting with electric two-wheelers.</span></h1>
+    </div>
+    <p class="who__by">BNC is Bharat New-Energy Company. Coimbatore, Tamil Nadu.</p>
+  </section>
+
+  <section class="say" id="vision" aria-labelledby="vision-h" data-say>
+    <div class="say__pin">
+      <h2 id="vision-h" data-words>Built in India. Built for the world.</h2>
+      <p class="say__more">Electric two-wheelers for India and for emerging markets everywhere, made for real roads, real durability and real everyday use.</p>
+    </div>
+  </section>
+
+  <!-- the leadership principles, word for word as on the NEMI LMM site's careers page: one screen each -->
+  <section class="pr" id="build" aria-labelledby="build-h">
+    <h2 id="build-h">How we build</h2>
+    <div class="pr__grid">
+        <div class="val"><span class="n">01</span><h3>Start with first principles</h3><p>Strip it back to what is actually true, not what the industry does.</p></div>
+        <div class="val"><span class="n">02</span><h3>Be bold</h3><p>Don’t be afraid to completely rethink convention, let first principles guide you.</p></div>
+        <div class="val"><span class="n">03</span><h3>Work frugal, work fast</h3><p>Constraints breed invention. We have moved fast and lean since day one.</p></div>
+        <div class="val"><span class="n">04</span><h3>Insist on the highest standards</h3><p>Ship defect-free. Flag mistakes early; never hide or repeat them.</p></div>
+    </div>
+  </section>
+
+  <section class="pr pr--flip" id="lead" aria-labelledby="lead-h">
+    <h2 id="lead-h">How we lead</h2>
+    <div class="pr__grid">
+        <div class="val"><span class="n">01</span><h3>High ownership</h3><p>We are a company full of entrepreneurs.</p></div>
+        <div class="val"><span class="n">02</span><h3>Data driven</h3><p>Set clear goals, measure outcomes.</p></div>
+        <div class="val"><span class="n">03</span><h3>Keep growing, grow others</h3><p>Hire people better than you. Their success is your success.</p></div>
+        <div class="val"><span class="n">04</span><h3>Build trust</h3><p>Lead with empathy. Listen closely, speak candidly, stay in the details.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="news" aria-labelledby="news-h">
+    <div class="head">
+      <h2 class="h2" id="news-h">In the news</h2>
+    </div>
+    <!-- the three lines are BNC's own news page headlines, shortened; dates are the dates they were posted there -->
+    <ul class="newsrow" role="list">
+      <li><span>22 January 2026</span><b>India Post introduces 200 e-bikes for postal staff in Mumbai</b></li>
+      <li><span>13 November 2025</span><b>BNC opens its first dealership in Chennai</b></li>
+      <li><span>13 November 2025</span><b>BNC secures a strategic investment from Japan</b></li>
+    </ul>
+    <div class="newsmore"><a class="more" href="bnc_motors_news.html">Read the news <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    <div class="find">
+      <h3>Find us in Coimbatore</h3>
+      <address>BNC Motors Private Limited, Unit No. 3, Saiman Thottam, Udayampalayam, Chinnavedampatti, Coimbatore, Tamil Nadu 641006, India<br>
+        <a href="tel:+914224722561">+91 422 4722561</a> · <a href="mailto:info@bncmotors.in">info@bncmotors.in</a></address>
+      <div class="links">
+        <a class="btn ghost" href="dealer_enquiry.html">Become a dealer</a>
+        <a class="btn ghost" href="bnc_motors_careers.html">Work with us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="end" aria-labelledby="end-h">
+    <h2 class="h2" id="end-h">Come and ride one</h2>
+    <p>Tell us your city and we connect you with the nearest dealer, to book a bike or to see one first.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn solid" href="buy.html#reach">Book Now</a>
+      <a class="btn ghost" href="buy.html">Compare the bikes</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div><a class="foot__logo" href="index.html"><img src="assets_v4/img/logo_big.png" alt="BNC Motors" width="616" height="348" loading="lazy"></a></div>
+  <div><h3>Products</h3><ul><li><a href="index.html">Challenger</a></li><li><a href="messenger.html">Messenger C110</a></li><li><a href="etrol.html">Etrol battery</a></li></ul></div>
+  <div><h3>Company</h3><ul><li><a href="about.html">About BNC</a></li><li><a href="business.html">B2B: fleets and leasing</a></li><li><a href="bnc_blog_page.html">Blogs</a></li><li><a href="bnc_motors_news.html">News</a></li><li><a href="bnc_motors_careers.html">Careers</a></li><li><a href="dealer_enquiry.html">Dealership enquiry</a></li><li><a href="customer_enquiry.html">Customer enquiry</a></li></ul></div>
+  <div><h3>Registered office</h3>
+    <address>BNC Motors Private Limited, Unit No. 3, Saiman Thottam, Udayampalayam, Chinnavedampatti, Coimbatore, Tamil Nadu 641006, India<br>
+    <a href="tel:+91-01206089947">+91 01206089947</a> · <a href="tel:+914224722561">+91 422 4722561</a><br><a href="mailto:info@bncmotors.in">info@bncmotors.in</a></address></div>
+  <div class="foot__base">
+    <span>© BNC Motors. Pricing is ex-showroom and subject to change prior to delivery.</span>
+    <span><a href="privacy_policy.html">Privacy policy</a> · <a href="terms_and_condition.html">Terms</a> · <a href="https://instagram.com/bnc_ev">Instagram</a> · <a href="https://www.youtube.com/channel/UC3GkzuhgPDDbDUu1EIiJXtQ">YouTube</a> · <a href="https://www.linkedin.com/company/bnc-motors/">LinkedIn</a> · <a href="https://www.facebook.com/BNC-108993001267446/">Facebook</a></span>
+  </div>
+</footer>
+
+<script src="assets_v4/next/site.js"></script>
+<script>
+/* The statements. Every heading marked data-words is split into words (the heading keeps its full text for screen
+   readers). The mission's words rise in by themselves; the vision's and the ambition's are lit by the scroll while
+   their screen holds. With reduced motion nothing here runs and every word is simply there. */
+(function(){
+  var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function split(el){
+    var n = 0, full = el.textContent.replace(/\s+/g,' ').trim();
+    (function walk(node){
+      [].slice.call(node.childNodes).forEach(function(c){
+        if (c.nodeType === 3){
+          var frag = document.createDocumentFragment();
+          c.textContent.split(/(\s+)/).forEach(function(t){
+            if (!t) return;
+            if (/^\s+$/.test(t)) { frag.appendChild(document.createTextNode(' ')); return; }
+            var w = document.createElement('span'); w.className = 'w'; w.textContent = t; w.style.setProperty('--i', n++); w.setAttribute('aria-hidden','true'); frag.appendChild(w);
+          });
+          node.replaceChild(frag, c);
+        } else if (c.nodeType === 1) walk(c);
+      });
+    })(el);
+    el.setAttribute('aria-label', full);
+    return [].slice.call(el.querySelectorAll('.w'));
+  }
+  var heads = [].slice.call(document.querySelectorAll('[data-words]'));
+  var words = heads.map(split);
+  if (calm) return;
+  var who = document.querySelector('.who__say'), by = document.querySelector('.who__by');
+  var scenes = [].slice.call(document.querySelectorAll('[data-say]')).map(function(sc){ return { el: sc, ws: [].slice.call(sc.querySelectorAll('.w')) }; });
+  var tick = false;
+  function paint(){
+    tick = false; var vh = innerHeight;
+    /* the mission eases away as the page leaves it */
+    var p0 = Math.min(1, Math.max(0, scrollY / (vh * .7)));
+    who.style.opacity = (1 - p0).toFixed(3); who.style.transform = 'translateY(' + (-p0 * 48).toFixed(1) + 'px) scale(' + (1 - p0 * .04).toFixed(4) + ')';
+    by.style.opacity = (1 - Math.min(1, p0 * 2)).toFixed(3);
+    scenes.forEach(function(s){
+      var r = s.el.getBoundingClientRect();
+      var p = (vh * .55 - r.top) / (r.height - vh * .45); p = Math.min(1, Math.max(0, p));
+      var q = Math.min(1, Math.max(0, (p - .12) / .6)) * (s.ws.length + .5);
+      s.ws.forEach(function(w, i){ var o = Math.min(1, Math.max(0, q - i)); w.style.setProperty('--o', (.14 + o * .86).toFixed(3)); });
+      s.el.classList.toggle('done', p > .74);
+    });
+  }
+  function ask(){ if (!tick){ tick = true; requestAnimationFrame(paint); } }
+  addEventListener('scroll', ask, { passive: true }); addEventListener('resize', ask); paint();
+})();
+</script>
+</body>
+</html>
