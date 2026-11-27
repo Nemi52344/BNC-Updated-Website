@@ -131,3 +131,13 @@ a .frame:hover img,.frame.zoom:hover img{transform:scale(1.025)}
 /* outline button on a dark photograph or ground */
 .btn.ghost.inv{color:#fff;border-color:rgba(255,255,255,.62)}
 .btn.ghost.inv:hover{border-color:#fff}
+
+/* forms that send */
+.form button[disabled]{opacity:.6;cursor:progress}
+.form.is-sent > :not(.sent){display:none}
+.form .sent{display:grid;gap:14px;justify-items:start;padding:clamp(12px,2.4vw,32px) 0;color:var(--ink)}
+.form .sent svg{width:44px;height:44px}
+.form .sent h3{font-weight:500;font-size:clamp(24px,2.4vw,34px);letter-spacing:-.03em;line-height:1.1;outline:none}
+.form .sent p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:44ch}
+.form input[type="file"]{width:100%;padding:13px 16px;border:1px dashed var(--line);border-radius:10px;background:var(--bg);color:var(--soft);font:500 14px var(--f);cursor:pointer}
+.form input[type="file"]::file-selector-button{margin-right:12px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 13px var(--f);cursor:pointer}
