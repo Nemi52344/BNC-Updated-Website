@@ -1,0 +1,12 @@
+# Text files keep LF line endings on every computer, so the build gives the same files everywhere.
+* text=auto eol=lf
+*.glb binary
+*.pdf binary
+*.webp binary
+*.png binary
+*.jpg binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
