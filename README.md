@@ -33,6 +33,16 @@ Then open the address it prints. The 3D bike on the landing page needs a server;
 
 Upload the folder as it is to any static host. `netlify.toml` asks search engines not to index the site while it is in review; remove that header before the public launch.
 
+## Forms
+
+The four forms (booking, fleet, careers, dealer) send from the page through `assets_v4/next/forms.js`, in this order:
+
+1. **Supabase**, once `assets_v4/next/forms-config.js` holds the project URL and its publishable key. Run `supabase/setup.sql` once in the project (SQL Editor) to create the table `bnc_form_entries` and the private bucket `bnc-resumes`. The website can only add rows and files; it cannot read them.
+2. **Netlify forms**, while Supabase is not set up (only when the site is hosted on Netlify).
+3. **The visitor's own email**, opened with the answers filled in, as the last resort on any host.
+
+Never put a secret or service_role key in `forms-config.js`.
+
 ## Notes
 
 - Shared styles and scripts for the new pages are in `assets_v4/next/`.
