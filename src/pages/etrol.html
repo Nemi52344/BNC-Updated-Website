@@ -1,0 +1,116 @@
+---
+title: Etrol 40: the removable battery and swap station | BNC Motors
+description: The Etrol 40 is BNC's removable 2.1 kWh battery: lift it out, charge it from any 6A socket, tested above 300°C, IP67, 5-year warranty. Swap and go in 2 minutes at an Etrol swapping station.
+ogTitle: Etrol 40: the removable battery and swap station
+ogDescription: Lift it out, charge it from any wall socket, swap it in two minutes.
+nav: etrol
+styles: pages/etrol.css
+modules: etrol3d.js
+---
+<!--head-->
+<script>
+/* this page always opens on its first screen: a reload or a return does not bring back the old scroll position
+(user, 2026-11-26). A link to a part of the page (#swap) still goes to that part. */
+try{ history.scrollRestoration='manual'; if(!location.hash){ scrollTo(0,0); addEventListener('pageshow',function(){ scrollTo(0,0); }); } }catch(e){}
+</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<!--/head-->
+<main id="main">
+  <section class="open" id="inside" aria-label="The Etrol 40, opened up">
+    <div class="open__stage" id="open-stage">
+      <img class="open__still" src="/assets/img/etrol/pack-cut-440.webp" srcset="/assets/img/etrol/pack-cut-440.webp 440w, /assets/img/etrol/pack-cut-820.webp 820w" sizes="(max-width:860px) 60vw, 30vw" alt="The Etrol 40 battery pack" width="820" height="1050">
+      <canvas id="open-c" role="img" aria-label="The Etrol 40 pack in 3D. As the page scrolls it comes apart, lid, seal, control board and core, and closes again."></canvas>
+    </div>
+    <div class="open__steps">
+      <div class="open__step"><div class="open__cap">
+        <h1>Petrol without <em>pollution.</em></h1>
+        <div class="cta"><a class="btn solid" href="/book-now/#reach">Book Now</a><a class="btn ghost" href="#swap">See the swap station</a></div>
+        <span class="open__cue">Scroll to open it up <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2v10M3 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div></div>
+      <div class="open__step"><div class="open__cap">
+        <h2 class="h2">Made to be carried</h2>
+        <p>Hassle-free to carry and to charge. Lift it out by the handle and plug it in at home, at the shop or at work.</p>
+      </div></div>
+      <div class="open__step"><div class="open__cap">
+        <h2 class="h2">Closed to dust and water</h2>
+        <p>Sealed where the lid meets the case. Rated IP67.</p>
+      </div></div>
+      <div class="open__step"><div class="open__cap">
+        <h2 class="h2">Know everything about your ride</h2>
+        <p>Electronics built by BNC watch over the pack. See where your bike is, your trips, the charge left and your service history, in one app.</p>
+      </div></div>
+      <div class="open__step"><div class="open__cap">
+        <h2 class="h2">Tested above 300°C</h2>
+        <p>Continuous internal temperature at the heart of the pack, and extreme electrical abuse in worst-case failure modes.</p>
+      </div></div>
+      <div class="open__step"><div class="open__cap">
+        <h2 class="h2">Covered for 5 years</h2>
+        <p>Closed up again, and ours to stand behind.</p>
+        <dl class="rows">
+          <div><dt>Warranty</dt><dd>5 years or 60,000 km</dd></div>
+          <div><dt>Standard</dt><dd>AIS-156, Amendment 3, Phase 2</dd></div>
+          <div><dt>Made by</dt><dd>BNC, in-house</dd></div>
+        </dl>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="The Etrol 40 in four numbers">
+    <dl class="nums">
+      <div class="num"><dt>Range</dt><dd>90<small>km</small></dd><p>On one pack. Up to 180 km on two.</p></div>
+      <div class="num"><dt>Socket</dt><dd>6<small>A</small></dd><p>The ordinary socket on your wall charges it.</p></div>
+      <div class="num"><dt>Warranty</dt><dd>5<small>years</small></dd><p>Or 60,000 km, on every Etrol pack.</p></div>
+    </dl>
+  </section>
+
+  <section class="swap" id="swap" aria-labelledby="swap-h">
+    <div class="swap__txt">
+      <h2 class="h2" id="swap-h">Swap and go in 2 minutes</h2>
+      <p>Hand in your drained battery pack, take a fully charged one and ride on. The BNC app shows you the nearest station. The station comes in three sizes.</p>
+    </div>
+    <!-- PICTURE SLOTS swap 1 to 3: BNC's own pictures of the three cabinets, clear background, drawn to one scale -->
+    <ul class="cabs" role="list">
+      <li><img src="/assets/img/etrol/cabinet-4.webp" alt="The 4-door Etrol swapping station" width="457" height="681" loading="lazy">
+        <div><b>4 slots</b><span>Cafes and local stores</span></div></li>
+      <li><img src="/assets/img/etrol/cabinet-8.webp" alt="The 8-door Etrol swapping station, an Etrol pack standing beside it" width="608" height="863" loading="lazy">
+        <div><b>8 slots</b><span>Dealerships and restaurants</span></div></li>
+      <li><img src="/assets/img/etrol/cabinet-12.webp" alt="The 12-door Etrol swapping station" width="779" height="758" loading="lazy">
+        <div><b>12 slots</b><span>Petrol bunks and fleets</span></div></li>
+    </ul>
+  </section>
+
+  <section class="plug" id="charge" aria-labelledby="charge-h">
+    <!-- PICTURE SLOT charging: the pack at a wall socket, 2800px wide or more -->
+    <img src="/assets/img/etrol/socket-1600.webp" srcset="/assets/img/etrol/socket-1600.webp 1600w, /assets/img/etrol/socket-2800.webp 2800w" sizes="100vw" alt="An Etrol pack on a marble floor, charging through its portable charger from an ordinary wall socket" width="1600" height="900" loading="lazy">
+    <div class="plug__card">
+      <h2 id="charge-h">Over a billion charging points</h2>
+      <p>The portable charger plugs into a standard 6A socket, so an Etrol pack can be charged anywhere there is one.</p>
+      <dl class="rows">
+        <div><dt>Plugs into</dt><dd>Standard 6A socket</dd></div>
+        <div><dt>Charger</dt><dd>Portable, travels with you</dd></div>
+        <div><dt>Charging stations needed</dt><dd>None</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="bikes" aria-labelledby="bikes-h">
+    <div class="head">
+      <h2 class="h2" id="bikes-h">The bikes it powers</h2>
+    </div>
+    <div class="bikes">
+      <a class="bcard bcard--c" href="/"><span><b>Challenger</b><small>The multipurpose electric bike</small><i>Explore Challenger <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></i></span>
+        <img src="/assets/img/home/model-challenger-1000.webp" alt="The BNC Challenger in red and black, from the side" width="1000" height="667" loading="lazy"></a>
+      <a class="bcard bcard--m" href="/messenger/"><span><b>Messenger C110</b><small>Built to carry. Made to last.</small><i>Explore Messenger <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></i></span>
+        <img src="/assets/img/home/model-messenger-full-1200.webp" alt="The BNC Messenger C110 from the side" width="2000" height="1125" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section class="end" aria-labelledby="end-h">
+    <h2 class="h2" id="end-h">See an Etrol pack at a BNC dealer</h2>
+    <p>Tell us your city and we connect you with the nearest dealer, to book a bike or to see one first.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn solid" href="/book-now/#reach">Book Now</a>
+      <a class="btn ghost" href="/">Back to BNC Motors</a>
+    </div>
+  </section>
+</main>

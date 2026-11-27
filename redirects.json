@@ -1,0 +1,90 @@
+[
+  {
+    "from": "/buy.html",
+    "to": "/book-now/"
+  },
+  {
+    "from": "/messenger.html",
+    "to": "/messenger/"
+  },
+  {
+    "from": "/etrol.html",
+    "to": "/etrol/"
+  },
+  {
+    "from": "/about.html",
+    "to": "/about/"
+  },
+  {
+    "from": "/business.html",
+    "to": "/b2b/"
+  },
+  {
+    "from": "/challenger.html",
+    "to": "/challenger-specs/"
+  },
+  {
+    "from": "/privacy_policy.html",
+    "to": "/privacy-policy/"
+  },
+  {
+    "from": "/terms_and_condition.html",
+    "to": "/terms/"
+  },
+  {
+    "from": "/bnc_motors_news.html",
+    "to": "/news/"
+  },
+  {
+    "from": "/bnc_blog_page.html",
+    "to": "/blog/"
+  },
+  {
+    "from": "/bnc_motors_careers.html",
+    "to": "/careers/"
+  },
+  {
+    "from": "/dealer_enquiry.html",
+    "to": "/become-a-dealer/"
+  },
+  {
+    "from": "/bnc_blog_info_page__info_MTQ.html",
+    "to": "/blog/hub-motors/"
+  },
+  {
+    "from": "/bnc_blog_info_page__info_MTE.html",
+    "to": "/blog/milk-delivery/"
+  },
+  {
+    "from": "/bnc_blog_info_page__info_MTI.html",
+    "to": "/blog/etrol40/"
+  },
+  {
+    "from": "/bnc_blog_info_page__info_OQ.html",
+    "to": "/blog/six-reasons-to-switch/"
+  },
+  {
+    "from": "/bnc_motors_blog.html",
+    "to": "/blog/"
+  },
+  {
+    "from": "/customer_enquiry.html",
+    "to": "/book-now/#reach"
+  },
+  {
+    "from": "/challenger-reveal.html",
+    "to": "/"
+  },
+  {
+    "from": "/bnc_blog_info_page__info_MTU.html",
+    "to": "/news/"
+  },
+  {
+    "from": "/bnc_blog_info_page__info_MTM.html",
+    "to": "/blog/"
+  },
+  {
+    "from": "/bnc_blog_info_page__info_MTA.html",
+    "to": "/blog/"
+  }
+]

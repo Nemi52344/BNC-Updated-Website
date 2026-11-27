@@ -1,0 +1,266 @@
+/* ONE SYSTEM
+     colour   black ground, white ink, two greys; the only colour on the page is the bike itself
+     type     Montserrat; four sizes: title 40, lead 18, body 16, label 13; weights 400, 500 and 600
+     space    8px steps: 8 16 24 32 48 64
+     picture  every photograph 3:2, the full width of its column, black and white
+     edges    one margin (--edge) left and right; everything in a caption starts on one left line */
+  :root{
+    --bg:#08090a; --bgc:8 9 10; --inkc:244 245 246; --word-a:.3; --ink:#f4f5f6; --soft:#c5cacf; --dim:#959ba2; --line:rgba(255,255,255,.16);
+    --surface:#111316; --st1:#191c20; --st2:#0f1114; --st3:#08090a; --vig:rgb(var(--bgc) / .55);
+    --f:'Montserrat',system-ui,sans-serif;
+    --edge:clamp(24px,6vw,96px);
+    --col:clamp(300px,34vw,400px);
+    --t-title:clamp(28px,3vw,40px); --t-lead:18px; --t-body:16px; --t-label:13px;
+  }
+  /* light mode: the same system on a pale studio ground */
+  :root[data-theme="light"]{
+    --bg:#f4f4f2; --bgc:244 244 242; --inkc:12 13 15; --word-a:.2; --ink:#0c0d0f; --soft:#383c41; --dim:#666c73; --line:rgba(0,0,0,.16);
+    --surface:#e7e7e4; --st1:#ffffff; --st2:#f1f1ef; --st3:#e3e3e0; --vig:rgba(90,90,84,.10);
+  }
+  @view-transition{navigation:auto}   /* a soft cross-fade when moving between the site's pages */
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{overflow-x:clip}
+  body{font-family:var(--f);font-size:var(--t-body);line-height:1.6;background:var(--bg);color:var(--ink);overflow-x:clip;-webkit-font-smoothing:antialiased}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+  .skip{position:fixed;left:16px;top:-80px;z-index:50;background:var(--ink);color:var(--bg);font-weight:600;font-size:14px;padding:12px 16px;text-decoration:none}
+  .skip:focus{top:16px}
+
+  #stage{position:fixed;inset:0;z-index:0;background:radial-gradient(60% 55% at 50% 56%,var(--st1) 0%,var(--st2) 48%,var(--st3) 100%)}
+  #c{position:relative;width:100%;height:100%;display:block}
+  /* "Challenge the status quo", each line set to the full width of the page, behind the bike */
+  .bgword{position:absolute;left:3vw;right:3vw;top:max(13svh,96px);font-weight:800;text-transform:uppercase;line-height:.88;letter-spacing:-.03em;
+    color:rgb(var(--inkc) / var(--word-a));white-space:nowrap;will-change:transform}
+  .bgword span{display:block;width:max-content;margin-inline:auto}
+  .js .bgword span{animation:wordin 1.3s cubic-bezier(.16,.84,.24,1) .05s both}
+  .js .bgword span:nth-child(2){animation-delay:.2s}
+  @keyframes wordin{from{opacity:0;transform:translateY(.22em)}to{opacity:1;transform:none}}
+  .bgword span:nth-child(1){font-size:9.6vw}
+  .bgword span:nth-child(2){font-size:12.6vw}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .stage-veil{position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(135% 100% at 50% 42%,transparent 46%,var(--vig) 100%)}
+
+  #loader{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:40;display:none;align-items:center;gap:12px;padding:10px 16px;border-radius:999px;
+    background:rgb(var(--bgc) / .86);border:1px solid var(--line);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:opacity .6s ease, visibility .6s;pointer-events:none}
+  .js #loader{display:flex}
+  #loader.gone{opacity:0;visibility:hidden}
+  #loader .lword{display:none !important} #loader .lbar{width:96px}
+  .lword{display:block;width:min(220px,56vw);height:auto}
+  .logo-d{display:none !important}
+  :root[data-theme="light"] .logo-w{display:none !important}
+  :root[data-theme="light"] .logo-d{display:block !important}
+  .mode{appearance:none;flex:none;width:40px;height:40px;border-radius:50%;
+    border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer;display:none;place-items:center;transition:border-color .15s}
+  /* the bar on this page takes the page's own tones, dark or light */
+  #topbar{z-index:30;background:rgb(var(--bgc) / .92);border-color:var(--line);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+  #topbar .bnav__links a{color:var(--soft)} #topbar .bnav__links a:hover,#topbar .bnav__links a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--ink)}
+  #topbar .bnav__btn{background:var(--ink);color:var(--bg)}
+  #topbar .bnav__menu summary{border-color:var(--line);color:var(--ink)}
+  #topbar .bnav__menu nav{background:var(--bg);border-color:var(--line)} #topbar .bnav__menu nav a{color:var(--ink)}
+  :root[data-theme="light"] #topbar .bnav__logo img{filter:none}
+  .js .mode{display:grid}
+  .mode:hover{border-color:var(--ink)}
+  .mode svg{display:block}
+  .lbar{width:min(220px,56vw);height:1px;background:var(--line);overflow:hidden}
+  .lbar i{display:block;height:100%;width:0;background:var(--ink);transition:width .25s ease}
+  .lsub{font-size:var(--t-label);color:var(--dim)}
+
+  .hud{position:fixed;z-index:12;pointer-events:none}
+  .hint{bottom:32px;left:50%;transform:translateX(-50%);display:none;flex-direction:column;align-items:center;gap:8px;
+    color:var(--dim);font-size:var(--t-label);transition:opacity .5s}
+  .js .hint{display:flex}
+  .hint .m{width:1px;height:32px;background:linear-gradient(180deg,var(--ink),transparent)}
+
+  #track{position:relative;z-index:10;overflow-x:clip}
+
+  /* first screen: the lettering behind the bike, the bike to the right; at the lower left one line, the three figures and the button */
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+    pointer-events:none;padding:96px var(--edge) clamp(32px,6vh,56px)}
+  .hero__id{width:fit-content;max-width:100%;animation:rise .9s .2s both}
+  .hero .lede{max-width:38ch;color:var(--soft)}
+  /* the three figures, in the place the logo had: large numerals in a row, each saying what it counts;
+     each digit rolls into place like an odometer */
+  .hfacts{display:flex;margin-top:24px}
+  .hfacts div{display:flex;flex-direction:column-reverse;padding:0 clamp(16px,2vw,32px);border-left:1px solid var(--line)}
+  .hfacts div:first-child{padding-left:0;border-left:0}
+  .hfacts dd{display:flex;align-items:baseline;gap:6px;font-weight:600;font-size:clamp(28px,2.8vw,48px);line-height:1;letter-spacing:-.03em;
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+  .hfacts dd small{font-size:.36em;font-weight:500;letter-spacing:0;color:var(--soft)}
+  .hfacts dt{margin-top:8px;font-size:var(--t-label);color:var(--dim);white-space:nowrap}
+  .hero .cta{margin-top:32px;gap:24px}
+  .from{font-size:var(--t-label);color:var(--soft);white-space:nowrap} .from b{font-weight:600;color:var(--ink);font-size:16px}
+  .cue{pointer-events:auto;display:inline-flex;align-items:center;gap:8px;min-height:48px;font-size:var(--t-label);font-weight:500;color:var(--soft);
+    text-decoration:none;transition:color .15s}
+  .hero > .cue{position:absolute;right:var(--edge);bottom:clamp(32px,6vh,56px);animation:rise .9s .5s both}
+  .cue:hover{color:var(--ink)}
+  .cue svg{transition:transform .2s}
+  .cue:hover svg{transform:translateY(3px)}
+  @media (max-height:720px){ .hero .lede .more{display:none} }
+  .od{display:inline-block;height:1em;overflow:hidden;vertical-align:bottom}
+  .od__strip{display:block;transition:transform 1.7s cubic-bezier(.16,.84,.24,1);transition-delay:var(--w,0s)}
+  .od__strip b{display:block;height:1em;line-height:1;font-weight:inherit}
+  .hfacts.go .od__strip{transform:translateY(calc(var(--d) * -1em))}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+  /* one caption per screen: photograph, heading, two lines, two facts, all on one left line and one width */
+  .panel{min-height:100vh;min-height:100svh;display:flex;align-items:center;pointer-events:none;padding:48px var(--edge)}
+  .panel.right{justify-content:flex-end}
+  .cap{position:relative;width:var(--col)}
+  /* the veil behind a caption: a block of the page colour with blurred edges, so every line reads over the ghosted bike.
+     A plain blurred block on purpose: a mask with backdrop-filter drew as a hard-edged rectangle whenever the caption was
+     partly off screen (found 2026-11-26). */
+  .cap::before{content:"";position:absolute;inset:-20px -32px;z-index:-1;pointer-events:none;border-radius:40px;
+    background:rgb(var(--bgc) / .9);filter:blur(22px)}
+  .shot{margin:0 0 24px;aspect-ratio:3/2;width:100%;max-height:30vh;overflow:hidden;border-radius:4px;background:var(--surface)}
+  .shot img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06)}
+  .cap h2{font-weight:600;font-size:var(--t-title);line-height:1.15;letter-spacing:-.015em;margin-bottom:16px;text-wrap:balance}
+  .cap p{color:var(--soft);max-width:40ch}
+  .cap p.fn{font-size:12px;margin-top:8px;color:var(--dim)}
+  .facts{margin-top:24px;border-top:1px solid var(--line)}
+  .facts div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .facts dt{font-size:var(--t-label);color:var(--dim)}
+  .facts dd{font-weight:500;text-align:right;font-variant-numeric:tabular-nums}
+
+  /* the colour swatches: four round buttons, the chosen one ringed */
+  .tones{display:flex;gap:12px;margin-top:24px}
+  .tones button{pointer-events:auto;appearance:none;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:none;padding:6px;cursor:pointer;
+    transition:border-color .15s, transform .15s}
+  .tones button::before{content:"";display:block;width:100%;height:100%;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgb(var(--inkc) / .22)}
+  .tones button:hover{border-color:var(--soft)}
+  .tones button:active{transform:scale(.94)}
+  .tones button[aria-pressed="true"]{border-color:var(--ink)}
+
+  /* behind the real-life pictures: slow, flowing lines (drawn by the script), fading out toward the top and foot */
+  .gallery__bg{position:absolute;inset:0;overflow:hidden;pointer-events:none;
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent)}
+  .gallery__bg svg{position:absolute;top:0;left:0;width:200%;height:100%;animation:drift 80s linear infinite}
+  .gallery__bg path{fill:none;stroke:rgb(var(--inkc) / .15);stroke-width:1.1;vector-effect:non-scaling-stroke}
+  @keyframes drift{to{transform:translateX(-25%)}}
+  .gallery > :not(.gallery__bg){position:relative}
+  /* real life: one screen. A heading, three set names, one mosaic of pictures per set, a line saying what they show */
+  .gallery{position:relative;background:var(--bg);min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;gap:24px;padding:40px 0}
+  .gallery__head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px 32px;padding:0 max(var(--edge), calc((100% - 1240px) / 2))}
+  .gallery h2{font-weight:600;font-size:var(--t-title);line-height:1.15;letter-spacing:-.015em}
+  .gallery__tabs{display:flex;gap:24px}
+  .gallery__tabs button{appearance:none;background:none;border:0;border-bottom:1px solid transparent;padding:8px 0;font:500 var(--t-body)/1.2 var(--f);
+    color:var(--dim);cursor:pointer;transition:color .15s,border-color .15s}
+  .gallery__tabs button:hover{color:var(--ink)}
+  .gallery__tabs button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+  .gallery__track{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;outline-offset:-2px}
+  .gallery__track::-webkit-scrollbar{display:none}
+  .gslide{flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:repeat(24,1fr);grid-template-rows:1fr 1fr;gap:8px;
+    padding:0 max(var(--edge), calc((100% - 1240px) / 2));height:min(calc(100svh - 280px),580px)}
+  .gslide figure{margin:0;min-width:0;min-height:0;border-radius:4px;overflow:hidden;background:var(--surface)}
+  .gslide img,.gslide video{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .gslide figure:hover img{transform:scale(1.025)}
+  .gslide--road .a{grid-area:1/1/3/15} .gslide--road .b{grid-area:1/15/2/25} .gslide--road .c{grid-area:2/15/3/20} .gslide--road .d{grid-area:2/20/3/25}
+  .gslide--work .a{grid-area:1/1/3/10} .gslide--work .b{grid-area:1/10/3/15} .gslide--work .c{grid-area:1/15/2/20} .gslide--work .e{grid-area:2/15/3/20} .gslide--work .d{grid-area:1/20/3/25}
+  .gallery__foot{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 max(var(--edge), calc((100% - 1240px) / 2))}
+  .gallery__foot p{font-size:var(--t-label);color:var(--dim)}
+  .gallery__nav{display:flex;align-items:center;gap:8px;flex:none}
+  #g-count{font-size:var(--t-label);color:var(--dim);font-variant-numeric:tabular-nums;margin-right:8px}
+  .gallery__nav button{appearance:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer;
+    display:grid;place-items:center;transition:border-color .15s, opacity .15s}
+  .gallery__nav button:hover{border-color:var(--ink)}
+  .gallery__nav button:disabled{opacity:.35;cursor:default;border-color:var(--line)}
+  @media (max-width:900px){ .gslide{height:min(calc(100svh - 300px),580px)} }
+
+  /* last screen: the line, the two actions, then the four figures across the page's width */
+  .finale{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;
+    padding:64px var(--edge) 48px;pointer-events:none}
+  .finale h2{font-weight:600;font-size:var(--t-title);line-height:1.15;letter-spacing:-.015em;max-width:16ch;
+    text-shadow:0 2px 40px rgb(var(--bgc) / .9)}
+  .finale .cta{margin-top:32px}
+  .fbot{position:relative}
+  .fbot::before{content:"";position:absolute;left:calc(-1 * var(--edge));right:calc(-1 * var(--edge));bottom:-48px;height:44vh;z-index:-1;pointer-events:none;
+    background:linear-gradient(180deg,rgb(var(--bgc) / 0),rgb(var(--bgc) / .9) 60%)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0 24px;border-top:1px solid var(--line)}
+  .stats div{padding-top:16px;display:flex;flex-direction:column-reverse;justify-content:flex-end}
+  .stats dd{font-weight:500;font-size:var(--t-title);line-height:1.15;letter-spacing:-.015em;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .stats dt{margin-top:4px;font-size:var(--t-label);color:var(--dim)}
+  .fnote{margin-top:16px;font-size:var(--t-label);color:var(--dim)}
+
+  .cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  /* after the finale: the rest of BNC. An opaque band, so the 3D behind is covered */
+  .onward{position:relative;background:var(--bg);padding:clamp(56px,8vw,112px) var(--edge) clamp(48px,6vw,88px);border-top:1px solid var(--line)}
+  .onward h2{font-weight:600;font-size:var(--t-title);line-height:1.15;letter-spacing:-.015em}
+  .onward__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:clamp(24px,3vw,40px)}
+  .ocard{pointer-events:auto;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);text-decoration:none;overflow:hidden;transition:border-color .2s,transform .2s}
+  .ocard:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .ocard__pic{display:block;position:relative;background:#fefefe;aspect-ratio:16/10}
+  .ocard__pic img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;padding:6%}
+  .ocard__txt{display:grid;gap:8px;padding:clamp(16px,2vw,28px);margin-top:auto}
+  .ocard b{font-weight:600;font-size:clamp(20px,1.8vw,26px);letter-spacing:-.01em}
+  .ocard small{font-size:var(--t-body);color:var(--soft);line-height:1.45}
+  .ocard i{font-style:normal;font-weight:600;font-size:var(--t-label);margin-top:8px}
+  .ocard i::after{content:" →"}
+  .ocard--go{background:var(--ink);color:var(--bg);justify-content:flex-end} .ocard--go small{color:inherit;opacity:.8}
+  /* the third card has no picture: its title is set large at the top so the card is never an empty slab */
+  .ocard--go .ocard__txt{margin-top:0;flex:1;grid-template-rows:1fr auto auto} .ocard--go b{align-self:start;font-weight:500;font-size:clamp(28px,3.2vw,48px);line-height:1.04;letter-spacing:-.035em}
+  /* the footer, as on the Book Now page: logo, products, company, registered office, then one base line */
+  .foot{position:relative;z-index:10;pointer-events:auto;background:var(--bg);border-top:1px solid var(--line);padding:clamp(40px,6vw,72px) var(--edge) 32px;display:grid;grid-template-columns:1.2fr 1fr 1fr 1.4fr;gap:32px clamp(24px,4vw,64px);font-size:var(--t-body)}
+  .foot__logo img{display:block;height:36px;width:auto}
+  :root[data-theme="dark"] .foot__logo img{filter:invert(1)}
+  .foot h3{font-size:var(--t-label);font-weight:500;color:var(--dim);margin-bottom:12px}
+  .foot ul{list-style:none;display:grid;gap:8px;margin:0;padding:0}
+  .foot a{text-decoration:none;color:var(--soft)}
+  .foot a:hover{color:var(--ink);text-decoration:underline}
+  .foot address{font-style:normal;color:var(--soft);font-size:14px;line-height:1.6}
+  .foot__base{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;border-top:1px solid var(--line);font-size:var(--t-label);color:var(--dim)}
+  @media (max-width:900px){ .foot{grid-template-columns:1fr 1fr} }
+  @media (max-width:520px){ .foot{grid-template-columns:1fr} }
+  @media (max-width:860px){ .onward__grid{grid-template-columns:minmax(0,1fr)} .ocard{flex-direction:row;align-items:stretch} .ocard__pic{flex:0 0 40%;aspect-ratio:auto;min-height:120px} .ocard--go{flex-direction:column} }
+
+  .btn{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:4px;
+    font-family:var(--f);font-weight:600;font-size:var(--t-body);text-decoration:none;border:1px solid var(--ink);
+    transition:transform .15s, background .15s, border-color .15s}
+  .btn.solid{background:var(--ink);color:var(--bg)}
+  .btn.solid:hover{transform:translateY(-1px);background:color-mix(in srgb,var(--ink) 88%,var(--bg))}
+  .btn.solid:active{transform:translateY(1px)}
+  .btn.ghost{background:rgb(var(--bgc) / .6);color:var(--ink);border-color:color-mix(in srgb,var(--ink) 40%,transparent)}
+  .btn.ghost:hover{border-color:var(--ink)}
+
+  /* narrower windows: the bike takes the middle, so the sentence gives way and the logo and button keep the left line */
+  @media (max-width:900px){
+    .hero .lede .more{display:none} .hero .lede{max-width:200px} .cue{display:none}
+    /* the bike needs the middle: the figures become a short list, number then words */
+    .hfacts{flex-direction:column;gap:10px;margin-top:20px}
+    .hfacts div{flex-direction:row-reverse;justify-content:flex-end;align-items:baseline;gap:10px;padding:0;border-left:0}
+    .hfacts dd{font-size:28px} .hfacts dt{margin-top:0}
+    .hero .cta{margin-top:24px}
+  }
+  /* phones: the bike in the upper part of the screen, the caption under it at full width */
+  @media (max-width:600px){
+    :root{--col:100%}
+    .hint{display:none !important}
+    /* a phone: the lettering in three lines at the top, the logo, the figures in a row and the button at the foot */
+    .bgword{left:24px;right:24px;top:84px;line-height:.92}
+    .bgword span:nth-child(1),.bgword span:nth-child(2){font-size:14.2vw;white-space:normal;width:auto}
+    .hero{padding:96px 24px 40px}
+    .hero__id{width:auto}
+    .hero .lede{max-width:none}
+    .hfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:16px}
+    .hfacts div{flex-direction:column-reverse;justify-content:flex-start;align-items:flex-start;gap:0;padding:0 0 0 12px;border-left:1px solid var(--line)}
+    .hfacts div:first-child{padding-left:0;border-left:0}
+    .hfacts dd{font-size:30px;gap:4px} .hfacts dt{margin-top:8px}
+    .hero .cta{margin-top:24px}
+    .hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:44%;z-index:-1;pointer-events:none;
+      background:linear-gradient(180deg,rgb(var(--bgc) / 0),rgb(var(--bgc) / .94) 34%)}
+    .panel,.panel.right{align-items:flex-end;justify-content:flex-start;padding:46svh 24px 48px}
+    .cap::before{inset:-64px -24px -48px;border-radius:0;filter:none;background:linear-gradient(180deg,rgb(var(--bgc) / 0),rgb(var(--bgc) / .92) 24%)}
+    .gallery{gap:16px}
+    .gallery__head,.gallery__foot{padding:0 24px}
+    .gallery__tabs{gap:20px}
+    .gslide{padding:0 24px;grid-template-columns:repeat(12,1fr);grid-template-rows:1.5fr 1fr;height:min(calc(100svh - 290px),520px)}
+    .gslide--road .a{grid-area:1/1/2/13} .gslide--road .b{grid-area:2/1/3/5} .gslide--road .c{grid-area:2/5/3/9} .gslide--road .d{grid-area:2/9/3/13}
+    .gslide--work .a{grid-area:1/1/2/8} .gslide--work .b{grid-area:1/8/2/13} .gslide--work .c{grid-area:2/1/3/5} .gslide--work .d{grid-area:2/5/3/9} .gslide--work .e{grid-area:2/9/3/13}
+    .stats{grid-template-columns:repeat(2,1fr);row-gap:24px}
+    .btn{width:100%}
+    .cta{width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .hero__id,.js .bgword span,.gallery__bg svg{animation:none}
+    .od__strip{transition:none}
+    #loader{transition:none}
+  }

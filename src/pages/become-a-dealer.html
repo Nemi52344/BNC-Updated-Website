@@ -1,0 +1,59 @@
+---
+title: Become a BNC dealer | BNC Motors
+description: Open a BNC Motors dealership. Tell us about yourself and where you want to open, and we will get in touch.
+ogTitle: Become a BNC dealer
+ogDescription: Open a BNC Motors dealership.
+footnote: Pricing is ex-showroom and subject to change prior to delivery.
+styles: pages/become-a-dealer.css
+scripts: forms-config.js, forms.js, pages/become-a-dealer.js
+---
+<main id="main">
+  <section class="dl" aria-labelledby="dl-h">
+    <div class="apply">
+      <div class="apply__txt">
+        <h1 id="dl-h">Become a BNC dealer</h1>
+        <p>Tell us about yourself and where you want to open. We will get in touch.</p>
+        <div class="apply__lines">
+          <a href="mailto:info@bncmotors.in">info@bncmotors.in</a>
+          <a href="tel:+914224722561">+91 422 4722561</a>
+        </div>
+        <!-- PICTURE SLOT dealer: BNC's own photograph -->
+        <figure class="apply__pic"><img src="/assets/img/home/ride-fort-2000.webp" srcset="/assets/img/home/ride-fort-1000.webp 1000w, /assets/img/home/ride-fort-2000.webp 2000w" sizes="440px" alt="A green Challenger parked below a hill fort" width="2000" height="1334" loading="lazy"></figure>
+      </div>
+      <form class="form" id="dealer-form" name="dealer" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="dealer"><p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <h2>About you</h2>
+        <div class="fields">
+          <label><span>Full name</span><input type="text" name="name" autocomplete="name" required></label>
+          <label><span>Mobile number</span><input type="tel" name="mobile" autocomplete="tel" inputmode="numeric" required></label>
+          <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          <label><span>Country</span><select name="country" autocomplete="country-name"><option>India</option><option>Africa</option><option>Bangladesh</option><option>Benin</option><option>China</option><option>Ghana</option><option>Indonesia</option><option>Japan</option><option>Nepal</option><option>Nigeria</option><option>Senegal</option><option>Singapore</option><option>Sri Lanka</option></select></label>
+          <label><span>State</span><input type="text" name="state" autocomplete="address-level1" required></label>
+          <label><span>City</span><input type="text" name="city" autocomplete="address-level2" required></label>
+          <label><span>Area</span><input type="text" name="area" autocomplete="address-level3" required></label>
+          <label><span>Pincode</span><input type="text" name="pincode" autocomplete="postal-code" inputmode="numeric" required></label>
+        </div>
+        <h2>Where you want to open</h2>
+        <div class="fields fields--3">
+          <label><span>Location 1</span><input type="text" name="location_1" required></label>
+          <label><span>Pincode 1</span><input type="text" name="pincode_1" inputmode="numeric" required></label>
+          <label><span>Location 2 (optional)</span><input type="text" name="location_2"></label>
+          <label><span>Pincode 2</span><input type="text" name="pincode_2" inputmode="numeric"></label>
+          <label><span>Location 3 (optional)</span><input type="text" name="location_3"></label>
+          <label><span>Pincode 3</span><input type="text" name="pincode_3" inputmode="numeric"></label>
+        </div>
+        <h2>Your plan</h2>
+        <div class="fields">
+          <label><span>Investment capability (INR in lakhs)</span><input type="text" name="investment_lakhs" inputmode="decimal" required></label>
+          <label><span>How do you know about us?</span><select name="source" required><option value="">Select</option><option>Instagram</option><option>Facebook</option><option>Twitter</option><option>LinkedIn</option><option>Google</option><option>Others</option></select></label>
+        </div>
+        <label><span>Describe your dealership experience</span><textarea name="experience" rows="3" required></textarea></label>
+        <label><span>Why would you like to work with us? (optional)</span><textarea name="why" rows="3"></textarea></label>
+        <div>
+          <p class="err" id="dealer-err" role="alert"></p>
+          <button class="btn solid" type="submit">Send enquiry</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

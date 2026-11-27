@@ -1,0 +1,139 @@
+/* THE BUSINESS (B2B) PAGE (2026-11-25): for a company that wants bikes for its riders. Same system as the booking,
+     Etrol and About pages: rounded frames, pill actions, every section inside one screen on a desktop window.
+     Every fact is one BNC has already published: its site (loads, range, battery, app, warranty), its news page (India
+     Post, Mumbai, January 2026) and its own blog (the milk round and its running-cost estimate, marked as BNC's
+     estimate). There is NO fleet price, discount, lease, service contract or fleet software here: BNC has published
+     none. Add them when BNC supplies them.
+     Pictures: real photographs only, 1050px wide or more, none shown larger than it is (the group's own, from the
+     iDelivery site's img/real folder) and BNC's studio pictures of the two bikes. No video stills (too soft), no
+     generated pictures, no factory pictures.
+     The form has no server behind it: it opens the visitor's own email, addressed to BNC, with the answers filled in. */
+  .h2{font-weight:500;font-size:clamp(30px,3.6vw,56px);line-height:1.06;letter-spacing:-.035em;text-wrap:balance}
+  .head{display:grid;justify-items:center;text-align:center;gap:16px;margin-bottom:clamp(24px,3vw,40px)}
+  .head p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:60ch}
+  .sec{padding:clamp(48px,6vw,96px) var(--edge)}
+
+  /* first screen: the words at the left, the India Post riders setting off at the right */
+  .biz{margin-top:84px;padding:clamp(16px,2.4vw,40px) var(--edge) 0;min-height:calc(100vh - 84px);min-height:calc(100svh - 84px);
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:center}
+  .biz__txt{display:grid;gap:18px;justify-items:start}
+  .biz h1{font-weight:500;font-size:clamp(40px,5vw,84px);line-height:1;letter-spacing:-.045em;text-wrap:balance}
+  .biz p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:44ch}
+  .biz .cta{margin-top:6px}
+  .biz__pic{margin:0;justify-self:end;width:min(100%,680px);border-radius:14px;overflow:hidden;background:#d9d6d0;
+    aspect-ratio:4/3;max-height:calc(100vh - 150px);max-height:calc(100svh - 150px)}
+  .biz__pic img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+  @media (max-width:860px){ .biz{grid-template-columns:minmax(0,1fr);min-height:0;padding-top:16px} .biz__pic{justify-self:stretch;width:100%;aspect-ratio:4/3;max-height:none;order:-1} }
+
+  /* four numbers */
+  .nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px)}
+  .num dd{font-weight:500;font-size:clamp(48px,5.2vw,88px);line-height:.9;letter-spacing:-.06em;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .num dd small{font-size:.3em;font-weight:400;letter-spacing:-.02em;margin-left:.12em;color:var(--soft)}
+  .num dt{display:none}
+  .num p{margin-top:18px;color:var(--soft);max-width:28ch}
+  @media (max-width:640px){ .nums{grid-template-columns:minmax(0,1fr);gap:28px} }
+
+  /* who runs on BNC: the customers' marks on white tiles (a mark keeps its own colours, so the tile is white in both
+     modes), then three customer cards */
+  .custs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .cust{display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+  .cust__pic{position:relative;aspect-ratio:16/10;background:#d9d6d0;flex:none}
+  .cust__pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--p,50% 50%)}
+  .cust__pic--mark{background:#fff;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+  .cust__pic--mark img{position:static;width:min(62%,300px);height:auto;object-fit:contain}
+  .cust__pic--three{display:flex;align-items:center;justify-content:center;gap:8%;padding:0 8%} .cust__pic--three img{width:auto;max-width:28%;height:auto;max-height:34%}
+  .cust__txt{padding:clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:10px;align-items:flex-start;flex:1}
+  .cust h3{font-weight:500;font-size:clamp(22px,2vw,30px);letter-spacing:-.025em;line-height:1.1}
+  .cust p{color:var(--soft);line-height:1.5;font-size:15px}
+  .cust .more{margin-top:auto}
+  .credit{margin-top:14px;font-size:var(--t-label);color:var(--dim);text-align:right}
+  @media (max-width:860px){ .custs{grid-template-columns:minmax(0,1fr)} .cust{flex-direction:row} .cust__pic{flex:0 0 42%;aspect-ratio:auto;min-height:170px} }
+  @media (max-width:520px){ .cust{flex-direction:column} .cust__pic{flex:none;aspect-ratio:16/10;min-height:0} }
+
+
+  /* three services: lease, own, AMC. Each card: a photograph, one line, what it includes, one action. No terms or prices
+     are published, so each ends in "Ask for ..." */
+  .svcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .svc{border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+  .svc__txt{padding:clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:10px;align-items:flex-start;flex:1}
+  .svc .n{font-size:13px;font-weight:500;color:var(--dim);font-variant-numeric:tabular-nums}
+  .svc h3{font-weight:500;font-size:clamp(26px,2.5vw,38px);letter-spacing:-.03em;line-height:1.06;margin-top:clamp(20px,3vw,48px)}
+  .svc--dark{background:#0f1012;color:#fff;border-color:#0f1012} .svc.svc--dark p,.svc.svc--dark .n{color:#c5cacf} .svc.svc--dark ul,.svc.svc--dark li{border-color:rgba(255,255,255,.18)} .svc.svc--dark .more{border-color:#fff;color:#fff}
+  .svc p{color:var(--soft);line-height:1.5;font-size:15px}
+  .svc ul{list-style:none;margin:4px 0 6px;padding:0;width:100%;border-top:1px solid var(--line)}
+  .svc li{padding:10px 0 10px 26px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.35;position:relative}
+  .svc li::before{content:"";position:absolute;left:2px;top:15px;width:10px;height:5px;border-left:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg)}
+  .svc .more{margin-top:auto}
+  @media (max-width:900px){ .svcs{grid-template-columns:minmax(0,1fr)} }
+
+  /* fleet tracking: what the app does for a fleet at the left, the app at the right, on a dark band */
+  .trk{margin:0 12px;border-radius:14px;background:#1c1d20;color:#fff;overflow:hidden;display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);gap:clamp(24px,3vw,56px);align-items:center;
+    padding:clamp(28px,3.6vw,60px) clamp(16px,3vw,48px) clamp(28px,3.6vw,60px) clamp(20px,5vw,84px)}
+  .trk .tag{background:rgba(255,255,255,.12);color:#fff;border:0}
+  .trk__txt{display:grid;gap:16px;justify-items:start}
+  .trk__txt h2{font-weight:500;font-size:clamp(32px,3.5vw,58px);line-height:1.03;letter-spacing:-.04em;text-wrap:balance}
+  .trk__txt p{color:#c5cacf;font-size:var(--t-lead);line-height:1.5;max-width:38ch}
+  .trk ul{list-style:none;margin:4px 0 0;padding:0;width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;border-top:1px solid rgba(255,255,255,.16)}
+  .trk li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15px;font-weight:500}
+  .trk img{display:block;justify-self:end;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 220px);max-height:calc(100svh - 220px);-webkit-mask-image:linear-gradient(#000 88%,transparent);mask-image:linear-gradient(#000 88%,transparent)}
+  @media (max-width:1000px){ .trk{grid-template-columns:minmax(0,1fr);padding:clamp(28px,5vw,48px) clamp(16px,4vw,40px)} .trk img{justify-self:center} }
+  @media (max-width:480px){ .trk ul{grid-template-columns:minmax(0,1fr)} }
+
+  /* the two bikes */
+  .bikes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .bcard{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;border-radius:14px;overflow:hidden;color:#fff;text-decoration:none;min-height:clamp(220px,22vw,320px);transition:transform .2s}
+  .bcard:hover{transform:translateY(-2px)}
+  .bcard--c{background:#010101} .bcard--m{background:#fefefe;color:#0c0d0f;border:1px solid var(--line)} .bcard.bcard--m small{color:#4a4f55}
+  .bcard > span{padding:clamp(20px,2.6vw,40px);display:grid;gap:8px;align-content:center}
+  .bcard b{font-weight:500;font-size:clamp(24px,2.4vw,38px);letter-spacing:-.03em;line-height:1.05}
+  .bcard small{font-size:15px;color:#c9cdd2;line-height:1.45}
+  .bcard i{font-style:normal;font-weight:600;font-size:14px;margin-top:10px;display:inline-flex;align-items:center;gap:8px}
+  .bcard img{display:block;width:100%;height:100%;max-height:clamp(220px,22vw,320px);object-fit:contain;padding:12px 12px 12px 0}
+  @media (max-width:860px){ .bikes{grid-template-columns:minmax(0,1fr)} }
+
+  /* talk to BNC: the words and the direct lines at the left, the short form at the right */
+  .talk{margin:0 12px;border-radius:14px;background:#0f1012;color:#fff;padding:clamp(24px,3.4vw,60px) clamp(16px,4vw,72px);
+    display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,72px);align-items:center}
+  .talk__txt{display:grid;gap:16px;justify-items:start}
+  .talk__txt p{color:#c5cacf;font-size:var(--t-lead);line-height:1.5;max-width:40ch}
+  .talk__txt .tag{background:rgba(255,255,255,.12);color:#fff;border:0}
+  .talk__lines{margin-top:8px;display:grid;gap:6px;font-weight:500}
+  .talk__lines a{color:#fff}
+  .form{border-radius:12px;background:var(--card);color:var(--ink);padding:clamp(18px,2.4vw,36px);display:grid;gap:18px}
+  .form fieldset{border:0;display:grid;gap:8px}
+  .form legend,.form label > span{font-size:var(--t-label);color:var(--dim);margin-bottom:8px;display:block}
+  .seg{display:flex;flex-wrap:wrap;gap:8px}
+  .seg label{position:relative;cursor:pointer}
+  .seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .seg span{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border:1px solid var(--line);border-radius:999px;font-weight:500;font-size:15px;transition:border-color .15s,background .15s,color .15s}
+  .form .seg label > span{display:inline-flex;margin-bottom:0;font-size:15px;color:var(--ink)}
+  .seg input:checked + span,.form .seg input:checked + span{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .seg input:focus-visible + span{outline:2px solid var(--ink);outline-offset:3px}
+  .seg label:hover span{border-color:var(--ink)}
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form input[type="text"],.form input[type="tel"]{width:100%;min-height:50px;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);font:500 16px var(--f)}
+  .form input:focus{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+  .form .note{font-size:var(--t-label);color:var(--dim);line-height:1.5}
+  .form .err{font-size:var(--t-label);color:#b3261e;min-height:1.2em}
+  @media (max-width:980px){ .talk{grid-template-columns:minmax(0,1fr)} }
+  @media (max-width:520px){ .fields{grid-template-columns:minmax(0,1fr)} }
+
+  /* form graphics (2026-11-27): a small line icon in each choice, and the bike choice as three picture cards */
+  .form .seg label > span svg{flex:none;margin-right:8px}
+  .pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .pick label{position:relative;cursor:pointer;display:block}
+  .pick input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .form .pick label > span{display:flex;flex-direction:column;margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg);color:var(--ink);font-size:15px;font-weight:500;transition:border-color .15s,box-shadow .15s}
+  .pick label > span{height:100%}
+  .pick i{position:relative;display:grid;place-items:center;aspect-ratio:16/10;background:#fff;flex:none}
+  .pick i img{position:absolute;left:8%;top:9%;width:84%;height:84%;object-fit:contain}
+  .pick b{flex:1}
+  .pick i img.sm{left:13%;top:14%;width:74%;height:76%}
+  .pick i svg{width:38%;height:auto;color:#9aa0a6}
+  .pick b{font-weight:500;padding:10px 12px 11px;display:flex;align-items:center;justify-content:space-between;gap:8px;line-height:1.2}
+  .pick b::after{content:"";flex:none;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line)}
+  .pick input:checked + span{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+  .pick input:checked + span b::after{border-color:var(--ink);background:var(--ink);box-shadow:inset 0 0 0 3px var(--bg)}
+  .pick input:focus-visible + span{outline:2px solid var(--ink);outline-offset:3px}
+  .pick label:hover > span{border-color:var(--ink)}
+  @media (max-width:420px){ .pick b{font-size:13px;padding:8px 8px 9px} .pick b::after{display:none} }

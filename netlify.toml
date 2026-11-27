@@ -1,14 +1,18 @@
-# Static site: the folder is published as it is, no build step.
+# The site is built from src/ and public/ into dist/ by build.js (no dependencies).
 [build]
-  publish = "."
+  command = "node build.js"
+  publish = "dist"
 
-# A review copy: search engines are asked not to list it (remove this block when it becomes the real site).
+# A review copy: search engines are asked not to list it. Remove this block when it becomes the real site.
 [[headers]]
   for = "/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
+# Our css and js carry ?v=<content hash>, images keep their names: both may be cached for a day.
 [[headers]]
-  for = "/assets_v4/*"
+  for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+# Old addresses are forwarded by dist/_redirects, which build.js writes from redirects.json.

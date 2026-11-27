@@ -1,0 +1,44 @@
+:root {
+  --p-bg: #ffffff; --p-surface: #f2f2f2; --p-ink: #0a0a0a; --p-muted: #6b6b6b;
+  --p-accent: #d92b21; --p-accent-ink: #ffffff; --p-action: #d92b21; --p-action-ink: #ffffff;
+  --p-inv-bg: #000000; --p-inv-surface: #010101; --p-inv-ink: #ffffff; --p-inv-muted: #868686;
+  --p-inv-accent: #d92b21; --p-inv-accent-ink: #ffffff; --p-inv-action: #d92b21; --p-inv-action-ink: #ffffff;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-text: "Figtree", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.04em;
+  --display-stretch: 96%;
+}
+
+.nav__logo > img { height: 30px; width: auto; display: block; }
+  /* the colour picker: four named colours, the bike under them on the page ground */
+  .bike { margin: var(--s-6) 0 0; min-height: 0; }
+  .bike > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .swatches { border: 0; padding: 0; margin: 0; min-width: 0; }
+  .swatches > legend { padding: 0; margin-bottom: var(--s-2); }
+  .swatches__row { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); }
+  .swatch { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; cursor: pointer; font-weight: 500; }
+  .swatch > input { appearance: none; -webkit-appearance: none; margin: 0; flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--c); border: 1px solid var(--line-strong); cursor: pointer; }
+  .swatch > input:checked { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--ink); }
+  /* the chassis film: its own wide ratio */
+  #chassis .frame { --ratio: 40%; }
+  /* the statement's photograph, under its words */
+  #idea .frame { margin-top: var(--s-7); }
+  /* the parts wall: four close-ups, 2px apart */
+  .wall { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; border-radius: var(--r-lg); overflow: clip; }
+  .wall > img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  /* the name across the wrap, with room for its descender */
+  .closing__cta { min-width: 0; }
+  .close__word { font-size: min(calc((100vw - 2 * var(--gut)) * 0.244), 312px); padding-bottom: 0.14em; max-width: 100%; min-width: 0; }
+  /* short screens (a 1366x768 laptop, a small window): a section grows with what it holds instead of running into the next */
+  @media (max-height: 800px) {
+    main > section:not(.is-live), footer.closing { height: auto; min-height: calc(var(--h, 1) * 100svh); }
+    main > section[data-moment="pinned-chapters"]:not(.is-live) { min-height: 100svh; }
+    #models .bike { flex: none; }
+    .bike > img { height: auto; max-height: 62svh; }
+    #idea .frame.fill { flex: none; aspect-ratio: 1500 / 620; }
+  }
+  @media (max-height: 800px) and (min-width: 1024px) { main > section.hero { height: max(100svh, 700px); } }
+  @media (max-width: 1023px) { .bike { margin-top: var(--s-7); } .bike > img { height: auto; } }
+  @media (max-width: 1023px) { #chassis .frame { --ratio: 62%; } }

@@ -1,0 +1,232 @@
+---
+layout: none
+footnote:  Pricing is subject to change prior to delivery.
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>BNC Motors: the Challenger electric bike, opened up in 3D</title>
+<meta name="description" content="Scroll through the BNC Challenger electric bike in 3D: the exoskeletal chassis, the removable Etrol 40 battery, the boot, the hub motor and the wheels.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BNC Motors: the Challenger electric bike, opened up in 3D">
+<meta property="og:description" content="The Challenger S110 and S125, taken apart on screen: chassis, battery, boot, motor and wheels.">
+<meta property="og:image" content="/assets/img/challenger_front_facing.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.png" type="image/png">
+<meta name="theme-color" content="#f4f4f2" id="theme-color">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+<!-- the loader only shows when scripts run; without them the page stands as written -->
+<script>document.documentElement.classList.add('js');
+/* WHITE by default (user, 2026-11-26: 'the default colour should be white only'); the switch at the top right turns the page dark, and that choice is kept */
+(function(){var t='light';try{t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('reveal-theme')||'light';}catch(e){}
+document.documentElement.dataset.theme=(t==='dark')?'dark':'light';})();</script>
+<link rel="stylesheet" href="/assets/css/pages/landing.css">
+<!-- without scripts there is no 3D scene: the bike stands as a still behind the words -->
+<noscript><style>#stage{background:#08090a url(/assets/img/challenger_front_facing.jpg) center/contain no-repeat}</style></noscript>
+<link rel="stylesheet" href="/assets/css/topbar-legacy.css">
+<link rel="preload" href="/assets/model/challenger_c.glb" as="fetch" crossorigin>
+<link rel="preload" href="/assets/model/parts.json" as="fetch" crossorigin>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js">
+</head>
+<body>
+<a class="skip" href="#track">Skip to content</a>
+
+<div id="stage">
+  <div class="bgword" id="bgword" aria-hidden="true"><span>Challenge the</span><span>status quo</span></div>
+  <canvas id="c" role="img" aria-label="The BNC Challenger in 3D. It turns and opens up as the page scrolls."></canvas></div>
+<div class="stage-veil"></div>
+
+<div id="loader" aria-hidden="true">
+  <img class="lword logo-w" src="/assets/img/BNC-Home-image/challenger_logo.png" alt="" width="848" height="76">
+  <img class="lword logo-d" src="/assets/img/challenger_v3/challenger_logo_dark.png" alt="" width="848" height="76">
+  <div class="lbar"><i id="lbar"></i></div>
+  <div class="lsub" id="lsub">Loading</div>
+</div>
+
+<header class="bnav" id="topbar">
+  <a class="bnav__logo" href="/"><img src="/assets/img/logo_big.png" alt="BNC Motors" width="616" height="348"></a>
+  <nav class="bnav__links" aria-label="Main">
+    <a href="/" aria-current="page">Challenger</a>
+    <a href="/messenger/">Messenger</a>
+    <a href="/etrol/">Etrol</a><a href="/about/">About</a><a href="/b2b/">B2B</a>
+  </nav>
+  <a class="bnav__btn" href="/book-now/#reach">Book Now</a>
+  <details class="bnav__menu">
+    <summary aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2.5 5.5h13M2.5 9h13M2.5 12.5h13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+    <nav aria-label="Main, compact"><a href="/">Challenger</a><a href="/messenger/">Messenger</a><a href="/etrol/">Etrol</a><a href="/about/">About</a><a href="/b2b/">B2B</a></nav>
+  </details>
+  <button class="mode" id="mode" type="button" aria-label="Switch between dark and light mode" aria-pressed="false">
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 1.75a7.25 7.25 0 0 1 0 14.5z" fill="currentColor"/></svg>
+  </button>
+</header>
+
+<main id="track">
+  <section class="hero" data-sec="0">
+    <h1 class="sr">BNC Challenger: challenge the status quo</h1>
+    <div class="hero__id">
+      <p class="lede">India’s multipurpose electric bike<span class="more">, built on an exoskeletal steel chassis, with a battery you lift out and charge from any 6A socket</span>.</p>
+      <dl class="hfacts" id="hfacts">
+        <div><dt>on single charge</dt><dd aria-label="90 kilometres"><span data-roll="90">90</span><small>kms</small></dd></div>
+        <div><dt>at the wheel</dt><dd aria-label="3 kilowatts"><span data-roll="3">3</span><small>kW</small></dd></div>
+        <div><dt>of loading capacity</dt><dd aria-label="200 kilograms and more"><span data-roll="200">200</span><small>kg+</small></dd></div>
+      </dl>
+      <div class="cta"><a class="btn solid" href="/book-now/#reach">Book a Challenger</a>
+        <span class="from">From <b>₹99,900</b> ex-showroom</span></div>
+    </div>
+    <!-- the scroll cue stands in the lower right corner of the first screen (user, 2026-11-26) -->
+    <a class="cue" href="#inside">Scroll to explore the BNC Challenger <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1.5v11M2.5 8 7 12.5 11.5 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </section>
+
+  <section class="panel" data-sec="1" id="inside">
+    <div class="cap">
+      <h2>One ride for every job</h2>
+      <p>Use it for work, use it for business or use it for leisure. The Challenger does it all.</p>
+    </div>
+  </section>
+
+  <section class="panel right" data-sec="2">
+    <div class="cap">
+      <h2>Exoskeletal chassis for extra strength, toughness and rigidity</h2>
+      <p>The dual-cradle chassis of the Challenger is made using high-tensile tubular steel. Its dual nature also allows it to protect all the internal components of the vehicle.</p>
+      <dl class="facts"><div><dt>Loading</dt><dd>200&nbsp;kg+</dd></div><div><dt>Frame</dt><dd>High-tensile steel</dd></div></dl>
+    </div>
+  </section>
+
+  <section class="panel" data-sec="3">
+    <div class="cap">
+      <h2>Removable Etrol 40</h2>
+      <p>An easy-to-remove, home-charging capable battery, which can be charged by any 6A socket.</p>
+      <dl class="facts"><div><dt>Capacity per pack</dt><dd>2.1&nbsp;kWh</dd></div><div><dt>Charges from</dt><dd>6A socket</dd></div></dl>
+    </div>
+  </section>
+
+  <section class="panel right" data-sec="4">
+    <div class="cap">
+      <h2>30 litres boot space</h2>
+      <p>Lift the seat for 30 litres of boot space*</p>
+      <p class="fn">*S110 model only</p>
+      <dl class="facts"><div><dt>Boot space</dt><dd>30&nbsp;litres</dd></div><div><dt>Model</dt><dd>S110</dd></div></dl>
+    </div>
+  </section>
+
+  <section class="panel" data-sec="5">
+    <div class="cap">
+      <h2>3&nbsp;kW peak hub motor</h2>
+      <p>The BLDC hub motor paired with a 14-inch wheel offers exceptional power and city rideability.</p>
+      <dl class="facts"><div><dt>Peak power</dt><dd>3&nbsp;kW</dd></div><div><dt>Gradient</dt><dd>14°</dd></div></dl>
+    </div>
+  </section>
+
+  <!-- suspension and wheels are one section (Gowtham, 2026-11-27: the suspension alone is not a USP; paired with the 14-inch wheels it is the ride and handling package) -->
+  <section class="panel right" data-sec="6">
+    <div class="cap">
+      <h2>Telescopic suspension, 14&#8209;inch alloy wheels</h2>
+      <p>The telescopic front suspension paired with 14-inch alloy wheels gives the Challenger a unique ride and handling package. Rough roads, rain, hills: you’re covered.</p>
+      <dl class="facts"><div><dt>Front suspension</dt><dd>Telescopic fork</dd></div><div><dt>Wheels</dt><dd>14-inch alloy</dd></div><div><dt>Tyres</dt><dd>90/90 R14 tubeless</dd></div></dl>
+    </div>
+  </section>
+
+  <!-- the four colours, with the lines BNC's own site gives them; a pick repaints the 3D bike -->
+  <section class="panel right" data-sec="7">
+    <div class="cap">
+      <h2><span class="sr">Colour: </span><span id="tone-name" aria-live="polite">Crimson Red</span></h2>
+      <p id="tone-line">It’s a picker-upper.</p>
+      <div class="tones" role="group" aria-label="Choose a colour">
+        <button type="button" data-tone="red" style="--c:#d62a22" aria-label="Crimson Red" aria-pressed="true"></button>
+        <button type="button" data-tone="black" style="--c:#1b1b1b" aria-label="Panther Black" aria-pressed="false"></button>
+        <button type="button" data-tone="blue" style="--c:#2f7cc9" aria-label="Azure Blue" aria-pressed="false"></button>
+        <button type="button" data-tone="green" style="--c:#8a8f72" aria-label="Commando Green" aria-pressed="false"></button>
+      </div>
+      <dl class="facts"><div><dt>Colours</dt><dd>Four</dd></div></dl>
+    </div>
+  </section>
+
+  <!-- real life, in colour, on one screen: two sets you switch between, each a mosaic of one height.
+       Only BNC's professional photographs (1500px and more): no video frames, no phone or Instagram pictures
+       (user, 2026-11-26: "this set of images we need to work"). No factory pictures on this page. -->
+  <section class="gallery" aria-labelledby="gallery-h">
+    <div class="gallery__bg" id="g-bg" aria-hidden="true"></div>
+    <div class="gallery__head">
+      <h2 id="gallery-h">The Challenger in real life</h2>
+      <div class="gallery__tabs" id="g-tabs" role="group" aria-label="Choose a set of pictures">
+        <button type="button" aria-pressed="true">On the road</button>
+        <button type="button" aria-pressed="false">Up close</button>
+      </div>
+    </div>
+    <div class="gallery__track" id="g-track" tabindex="0" aria-label="Pictures of the Challenger in use">
+      <div class="gslide gslide--road" data-note="Hill roads, bends and open tarmac.">
+        <figure class="a"><img src="/assets/img/home/ride-rock-800.webp" srcset="/assets/img/home/ride-rock-800.webp 800w, /assets/img/home/ride-rock-1600.webp 1600w" sizes="(max-width:600px) 100vw, 52vw" alt="A rider on a green Challenger passing a rock face" width="1600" height="1066" loading="lazy" style="object-position:50% 62%"></figure>
+        <figure class="b"><img src="/assets/img/home/ride-curve-1000.webp" srcset="/assets/img/home/ride-curve-1000.webp 1000w, /assets/img/home/ride-curve-2000.webp 2000w" sizes="(max-width:600px) 34vw, 38vw" alt="A rider on a Challenger rounding a hill bend, headlamp on" width="2000" height="1334" loading="lazy" style="object-position:48% 52%"></figure>
+        <figure class="c"><img src="/assets/img/home/ride-corner-800.webp" srcset="/assets/img/home/ride-corner-800.webp 800w, /assets/img/home/ride-corner-1600.webp 1600w" sizes="(max-width:600px) 34vw, 19vw" alt="A rider leaning a red Challenger into a turn" width="1600" height="1066" loading="lazy" style="object-position:56% 50%"></figure>
+        <figure class="d"><img src="/assets/img/home/ride-trees-800.webp" srcset="/assets/img/home/ride-trees-800.webp 800w, /assets/img/home/ride-trees-1600.webp 1600w" sizes="(max-width:600px) 34vw, 19vw" alt="A rider on a blue Challenger on a tree-lined road" width="1600" height="1200" loading="lazy" style="object-position:64% 55%"></figure>
+      </div>
+      <div class="gslide gslide--road" data-note="The frame, the lettering, the hub motor and the front wheel.">
+        <figure class="a"><img src="/assets/img/home/ride-fort-1000.webp" srcset="/assets/img/home/ride-fort-1000.webp 1000w, /assets/img/home/ride-fort-2000.webp 2000w" sizes="(max-width:600px) 100vw, 52vw" alt="A green Challenger parked on rock below a hill fort" width="2000" height="1334" loading="lazy" style="object-position:45% 70%"></figure>
+        <figure class="b"><img src="/assets/img/home/wide-panel-800.webp" srcset="/assets/img/home/wide-panel-800.webp 800w, /assets/img/home/wide-panel-1500.webp 1500w" sizes="(max-width:600px) 34vw, 38vw" alt="Close up: the BNC Challenger lettering on the side panel, inside the green steel frame" width="1500" height="1000" loading="lazy" style="object-position:50% 68%"></figure>
+        <figure class="c"><img src="/assets/img/home/ride-hub-800.webp" srcset="/assets/img/home/ride-hub-800.webp 800w, /assets/img/home/ride-hub-1600.webp 1600w" sizes="(max-width:600px) 34vw, 19vw" alt="Close up: the hub motor inside the rear wheel" width="1600" height="1066" loading="lazy" style="object-position:40% 60%"></figure>
+        <figure class="d"><img src="/assets/img/home/wide-wheel-800.webp" srcset="/assets/img/home/wide-wheel-800.webp 800w, /assets/img/home/wide-wheel-1500.webp 1500w" sizes="(max-width:600px) 34vw, 19vw" alt="Close up: the front wheel and disc brake of a green Challenger" width="1500" height="1000" loading="lazy" style="object-position:30% 62%"></figure>
+      </div>
+    </div>
+    <div class="gallery__foot">
+      <p id="g-note">On the highway, off the tarmac and through town.</p>
+      <div class="gallery__nav">
+        <span id="g-count">1 / 2</span>
+        <button type="button" id="g-prev" aria-label="Previous set"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 3.5 5.5 9l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" id="g-next" aria-label="Next set"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M7 3.5 12.5 9 7 14.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="finale" id="finale" data-sec="8">
+    <div class="ftop">
+      <h2>Never back down. Never stop.</h2>
+      <div class="cta">
+        <a class="btn solid" href="/book-now/#reach">Book a Challenger</a>
+        <a class="btn ghost" href="/challenger-specs/#specs">See full specs</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <dl class="stats">
+        <div><dt>km range</dt><dd>90–180</dd></div>
+        <div><dt>km/h top speed</dt><dd>65–70</dd></div>
+        <div><dt>kWh battery</dt><dd>2.1–4.2</dd></div>
+        <div><dt>gradient</dt><dd>14°</dd></div>
+      </dl>
+      <p class="fnote">Lower figures are the S110, higher the S125. Range in Low mode, top speed in High mode.</p>
+    </div>
+  </section>
+
+  <section class="onward" aria-labelledby="onward-h">
+    <h2 id="onward-h">There is more to BNC</h2>
+    <div class="onward__grid">
+      <a class="ocard" href="/messenger/">
+        <span class="ocard__pic"><img src="/assets/img/home/model-messenger-full-1200.webp" alt="The BNC Messenger C110 from the side" width="2000" height="1125" loading="lazy"></span>
+        <span class="ocard__txt"><b>Messenger C110</b><small>Built to carry. Made to last. From ₹89,999.</small><i>Explore Messenger</i></span>
+      </a>
+      <a class="ocard" href="/etrol/">
+        <span class="ocard__pic"><img src="/assets/img/etrol/pack-cut-440.webp" alt="The Etrol 40 battery pack" width="820" height="1050" loading="lazy"></span>
+        <span class="ocard__txt"><b>Etrol 40 battery</b><small>Petrol without pollution. Lift it out, plug it in.</small><i>Open it up</i></span>
+      </a>
+      <a class="ocard ocard--go" href="/book-now/">
+        <span class="ocard__txt"><b>Find your BNC</b><small>Both bikes, prices, colours, warranty and dealers in 24 cities.</small><i>Book Now</i></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- the footer: the same one as on the Book Now page (user, 2026-11-26) -->
+  {{> footer}}
+</main>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+}}
+</script>
+<script type="module" src="/assets/js/landing/reveal.module.js"></script>
+</body>
+</html>

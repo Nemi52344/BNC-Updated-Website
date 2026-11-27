@@ -1,0 +1,325 @@
+/* THE HOME PAGE: photographs first, set in large rounded frames; headings centred and friendly; every action a pill.
+     All pictures are BNC's own. No film on this page. */
+  .h2{font-weight:500;font-size:clamp(30px,3.6vw,56px);line-height:1.06;letter-spacing:-.035em;text-wrap:balance}
+  .head{display:grid;justify-items:center;text-align:center;gap:16px;margin-bottom:clamp(32px,5vw,64px)}
+  .head p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:52ch}
+  .sec{padding:clamp(56px,8vw,120px) var(--edge)}
+
+  /* first screen: one photograph in a large rounded window. Wide screens: the whole frame, the rider on the right and the
+     words on the left, never over the bike. Narrower or taller screens: a closer crop on top, the words under it. */
+  .hero{position:relative;margin:84px 12px 12px;border-radius:14px;overflow:hidden;background:#0d0f0e;color:#fff;display:flex;flex-direction:column}
+  .hero__slides{position:relative;overflow:hidden}
+  .hero__track{display:flex;transition:transform 1s cubic-bezier(.22,.8,.2,1)}
+  .hero__track picture{display:block;flex:0 0 100%;min-width:0}
+  .hero__dots{position:absolute;z-index:3;right:20px;bottom:18px;display:flex;gap:8px}
+  .hero__dots button{appearance:none;border:0;padding:0;width:28px;height:28px;background:none;cursor:pointer;display:grid;place-items:center}
+  .hero__dots button::before{content:"";width:22px;height:3px;border-radius:3px;background:rgba(255,255,255,.45);transition:background .3s,width .3s}
+  .hero__dots button[aria-pressed="true"]::before{background:#fff;width:28px}
+  .hero__dots button:focus-visible{outline:2px solid #fff;outline-offset:2px;border-radius:6px}
+  @media (prefers-reduced-motion:reduce){ .hero__track{transition:none} }
+  .hero__media{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:var(--pm,50% 100%);max-height:calc(100vh - 96px - var(--words));max-height:calc(100svh - 96px - var(--words));min-height:220px}
+  .hero{--words:290px}
+  .hero__in{position:relative;z-index:2;display:grid;justify-items:start;gap:16px;padding:clamp(24px,5vw,40px) clamp(20px,5vw,40px) clamp(28px,6vw,44px)}
+  .hero h1{font-weight:500;font-size:clamp(36px,8.4vw,64px);line-height:1;letter-spacing:-.045em;text-wrap:balance}
+  .hero p{font-size:clamp(17px,2.2vw,20px);font-weight:500;color:#e6e8ea}
+  .hero .cta{margin-top:8px}
+  @media (max-width:560px){ .hero__media{aspect-ratio:4/5;object-position:50% 70%} .hero__dots{right:10px;bottom:auto;top:10px} .hero{--words:232px} }
+  @media (min-width:561px){ .hero{--words:176px} .hero__in{grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:end} .hero h1{font-size:clamp(36px,6.2vw,56px)}
+    .hero h1,.hero p{grid-column:1} .hero .cta{grid-column:2;grid-row:1 / span 2;flex-direction:column;align-items:stretch;margin:0} }
+  @media (min-width:900px) and (min-aspect-ratio:3/2){
+    .hero{height:calc(100vh - 96px);height:calc(100svh - 96px);min-height:480px;justify-content:center}
+    .hero__slides{position:absolute;inset:0} .hero__track,.hero__track picture{height:100%}
+    .hero__media{height:100%;max-height:none;min-height:0;aspect-ratio:auto;object-position:var(--pw,50% 96%)}
+    .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(8,10,9,.8),rgba(8,10,9,.52) 26%,rgba(8,10,9,0) 54%)}
+    .hero__in{display:grid;grid-template-columns:minmax(0,1fr);width:46%;padding:0 0 0 clamp(40px,5vw,96px);gap:20px}
+    .hero .cta{grid-column:1;grid-row:auto;flex-direction:row;align-items:center;margin-top:8px}
+    .hero h1{font-size:clamp(44px,4.6vw,92px);white-space:nowrap;text-shadow:0 2px 40px rgba(0,0,0,.35)}
+    .hero p{font-size:clamp(18px,1.5vw,26px);text-shadow:0 1px 20px rgba(0,0,0,.5)}
+  }
+
+  /* the bikes in daily use: a grid of nine pictures, one of them open (large). The open one stands at its own column and
+     row (--c, --r, set by the script) and covers --sc by --sr cells; the eight others fill the cells that are left */
+  #life{padding-bottom:clamp(24px,3vw,40px)} #life .head{margin-bottom:clamp(20px,2.4vw,32px)}
+  .wall{--sc:2;--sr:2;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:16px;
+    height:clamp(380px,min(calc(100vh - 330px),33vw),660px);height:clamp(380px,min(calc(100svh - 330px),33vw),660px)}
+  .wall figure.on{grid-column:var(--c,1) / span var(--sc);grid-row:var(--r,1) / span var(--sr)}
+  .wall figure{position:relative;margin:0;min-width:0;min-height:0;border-radius:12px;overflow:hidden;background:#17181b;cursor:pointer;transform-origin:0 0}
+  .wall figure.on{cursor:default} .wall figure.rise{z-index:3;box-shadow:0 24px 60px rgba(0,0,0,.28)} .wall figure.sink{z-index:2}
+  .wall img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--p,50% 50%);filter:brightness(.8) saturate(.86);transition:filter .7s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+  .wall figure.on img{filter:none}
+  /* a studio render: the whole bike on a light ground */
+  .wall figure.r{background:#e9ebed} .wall figure.r img{object-fit:contain;padding:9% 8%;filter:none}
+  .wall figure.r::before{background:rgba(12,13,15,.16)} .wall figure.r::after{background:#0c0d0f}
+  .wall figure:not(.on):hover img,.wall figure:not(.on):focus-visible img{filter:none;transform:scale(1.04)}
+  .wall figure:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+  /* the time left on the large picture */
+  .wall figure::before,.wall figure::after{content:"";position:absolute;z-index:2;left:20px;right:20px;bottom:16px;height:3px;border-radius:3px;opacity:0;pointer-events:none}
+  .wall figure::before{background:rgba(255,255,255,.34)}
+  .wall figure::after{background:#fff;transform-origin:0 50%;transform:scaleX(0)}
+  .wall.run figure.on::before{opacity:1;transition:opacity .5s .7s}
+  .wall.run figure.on::after{opacity:1;animation:wallfill var(--hold,4200ms) linear forwards}
+  @keyframes wallfill{to{transform:scaleX(1)}}
+  @media (hover:hover){ .wall.run:hover figure.on::after{animation-play-state:paused} }
+  @media (max-width:860px){ .wall{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:8px;height:clamp(360px,calc(100vh - 280px),660px);height:clamp(360px,calc(100svh - 280px),660px)}
+    .wall figure{border-radius:10px} .wall figure:nth-child(n+10){display:none} }
+  @media (max-width:600px){ .wall{--sc:4;grid-template-rows:repeat(4,minmax(0,1fr));gap:6px;height:clamp(460px,calc(100vh - 240px),700px);height:clamp(460px,calc(100svh - 240px),700px)}
+    .wall figure{border-radius:8px}
+    .wall figure::before,.wall figure::after{left:14px;right:14px;bottom:12px} }
+  @media (prefers-reduced-motion:reduce){ .wall img{transition:none} }
+
+  .sub{font-weight:500;font-size:clamp(24px,2.3vw,34px);line-height:1.05;letter-spacing:-.03em;text-align:center;margin:clamp(48px,6vw,88px) 0 clamp(20px,2.4vw,32px)}
+  @media (max-width:760px){ }
+
+  /* the family: one bike large at a time, the other waiting beside it as a narrow card. Dark studio grounds, the bike whole. */
+  .family{display:flex;gap:16px;height:clamp(400px,min(40vw,calc(100vh - 400px)),620px);height:clamp(400px,min(40vw,calc(100svh - 400px)),620px)}
+  .mcard{position:relative;flex:1 1 0;min-width:0;border-radius:14px;overflow:hidden;color:#fff;transition:flex-grow .7s cubic-bezier(.2,.7,.2,1)}
+  .mcard.on{flex-grow:3.1}
+  .mcard--c{background:#010101} .mcard--m{background:#fefefe;color:#0c0d0f;border:1px solid var(--line)}
+  .mcard__pic{position:absolute;top:0;bottom:0;right:0;width:100%;display:grid;place-items:center;padding:88px 20px 104px;transition:width .7s cubic-bezier(.2,.7,.2,1),padding .7s cubic-bezier(.2,.7,.2,1)}
+  .mcard.on .mcard__pic{width:60%;padding:28px 28px 28px 0}
+  .mcard__pic img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+  .mcard--m:not(.on) .mcard__pic{padding:88px 10px 104px}
+  .mcard.mcard--m .tag{background:#0c0d0f;color:#fff}
+  .mcard.mcard--m .from{color:#4a4f55} .mcard.mcard--m .from b{color:#0c0d0f}
+  .mcard.mcard--m .mcard__mini span{color:#4a4f55} .mcard.mcard--m .mcard__mini i{border-color:rgba(12,13,15,.4)}
+  .mcard.mcard--m .mcard__mini:hover i,.mcard.mcard--m .mcard__mini:focus-visible i{background:#0c0d0f;color:#fff;border-color:#0c0d0f}
+  .mcard.mcard--m .mcard__mini:focus-visible{outline-color:#0c0d0f}
+  .mcard.mcard--m .btn.solid{background:#0c0d0f;color:#fff;border-color:#0c0d0f} .mcard.mcard--m .btn.ghost{border-color:rgba(12,13,15,.5);color:#0c0d0f}
+  /* the waiting card: its name, where the price starts, and an arrow; the whole card is the button */
+  .mcard__mini{appearance:none;position:absolute;inset:0;z-index:3;width:100%;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(20px,2vw,28px);transition:opacity .3s}
+  .mcard__mini b{font-weight:500;font-size:clamp(22px,2vw,30px);line-height:1.05;letter-spacing:-.03em}
+  .mcard__mini span{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;color:#c9cdd2}
+  .mcard__mini i{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;transition:background .2s,color .2s,border-color .2s}
+  .mcard__mini:hover i,.mcard__mini:focus-visible i{background:#fff;color:#0c0d0f;border-color:#fff}
+  .mcard__mini:focus-visible{outline:2px solid #fff;outline-offset:-6px;border-radius:14px}
+  .mcard.on .mcard__mini{opacity:0;visibility:hidden;pointer-events:none}
+  /* the bike on show: its words on the left, clear of the picture */
+  .mcard__full{position:absolute;z-index:2;left:0;top:0;bottom:0;width:clamp(300px,31vw,560px);padding:clamp(24px,3vw,56px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:14px;opacity:0;visibility:hidden;transition:opacity .15s,visibility 0s .15s}
+  .mcard.on .mcard__full{opacity:1;visibility:visible;transition:opacity .45s .3s,visibility 0s}
+  .mcard h3{font-weight:500;font-size:clamp(32px,3.6vw,60px);line-height:1;letter-spacing:-.04em}
+  .mcard .tag{border:0;background:rgba(255,255,255,.12);color:#fff}
+  .mcard .from{margin-top:8px;font-size:14px;font-weight:500;color:#c9cdd2}
+  .mcard .from b{display:block;color:#fff;font-weight:500;font-size:clamp(30px,3vw,48px);line-height:1.1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+  .mcard .cta{margin-top:10px}
+  html:not(.js) .mcard__mini{pointer-events:none}
+  @media (max-width:860px){
+    .family{flex-direction:column;height:auto;gap:12px}
+    .mcard{flex:none;transition:none}
+    .mcard:not(.on){height:112px}
+    .mcard:not(.on) .mcard__pic{left:auto;right:64px;width:150px;padding:10px 0}
+    .mcard--m:not(.on) .mcard__pic{right:60px;width:150px;padding:8px 0} .mcard--m:not(.on) .mcard__mini b{font-size:18px;max-width:calc(100% - 230px)}
+    .mcard:not(.on) .mcard__mini{flex-direction:row;align-items:center;gap:12px}
+    .mcard:not(.on) .mcard__mini span{flex-direction:row-reverse;gap:12px}
+    .mcard:not(.on) .mcard__mini span em{display:none}
+    .mcard.on .mcard__pic{position:relative;width:100%;aspect-ratio:3/2;padding:20px 16px 0}
+    .mcard.on .mcard__full{position:relative;width:100%;padding:20px 20px 28px}
+  }
+  @media (prefers-reduced-motion:reduce){ .mcard,.mcard__pic,.mcard__full,.mcard__mini{transition:none} }
+
+  /* three numbers that carry the pitch */
+  .nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,64px)}
+  .num dd{font-weight:500;font-size:clamp(56px,6vw,96px);line-height:.9;letter-spacing:-.06em;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .num dd small{font-size:.3em;font-weight:400;letter-spacing:-.02em;margin-left:.12em;color:var(--soft)}
+  .num dt{display:none}
+  .num p{margin-top:20px;color:var(--soft);font-size:clamp(14px,1.3vw,16px)}   /* two lines each: a short line, a break, a short line */
+  .num .btn{margin-top:20px;min-height:44px}
+  @media (max-width:900px){ .nums{grid-template-columns:minmax(0,1fr);gap:40px} .num p{font-size:16px} }
+
+  /* colours: a soft band that takes the colour you pick; the bike changes with it */
+  .tones{--tint:#f3d9d4;margin:0 12px;border-radius:14px;background:var(--tint);color:#0c0d0f;padding:clamp(28px,4vw,56px) clamp(20px,5vw,84px);display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);
+    gap:24px;align-items:center;transition:background .5s}
+  .tones h2{margin-bottom:28px}
+  .tones__dots{display:flex;gap:12px;flex-wrap:wrap}
+  .tones__dots button{appearance:none;width:56px;height:56px;border-radius:50%;border:2px solid transparent;background:none;padding:5px;cursor:pointer;transition:border-color .2s,transform .15s}
+  .tones__dots button::before{content:"";display:block;width:100%;height:100%;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.14)}
+  .tones__dots button[aria-pressed="true"]{border-color:#0c0d0f}
+  .tones__dots button:active{transform:scale(.94)}
+  .tones__name{margin-top:24px;font-size:14px;color:#3a3d42}
+  .tones__name b{display:block;font-weight:500;font-size:clamp(22px,2.2vw,32px);letter-spacing:-.02em;color:#0c0d0f;margin-top:4px}
+  .tones__line{margin-top:8px;color:#3a3d42}
+  .tones .btn{margin-top:28px;border-color:#0c0d0f;color:#0c0d0f}
+  .tones .btn:hover{background:#0c0d0f;color:#fff}
+  .tones__bike{position:relative;aspect-ratio:1260/860}
+  .tones__bike img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;opacity:0;transition:opacity .5s}
+  .tones__bike img.on{opacity:1}
+  @media (max-width:860px){ .tones{grid-template-columns:minmax(0,1fr)} .tones__bike{order:-1} }
+  @media (max-width:560px){ .tones,.care{padding-inline:12px} .plug{padding-inline:12px} }
+
+  /* Etrol: the pack on a plain disc, one fine ring around it, six facts on the ring. --ro is the ring's radius; the
+     upper and lower facts sit 38 degrees above and below the middle (cos .788, sin .616). Each fact is one figure and
+     one short line; its leader meets the ring at the height of the figure's middle (--f is the figure's size). */
+  #etrol{padding-top:clamp(40px,5vw,72px);padding-bottom:clamp(32px,4vw,56px)} #etrol .head{margin-bottom:clamp(20px,2.4vw,32px)} #etrol .head p{max-width:72ch}
+  .orbit{--ro:clamp(170px,calc((100vh - 400px) / 2),250px);--ro:clamp(170px,calc((100svh - 400px) / 2),250px);--lead:clamp(28px,3.4vw,64px);--f:clamp(26px,2.3vw,38px);
+    position:relative;height:calc(var(--ro) * 2 + 2px);max-width:1240px;margin-inline:auto}
+  .orbit__ring{position:absolute;left:50%;top:50%;width:calc(var(--ro) * 2);height:calc(var(--ro) * 2);margin:calc(var(--ro) * -1) 0 0 calc(var(--ro) * -1);border-radius:50%;border:1px solid rgb(var(--inkc) / .22);display:grid;place-items:center}
+  .orbit__ring::before{content:"";position:absolute;inset:22px;border-radius:50%;background:#fff;border:1px solid var(--line)}
+  :root[data-theme="dark"] .orbit__ring::before{background:#e4e6e9}
+  .orbit__ring img{position:relative;z-index:1;display:block;height:58%;width:auto}
+  .fact{position:absolute;z-index:2;white-space:nowrap}
+  .fact b{display:block;font-weight:500;font-size:var(--f);line-height:1;letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+  .fact b small{font-size:.42em;font-weight:500;letter-spacing:0;color:var(--soft);margin-left:4px}
+  .fact p{margin-top:8px;color:var(--soft);font-size:14px;line-height:1.3}
+  .fact a{color:inherit;text-underline-offset:3px}
+  .fact--l{text-align:right} .fact--r{text-align:left}
+  .fact--t{top:calc(50% - var(--ro) * .616 - var(--f) / 2)} .fact--m{top:calc(50% - var(--f) / 2)} .fact--b{top:calc(50% + var(--ro) * .616 - var(--f) / 2)}
+  .fact--l.fact--t,.fact--l.fact--b{right:calc(50% + var(--ro) * .788 + var(--lead))} .fact--l.fact--m{right:calc(50% + var(--ro) + var(--lead))}
+  .fact--r.fact--t,.fact--r.fact--b{left:calc(50% + var(--ro) * .788 + var(--lead))} .fact--r.fact--m{left:calc(50% + var(--ro) + var(--lead))}
+  /* leader and its dot on the ring */
+  .fact::before{content:"";position:absolute;top:calc(var(--f) / 2);height:1px;width:calc(var(--lead) - 12px);background:rgb(var(--inkc) / .3)}
+  .fact::after{content:"";position:absolute;top:calc(var(--f) / 2 - 3px);width:7px;height:7px;border-radius:50%;background:var(--ink)}
+  .fact--l::before{left:calc(100% + 12px)} .fact--l::after{left:calc(100% + var(--lead) - 3px)}
+  .fact--r::before{right:calc(100% + 12px)} .fact--r::after{right:calc(100% + var(--lead) - 3px)}
+  @media (max-width:980px){
+    .orbit{--ro:clamp(110px,28vw,150px);height:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px;border-bottom:1px solid var(--line)}
+    .orbit__ring{position:relative;left:auto;top:auto;margin:0 auto 28px;grid-column:1 / -1}
+    .orbit__ring::before{inset:14px}
+    .fact{position:static;white-space:normal;text-align:left;padding:16px 0;border-top:1px solid var(--line)}
+    .fact::before,.fact::after{display:none}
+    .fact--l.fact--t{order:1} .fact--r.fact--t{order:2} .fact--l.fact--m{order:3} .fact--r.fact--m{order:4} .fact--l.fact--b{order:5} .fact--r.fact--b{order:6}
+  }
+
+  /* the BNC advantage: four tall photographs, each with the thing it stands for */
+  .adv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  /* each card: the photograph, clear, and under it on the card its title and one line */
+  .adv .card{border-radius:12px;overflow:hidden;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line)}
+  .adv .card > .pic{overflow:hidden;height:clamp(180px,calc(100vh - 560px),400px);height:clamp(180px,calc(100svh - 560px),400px)}
+  .adv img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+  .adv .card:hover img{transform:scale(1.04)}
+  .adv .txt{padding:clamp(16px,1.6vw,24px)}
+  .adv h3{font-weight:600;font-size:18px;line-height:1.25;letter-spacing:-.01em}
+  .adv p{margin-top:6px;font-size:14px;color:var(--soft)}
+  @media (max-width:980px){ .adv{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:520px){ .adv{grid-template-columns:minmax(0,1fr)} .adv .card > .pic{height:auto;aspect-ratio:16/10} }
+  @media (max-width:520px){ .adv{gap:8px} }
+
+  /* what it is made of: the Challenger, live, with its parts called out */
+  .made{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);gap:16px}
+  .made__txt{border-radius:14px;background:var(--card);border:1px solid var(--line);padding:clamp(20px,3vw,48px);display:flex;flex-direction:column;justify-content:center}
+  .made__txt h3{font-weight:500;font-size:clamp(24px,2.3vw,34px);line-height:1.05;letter-spacing:-.03em}
+  .made__txt p{margin-top:16px;color:var(--soft)}
+  .made__txt .rows{margin-top:24px}
+  .bike{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+  .bike .grid-bg{-webkit-mask-image:none;mask-image:none;background-position:0 0}
+  .bike canvas{position:relative;width:100%;height:100%;opacity:0;transition:opacity .9s}
+  .bike.ready canvas{opacity:1}
+  .bike__still{position:absolute;inset:8%;width:84%;height:84%;object-fit:contain;mix-blend-mode:multiply}
+  :root[data-theme="dark"] .bike__still{mix-blend-mode:normal;opacity:.9}
+  .js .bike.ready .bike__still{display:none}
+  .pins,.pin-lines{position:absolute;inset:0;pointer-events:none;display:none}
+  .js .bike.ready .pins,.js .bike.ready .pin-lines{display:block}
+  .pin-lines{width:100%;height:100%}
+  .pin-lines path{fill:none;stroke:rgb(var(--inkc) / .5);stroke-width:1}
+  .pin{position:absolute;left:0;top:0;white-space:nowrap;padding:8px 12px;font-size:12px;line-height:1.35;color:var(--soft);
+    background:rgb(var(--bgc) / .96);border:1px solid var(--line);border-radius:8px;will-change:transform}
+  .pin b{display:block;font-weight:600;font-size:13px;color:var(--ink)}
+  @media (max-width:900px){ .made{grid-template-columns:1fr} }
+  @media (max-width:700px){ .js .bike.ready .pins,.js .bike.ready .pin-lines{display:none} }
+
+  /* the BNC app: a dark band, the words on top, the five phone screens rising from its foot. One screen. */
+  .app{margin:0 12px 12px;border-radius:14px;background:#1c1d20;color:#fff;overflow:hidden;display:grid;
+    grid-template-columns:minmax(0,.55fr) minmax(0,1fr);align-items:end;gap:clamp(24px,3vw,56px);
+    padding:clamp(32px,4vw,64px) clamp(16px,3vw,48px) clamp(28px,3.4vw,56px) clamp(24px,5vw,84px)}
+  .app__txt{align-self:center;display:grid;gap:16px;justify-items:start;text-align:left}
+  .app .tag{background:rgba(255,255,255,.12);color:#fff;border:0}
+  .app p{color:#c5cacf;font-size:var(--t-lead);line-height:1.5;max-width:40ch}
+  .app__list{list-style:none;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:8px;margin-top:4px}
+  .app__list li{padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-size:14px;font-weight:500}
+  /* the phones stand on the band's lower edge and take the whole right column; never taller than the window */
+  /* space under the phones (user, 2026-11-26). The picture itself ends partway down the phones, so its last part fades out instead of ending in a cut line */
+  .app img{display:block;align-self:center;justify-self:end;width:auto;height:auto;max-width:100%;-webkit-mask-image:linear-gradient(#000 88%,transparent);mask-image:linear-gradient(#000 88%,transparent);
+    max-height:calc(100vh - 150px);max-height:calc(100svh - 150px)}
+  /* narrower: the words above, centred, the phones under them */
+  @media (max-width:1000px){ .app{grid-template-columns:minmax(0,1fr);justify-items:center;gap:clamp(20px,3vw,32px);padding:clamp(36px,5vw,56px) clamp(16px,4vw,48px) clamp(28px,5vw,48px)}
+    .app__txt{justify-items:center;text-align:center;padding-bottom:0} .app p{max-width:56ch} .app__list{justify-content:center} .app img{justify-self:center} }
+  /* on a phone the picture is deliberately pushed past the band and cropped, so cover belongs here */
+  @media (max-width:600px){ .app img{width:calc(100% + 32px);height:clamp(240px,74vw,360px);max-width:none;max-height:none;object-fit:cover;object-position:50% 0} }
+
+  /* service and warranty: three cards on one grid, each a warranty figure over one service fact */
+  .care{margin:0 12px;border-radius:14px;background:#e4ecf3;color:#0c0d0f;padding:clamp(40px,5vw,72px) clamp(20px,5vw,84px)}
+  :root[data-theme="dark"] .care{background:#151a20;color:#f4f5f6}
+  .care .head{margin-bottom:clamp(24px,3vw,40px)} .care .head p{color:inherit;opacity:.74}
+  .care__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1280px;margin-inline:auto}
+  .care__card{border-radius:12px;background:rgba(255,255,255,.66);display:grid;grid-template-rows:auto 1fr;min-width:0}
+  :root[data-theme="dark"] .care__card{background:rgba(255,255,255,.06)}
+  .care__n{display:flex;align-items:baseline;gap:14px;padding:clamp(20px,2.4vw,36px) clamp(20px,2.4vw,36px) clamp(16px,2vw,28px);border-bottom:1px solid rgba(12,13,15,.1)}
+  :root[data-theme="dark"] .care__n{border-bottom-color:rgba(255,255,255,.12)}
+  .care__n b{font-weight:500;font-size:clamp(56px,6vw,96px);line-height:.86;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+  .care__n span{font-weight:500;font-size:clamp(15px,1.25vw,18px);line-height:1.25}
+  .care__k{padding:clamp(16px,2vw,28px) clamp(20px,2.4vw,36px) clamp(20px,2.4vw,32px);min-width:0;overflow-wrap:anywhere}
+  .care__k .k{font-size:13px;font-weight:500;opacity:.7}
+  .care__k p:not(.k){margin-top:6px;font-weight:500;line-height:1.4}
+  .care__k a{display:inline-flex;align-items:center;min-height:32px}
+  @media (max-width:860px){ .care__grid{grid-template-columns:minmax(0,1fr)} .care__card{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);grid-template-rows:none;align-items:center} .care__n{border-bottom:0;border-right:1px solid rgba(12,13,15,.1);flex-direction:column;gap:8px;height:100%;justify-content:center} }
+  @media (max-width:460px){ .care__card{grid-template-columns:minmax(0,1fr)} .care__n{flex-direction:row;border-right:0;border-bottom:1px solid rgba(12,13,15,.1)} }
+
+  /* get in touch */
+  .reach{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,80px);align-items:start}
+  .reach > div > p{margin-top:16px;color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:38ch}
+  .cities{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+  .cities li{padding:8px 14px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--soft);background:var(--card)}
+  .form{border-radius:14px;background:var(--card);border:1px solid var(--line);padding:clamp(20px,3vw,44px);display:grid;gap:24px;
+    position:relative;isolation:isolate;overflow:hidden;--bike:.07}
+  /* a Challenger standing behind the form: the bike it is asking about, not something to read.
+     --bike is the only knob - raise it to bring the bike forward, lower it to take it back. */
+  .form::before{content:"";position:absolute;z-index:-1;right:-5%;bottom:-7%;width:min(88%,540px);aspect-ratio:3/2;
+    background:url("/assets/img/home/model-challenger-1000.webp") right bottom/contain no-repeat;
+    opacity:var(--bike);pointer-events:none}
+  /* the bike is dark, so it needs more of itself on a dark card */
+  :root[data-theme="dark"] .form{--bike:.12}
+  .form fieldset{border:0;display:grid;gap:10px}
+  .form legend,.form label > span{font-size:var(--t-label);color:var(--dim);margin-bottom:10px;display:block}
+  .seg{display:flex;flex-wrap:wrap;gap:8px}
+  .seg label{position:relative;cursor:pointer}
+  .seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .seg span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid var(--line);border-radius:999px;font-weight:500;font-size:15px;transition:border-color .15s,background .15s,color .15s}
+  .form .seg label > span{display:inline-flex;margin-bottom:0;font-size:15px}
+  .form .seg input:not(:checked) + span{color:var(--ink)}
+  .seg input:checked + span{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .seg input:focus-visible + span{outline:2px solid var(--ink);outline-offset:3px}
+  .seg label:hover span{border-color:var(--ink)}
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .fields label:last-child{grid-column:1/-1}
+  .form input[type="text"],.form input[type="tel"],.form select{width:100%;min-height:52px;padding:0 18px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:500 16px var(--f)}
+  .form input:focus,.form select:focus{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+  .form .note{font-size:var(--t-label);color:var(--dim)}
+  .form .err{font-size:var(--t-label);color:#b3261e;min-height:1.2em}
+  @media (max-width:860px){ .reach{grid-template-columns:1fr} }
+  @media (max-width:520px){ .fields{grid-template-columns:1fr} }
+
+  /* questions: each one a rounded card that opens */
+  .faq{max-width:920px;margin-inline:auto;display:grid;gap:8px;interpolate-size:allow-keywords}
+  .faq details{border-radius:12px;background:var(--card);border:1px solid var(--line);padding:0 clamp(16px,2vw,28px);transition:border-color .2s}
+  .faq details[open]{border-color:var(--ink)}
+  .faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:15px 0;cursor:pointer;font-weight:500;font-size:clamp(17px,1.3vw,20px);line-height:1.3;letter-spacing:-.01em}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary i{flex:none;position:relative;width:36px;height:36px;border-radius:50%;background:var(--surface);transition:transform .35s cubic-bezier(.2,.7,.2,1),background .2s}
+  .faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%);transition:background .2s}
+  .faq summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+  .faq details[open] summary i{transform:rotate(45deg);background:var(--ink)}
+  .faq details[open] summary i::before,.faq details[open] summary i::after{background:var(--bg)}
+  .faq details::details-content{height:0;overflow:clip;transition:height .4s cubic-bezier(.2,.7,.2,1), content-visibility .4s allow-discrete}
+  .faq details[open]::details-content{height:auto}
+  .faq .a{padding:0 48px 24px 0;color:var(--soft);max-width:64ch}
+
+  @media (prefers-reduced-motion:reduce){ .tones,.tones__bike img{transition:none} }
+
+  /* form graphics (2026-11-27): a small line icon in each choice, and the bike choice as three picture cards */
+  .form .seg label > span svg{flex:none;margin-right:8px}
+  .pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .pick label{position:relative;cursor:pointer;display:block}
+  .pick input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .form .pick label > span{display:flex;flex-direction:column;margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg);color:var(--ink);font-size:15px;font-weight:500;transition:border-color .15s,box-shadow .15s}
+  .pick label > span{height:100%}
+  .pick i{position:relative;display:grid;place-items:center;aspect-ratio:16/10;background:#fff;flex:none}
+  .pick i img{position:absolute;left:8%;top:9%;width:84%;height:84%;object-fit:contain}
+  .pick b{flex:1}
+  .pick i img.sm{left:13%;top:14%;width:74%;height:76%}
+  .pick i svg{width:38%;height:auto;color:#9aa0a6}
+  .pick b{font-weight:500;padding:10px 12px 11px;display:flex;align-items:center;justify-content:space-between;gap:8px;line-height:1.2}
+  .pick b::after{content:"";flex:none;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line)}
+  .pick input:checked + span{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+  .pick input:checked + span b::after{border-color:var(--ink);background:var(--ink);box-shadow:inset 0 0 0 3px var(--bg)}
+  .pick input:focus-visible + span{outline:2px solid var(--ink);outline-offset:3px}
+  .pick label:hover > span{border-color:var(--ink)}
+  @media (max-width:420px){ .pick b{font-size:13px;padding:8px 8px 9px} .pick b::after{display:none} }

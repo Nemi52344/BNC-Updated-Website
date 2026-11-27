@@ -1,0 +1,111 @@
+/* THE ETROL PAGE: the battery, how it is carried, charged and kept safe, and the swap station. Same system as the home
+     page: rounded frames, centred headings, pill actions, every section inside one screen on a desktop window.
+     Facts are BNC's own (the earlier Etrol page and the home page); the swap station; the other future uses (home UPS, renewable energy) were removed from the page on 2026-11-26 at the user's request. They were
+     marked as planned, as BNC states them. Pictures are BNC's own renders and one photograph. */
+  .h2{font-weight:500;font-size:clamp(30px,3.6vw,56px);line-height:1.06;letter-spacing:-.035em;text-wrap:balance}
+  .head{display:grid;justify-items:center;text-align:center;gap:16px;margin-bottom:clamp(24px,3vw,40px)}
+  .head p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:60ch}
+  .sec{padding:clamp(48px,6vw,96px) var(--edge)}
+
+  /* the first six screens: the pack in 3D, held on screen while the page scrolls. The band is always light (the pack is
+     black), so the page's tokens are set to their light values inside it, whatever the theme */
+  .open{--sh:max(480px,calc(100vh - 96px));--sh:max(480px,calc(100svh - 96px));--stage:#e9ebed;position:relative;margin:84px 12px 12px;
+    --ink:#0c0d0f;--soft:#474b52;--dim:#6b7076;--line:rgba(12,13,15,.14);--inkc:12 13 15;--bgc:233 235 237;--bg:#e9ebed;--card:#fff;--surface:#dfe2e5;color:var(--ink)}
+  :root[data-theme="dark"] .open{--stage:#d5d8dc;--bg:#d5d8dc;--bgc:213 216 220}
+  .open__stage{position:sticky;top:84px;height:var(--sh);border-radius:14px;overflow:hidden;background:var(--stage)}
+  .open__stage canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .8s;touch-action:pan-y}
+  .open__stage.ready canvas{opacity:1}
+  .open__still{position:absolute;right:12%;top:14%;height:72%;width:auto;display:block}
+  .js .open__stage.ready .open__still{display:none}
+  .open__steps{position:relative;z-index:2;margin-top:calc(var(--sh) * -1);pointer-events:none}
+  .open__step{height:var(--sh);display:flex;align-items:center;padding:0 clamp(24px,5vw,96px)}
+  .open__cap{pointer-events:auto;width:min(100%,460px);display:grid;gap:16px;justify-items:start}
+  .open__cap h1{font-weight:500;font-size:clamp(40px,4.6vw,88px);line-height:1;letter-spacing:-.045em}
+  .open__cap h1 em{font-style:normal;color:#12864c}
+  .open__cap p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:40ch}
+  .open__cap .cta{margin-top:8px}
+  .open__cap .rows{width:100%;margin-top:4px}
+  .open__cue{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--dim);margin-top:4px}
+  /* narrow screens: the pack in the upper part of the stage, the words under it, nothing overlapping */
+  @media (max-width:860px){
+    .open__stage canvas{inset:0 0 auto 0;height:52%}
+    .open__step{align-items:flex-end;padding:0 clamp(16px,4vw,28px) clamp(16px,3vh,28px)}
+    .open__cap{width:100%;gap:10px;max-height:46%}
+    .open__cap h1{font-size:clamp(32px,7.4vw,48px)} .open__cap .h2{font-size:clamp(26px,6vw,36px)}
+    .open__cap p{font-size:16px;line-height:1.45}
+    .open__cap .cta{margin-top:4px}
+    .open__still{right:0;left:0;margin:auto;top:6%;height:42%}
+    .open__cue{display:none}
+  }
+  @media (max-width:860px) and (max-height:700px){ .open__cap .tag{display:none} .open__cap .rows div{padding:8px 0} }
+
+  /* the swap stations: the words at the left; BNC's three cabinets (4, 8 and 12 doors) fill the rest of the dark band,
+     to one scale, standing on one level (no drawn line: user, 2026-11-26), their names in one row under them */
+  .swap{margin:0 12px;border-radius:14px;background:#0b0c0e;color:#fff;padding:clamp(28px,3.4vw,64px) clamp(16px,4vw,72px);
+    display:grid;grid-template-columns:minmax(280px,.42fr) minmax(0,1fr);gap:clamp(24px,3.4vw,64px);align-items:center}
+  .swap .tag{background:rgba(63,214,138,.16);color:#7be7b0;border:0}
+  .swap__txt{display:grid;gap:16px;justify-items:start;text-align:left}
+  .swap__txt h2{font-weight:500;font-size:clamp(34px,3.7vw,64px);line-height:1.02;letter-spacing:-.04em;text-wrap:balance}
+  .swap__txt p{color:#c5cacf;font-size:var(--t-lead);line-height:1.5;max-width:30ch}
+  /* three columns in step with the cabinets' sizes: the doors are one size in all three, so the 4 is the small one, the 8
+     the tall one and the 12 the wide one (384 : 592 : 779; the 4 is set a touch under scale so the step reads at a glance:
+     user, 2026-11-26, "let 4 be small"). Never so large that the tallest leaves the window */
+  .cabs{list-style:none;margin:0;padding:0;justify-self:end;width:100%;max-width:max(420px,calc((100vh - 330px) * 2.09 + 80px));max-width:max(420px,calc((100svh - 330px) * 2.09 + 80px));
+    display:grid;grid-template-columns:384fr 592fr 779fr;column-gap:clamp(12px,2.4vw,40px);row-gap:clamp(14px,1.6vw,22px)}
+  .cabs li{display:contents}
+  .cabs li:nth-child(1) > *{grid-column:1} .cabs li:nth-child(2) > *{grid-column:2} .cabs li:nth-child(3) > *{grid-column:3}
+  .cabs img{grid-row:1;align-self:end;display:block;width:100%;height:auto;position:relative}
+  .cabs div{grid-row:2;text-align:center;min-width:0}
+  .cabs b{display:block;font-weight:500;font-size:clamp(20px,2vw,32px);letter-spacing:-.03em;line-height:1.1;white-space:nowrap}
+  .cabs span{display:block;margin-top:6px;color:#aab0b6;font-size:clamp(12px,1vw,15px);line-height:1.35}
+  @media (max-width:1000px){ .swap{grid-template-columns:minmax(0,1fr);justify-items:center} .swap__txt{justify-items:center;text-align:center} .swap__txt p{max-width:44ch} .cabs{justify-self:center;max-width:min(760px,max(480px,calc((100vh - 440px) * 2.09 + 80px)));max-width:min(760px,max(480px,calc((100svh - 440px) * 2.09 + 80px)))} }
+  @media (max-width:520px){ .cabs{display:block} .cabs li{display:grid;justify-items:center;gap:12px} .cabs li + li{margin-top:36px}
+    .cabs li:nth-child(1) img{width:50%} .cabs li:nth-child(2) img{width:76%} }
+
+  /* four numbers */
+  .nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px)}
+  .num dd{font-weight:500;font-size:clamp(48px,5.2vw,88px);line-height:.9;letter-spacing:-.06em;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .num dd small{font-size:.3em;font-weight:400;letter-spacing:-.02em;margin-left:.12em;color:var(--soft)}
+  .num dt{display:none}
+  .num p{margin-top:18px;color:var(--soft);max-width:28ch}
+  @media (max-width:640px){ .nums{grid-template-columns:minmax(0,1fr);gap:28px} }
+
+  /* charging: the pack at a wall socket, the sentence on a card over the picture's corner */
+  .plug{position:relative;margin:12px 12px 0;border-radius:14px;overflow:hidden;background:#e7e3dc;height:clamp(460px,calc(100vh - 120px),760px);height:clamp(460px,calc(100svh - 120px),760px);display:flex;align-items:flex-end;justify-content:flex-start;padding:clamp(16px,2.4vw,36px)}
+  .plug > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+  .plug__card{position:relative;z-index:2;width:min(100%,500px);border-radius:12px;background:rgb(var(--bgc) / .94);padding:clamp(20px,2.6vw,40px)}
+  .plug__card h2{font-weight:500;font-size:clamp(28px,2.8vw,44px);line-height:1.06;letter-spacing:-.035em;text-wrap:balance}
+  .plug__card p{margin-top:16px;color:var(--soft)}
+  .plug__card .rows{margin-top:20px}
+  @media (max-width:760px){ .plug{height:auto;padding:70vw 12px 12px} .plug > img{height:78vw;inset:0 0 auto 0;object-position:62% 20%} }
+
+  /* safety: four tested facts as tiles */
+  .safe{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .tile{border-radius:12px;background:var(--card);border:1px solid var(--line);padding:clamp(18px,1.8vw,28px);display:flex;flex-direction:column;min-height:clamp(200px,22vw,280px)}
+  .tile .big{font-weight:500;font-size:clamp(32px,3.2vw,54px);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;margin-bottom:auto;padding-bottom:18px;white-space:nowrap}
+  .tile .big small{font-size:.36em;font-weight:400;letter-spacing:0;color:var(--soft);margin-left:3px}
+  .tile h3{font-weight:600;font-size:18px;line-height:1.25}
+  .tile p{margin-top:6px;color:var(--soft);font-size:14px;line-height:1.5}
+  .tile--dark{background:#0f1012;color:#fff;border-color:#0f1012} .tile--dark p{color:#c5cacf} .tile--dark .big small{color:#c5cacf}
+  @media (max-width:900px){ .safe{grid-template-columns:repeat(2,minmax(0,1fr))} .tile{min-height:170px} }
+
+  /* what comes next, and the warranty */
+
+  /* the two bikes it powers */
+  .bikes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .bcard{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;border-radius:14px;overflow:hidden;color:#fff;text-decoration:none;min-height:clamp(220px,22vw,320px);transition:transform .2s}
+  .bcard:hover{transform:translateY(-2px)}
+  .bcard--c{background:#010101} .bcard--m{background:#fefefe;color:#0c0d0f;border:1px solid var(--line)} .bcard.bcard--m small{color:#4a4f55}
+  .bcard > span{padding:clamp(20px,2.6vw,40px);display:grid;gap:8px;align-content:center}
+  .bcard b{font-weight:500;font-size:clamp(24px,2.4vw,38px);letter-spacing:-.03em;line-height:1.05}
+  .bcard small{font-size:14px;color:#c9cdd2}
+  .bcard i{font-style:normal;font-weight:600;font-size:14px;margin-top:10px;display:inline-flex;align-items:center;gap:8px}
+  .bcard img{display:block;width:100%;height:100%;max-height:clamp(220px,22vw,320px);object-fit:contain;padding:12px 12px 12px 0}
+  @media (max-width:860px){ .bikes{grid-template-columns:minmax(0,1fr)} }
+
+  /* the closing line */
+  .end{margin:0 12px;border-radius:14px;background:#dff3e7;color:#0c0d0f;padding:clamp(40px,5vw,80px) clamp(20px,5vw,84px);display:grid;justify-items:center;text-align:center;gap:20px}
+  :root[data-theme="dark"] .end{background:#12201a;color:#f4f5f6}
+  .end p{max-width:52ch;font-size:var(--t-lead);opacity:.8}
+  .end .btn.ghost{border-color:currentColor;color:inherit}
+  :root:not([data-theme="dark"]) .end .btn.solid{background:#0c0d0f;color:#fff;border-color:#0c0d0f}

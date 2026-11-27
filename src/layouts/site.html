@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ogTitle}}">
+<meta property="og:description" content="{{ogDescription}}">
+<meta name="theme-color" content="#f4f4f2" id="theme-color">
+<link rel="icon" href="/assets/img/favicon.png">
+<script>document.documentElement.classList.add('js');
+/* light by default; the switch at the top right turns the page dark and the choice is kept */
+(function(){var t='light';try{t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('reveal-theme')||'light';}catch(e){}
+document.documentElement.dataset.theme=(t==='dark')?'dark':'light';})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/base.css">
+{{styles}}
+{{head}}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+{{> header}}
+
+{{content}}
+
+{{> footer}}
+
+<script src="/assets/js/site.js"></script>
+{{scripts}}
+</body>
+</html>

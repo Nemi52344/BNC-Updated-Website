@@ -1,0 +1,10 @@
+{
+  "name": "bnc-motors-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The BNC Motors website: a static site built from src/ into dist/.",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js --serve"
+  }
+}

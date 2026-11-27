@@ -1,0 +1,85 @@
+/* THE CAREERS PAGE (2026-11-27). Same system as the other new pages. No roles are listed: BNC has published none. */
+  .h2{font-weight:500;font-size:clamp(30px,3.6vw,56px);line-height:1.06;letter-spacing:-.035em;text-wrap:balance}
+  .sec{padding:clamp(48px,6vw,96px) var(--edge)}
+
+  /* first screen: words alone */
+  .cr{min-height:min(78vh,720px);min-height:min(78svh,720px);padding:clamp(120px,18vh,190px) var(--edge) clamp(32px,5vh,64px);display:grid;align-content:center;justify-items:center;text-align:center;gap:clamp(16px,2vw,24px)}
+  .cr h1{font-weight:500;font-size:clamp(40px,6vw,104px);line-height:1;letter-spacing:-.045em;text-wrap:balance}
+  .cr p{color:var(--soft);font-size:clamp(18px,1.6vw,22px);line-height:1.45;max-width:46ch}
+  .cr .cta{justify-content:center;margin-top:8px}
+
+  /* three lines on how BNC works: the same card as the values on the About page */
+  .ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .way{border-radius:12px;background:var(--card);border:1px solid var(--line);padding:clamp(18px,1.8vw,28px);display:flex;flex-direction:column;min-height:clamp(140px,12vw,180px)}
+  .way .n{font-size:13px;font-weight:500;color:var(--dim);font-variant-numeric:tabular-nums;margin-bottom:auto;padding-bottom:16px}
+  .way h3{font-weight:500;font-size:clamp(20px,1.8vw,26px);letter-spacing:-.02em;line-height:1.15}
+  .way p{margin-top:8px;color:var(--soft);font-size:15px;line-height:1.5}
+  .head{display:grid;justify-items:center;text-align:center;gap:16px;margin-bottom:clamp(20px,2.4vw,32px)}
+  .grp{font-weight:500;font-size:clamp(18px,1.5vw,22px);letter-spacing:-.01em;color:var(--soft);margin:clamp(24px,3vw,40px) 0 14px}
+  .head + .grp{margin-top:0}
+  .ways--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  /* one screen per group of principles: the heading large at one side, four cards two by two at the other */
+  .pr{min-height:100vh;min-height:100svh;padding:clamp(96px,12vh,140px) var(--edge) clamp(32px,5vh,64px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.25fr);gap:clamp(24px,4vw,80px);align-items:center}
+  .pr h2{font-weight:500;font-size:clamp(40px,5.6vw,100px);line-height:.98;letter-spacing:-.045em;text-wrap:balance}
+  .pr--flip{grid-template-columns:minmax(0,1.25fr) minmax(0,.8fr)} .pr--flip h2{order:2;text-align:right}
+  .pr__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .pr .way{min-height:clamp(170px,24vh,260px)}
+  .pr .way h3{font-size:clamp(20px,1.9vw,28px)}
+  @media (max-width:900px){ .pr,.pr--flip{grid-template-columns:minmax(0,1fr);min-height:0;gap:20px;padding:clamp(56px,9vw,88px) var(--edge)} .pr--flip h2{order:0;text-align:left} .pr .way{min-height:150px} }
+  @media (max-width:520px){ .pr__grid{grid-template-columns:minmax(0,1fr)} .pr .way{min-height:0} }
+  @media (max-width:1100px){ .ways--4{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:860px){ .ways{grid-template-columns:minmax(0,1fr)} .ways--4{grid-template-columns:repeat(2,minmax(0,1fr))} .way{min-height:0} .way .n{padding-bottom:10px} }
+  @media (max-width:520px){ .ways--4{grid-template-columns:minmax(0,1fr)} }
+
+  /* the application: words at the left, the form at the right */
+  .apply{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.15fr);gap:clamp(24px,4vw,72px);align-items:start}
+  .apply__txt{display:grid;gap:16px;justify-items:start;position:sticky;top:104px}
+  .apply__txt p{color:var(--soft);font-size:var(--t-lead);line-height:1.5;max-width:38ch}
+  .apply__lines{margin-top:4px;display:grid;gap:6px;font-weight:500}
+  .apply__lines a{color:var(--ink)}
+  .form{border-radius:14px;background:var(--card);border:1px solid var(--line);color:var(--ink);padding:clamp(18px,2.4vw,36px);display:grid;gap:18px}
+  .form fieldset{border:0;display:grid;gap:8px;min-width:0;margin:0;padding:0}
+  .form legend,.form label > span{font-size:var(--t-label);color:var(--dim);margin-bottom:8px;display:block;padding:0}
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form input[type="text"],.form input[type="tel"],.form input[type="email"],.form input[type="url"],.form textarea{width:100%;min-height:50px;padding:0 16px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:500 16px var(--f)}
+  .form textarea{min-height:120px;padding:14px 16px;line-height:1.5;resize:vertical}
+  .form input:focus,.form textarea:focus{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+  .seg{display:flex;flex-wrap:wrap;gap:8px}
+  .seg label{position:relative;cursor:pointer}
+  .seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .form .seg label > span{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;margin-bottom:0;border:1px solid var(--line);border-radius:999px;font-weight:500;font-size:15px;color:var(--ink);transition:border-color .15s,background .15s,color .15s}
+  .form .seg input:checked + span{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .seg input:focus-visible + span{outline:2px solid var(--ink);outline-offset:3px}
+  .seg label:hover span{border-color:var(--ink)}
+  .form .note{font-size:var(--t-label);color:var(--dim);line-height:1.5}
+  .form .err{font-size:var(--t-label);color:#b3261e;min-height:1.2em}
+  :root[data-theme="dark"] .form .err{color:#ff8a80}
+  @media (max-width:980px){ .apply{grid-template-columns:minmax(0,1fr)} .apply__txt{position:static} }
+  @media (max-width:520px){ .fields{grid-template-columns:minmax(0,1fr)} }
+
+  /* pictures (2026-11-27): the site's own professional photographs */
+  .cr{min-height:0;padding-bottom:clamp(28px,4vw,56px)}
+  .crpic{margin:0 var(--edge);border-radius:14px;overflow:hidden;aspect-ratio:21/9;position:relative;background:#d9d6d0}
+  .crpic img,.work figure img,.apply__pic img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
+  .crpic img{object-position:50% 58%}
+  .work__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .work__grid li{display:grid}
+  .work a{display:flex;flex-direction:column;border-radius:12px;background:var(--card);border:1px solid var(--line);overflow:hidden;color:inherit;text-decoration:none;transition:border-color .15s}
+  .work a:hover{border-color:var(--ink)}
+  .work figure{margin:0;aspect-ratio:4/3;position:relative;background:#d9d6d0;flex:none}
+  .work figure.fit{background:#fff} .work figure.fit img{object-fit:contain;inset:8% 6%;width:88%;height:84%}
+  .work b{font-weight:500;font-size:clamp(18px,1.6vw,22px);letter-spacing:-.015em;padding:clamp(14px,1.5vw,20px) clamp(16px,1.6vw,24px);display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .work b svg{width:16px;height:16px;flex:none;transition:transform .15s} .work a:hover b svg{transform:translateX(3px)}
+  .apply__pic{margin:14px 0 0;width:100%;max-width:440px;aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:#d9d6d0}
+  @media (max-width:980px){ .apply__pic{display:none} }
+  @media (max-width:860px){ .crpic{aspect-ratio:4/3} .work__grid{grid-template-columns:minmax(0,1fr)} .work figure{aspect-ratio:16/9} }
+
+  /* THE DEALER ENQUIRY (2026-11-27): the old form's questions in the new system; it sends from the page */
+  .dl{padding:clamp(120px,17vh,180px) var(--edge) clamp(48px,6vw,96px)}
+  .dl h1{font-weight:500;font-size:clamp(36px,4.6vw,72px);line-height:1.02;letter-spacing:-.04em;text-wrap:balance}
+  .form select{width:100%;min-height:50px;padding:0 16px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:500 16px var(--f)}
+  .form select:focus{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+  .form h2{font-weight:500;font-size:18px;letter-spacing:-.01em;padding-top:10px;border-top:1px solid var(--line);margin-top:4px}
+  .form h2:first-of-type{border-top:0;padding-top:0;margin-top:0}
+  .fields--3{grid-template-columns:2fr 1fr}
+  @media (max-width:520px){ .fields--3{grid-template-columns:minmax(0,1fr)} }
